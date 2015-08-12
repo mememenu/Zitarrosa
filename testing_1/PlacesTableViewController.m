@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray *allData;
 @property (nonatomic, strong) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+- (IBAction)showSearchBar:(id)sender;
 
 @end
 
@@ -26,10 +27,10 @@
                      @"Six", @"Seven", @"Eight", @"Nine", @"Ten"];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated {
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + self.searchBar.bounds.size.height;
+    self.tableView.bounds = newBounds;
 }
 
 #pragma mark - Table view data source
@@ -39,7 +40,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section
     if (tableView == self.tableView) {
         return self.allData.count;
     } else {
@@ -85,4 +85,8 @@
 
 
 
+- (IBAction)showSearchBar:(id)sender {
+    [self.searchDisplayController setActive:YES animated:YES];
+    
+}
 @end

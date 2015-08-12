@@ -366,7 +366,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="MEME" id="RL5-9u-cjR">
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="bUP-fy-yhF"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="8f8-Om-pvj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="8f8-Om-pvj">
+                            <connections>
+                                <action selector="showSearchBar:" destination="AgE-iL-K0r" id="aiQ-Ia-27f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
