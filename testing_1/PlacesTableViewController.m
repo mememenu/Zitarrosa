@@ -14,7 +14,6 @@
 @property (nonatomic, strong) NSArray *allData;
 @property (nonatomic, strong) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-- (IBAction)showSearchBar:(id)sender;
 
 @end
 
@@ -80,13 +79,5 @@
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains [cd] %@", self.searchBar.text];
         
     self.searchResults = [self.allData filteredArrayUsingPredicate:predicate];
-}
-
-
-
-
-- (IBAction)showSearchBar:(id)sender {
-    [self.searchDisplayController setActive:YES animated:YES];
-    
 }
 @end
