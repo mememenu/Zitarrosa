@@ -17,6 +17,7 @@
 		BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF4381B7AB8820071A70D /* PlacesTableViewController.m */; };
 		BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */; };
 		BE6477BA1B7ADA1900CC5387 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477B91B7ADA1900CC5387 /* SWRevealViewController.m */; };
+		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
 		BE6477B81B7ADA1900CC5387 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BE6477B91B7ADA1900CC5387 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 			children = (
 				BE2CF41C1B7A73B10071A70D /* AppDelegate.h */,
 				BE2CF41D1B7A73B10071A70D /* AppDelegate.m */,
+				BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */,
+				BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */,
 				BE2CF43D1B7AB8D00071A70D /* Places */,
 				BE2CF4361B7A9FC50071A70D /* Home */,
 				BE2CF4221B7A73B10071A70D /* Main.storyboard */,
@@ -185,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */,
 				BE6477BA1B7ADA1900CC5387 /* SWRevealViewController.m in Sources */,
 				BE2CF4321B7A978F0071A70D /* HomeCollectionViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
