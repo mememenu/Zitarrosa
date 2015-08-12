@@ -8,6 +8,7 @@
 
 #import "HomeCollectionViewController.h"
 #import "HomeCollectionViewCell.h"
+#import "SWRevealViewController.h"
 
 @interface HomeCollectionViewController ()
 
@@ -19,6 +20,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.barButtonItem.target = self.revealViewController;
+    self.barButtonItem.action = @selector(revealToggle:);
+    
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 

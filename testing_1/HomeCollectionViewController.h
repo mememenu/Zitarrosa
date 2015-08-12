@@ -10,4 +10,6 @@
 
 @interface HomeCollectionViewController : UICollectionViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+
 @end
