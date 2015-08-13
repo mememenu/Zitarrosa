@@ -8,6 +8,7 @@
 
 #import "PlacesTableViewController.h"
 #import "PlacesTableViewCell.h"
+#import "SWRevealViewController.h"
 
 @interface PlacesTableViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
@@ -24,6 +25,12 @@
     
     self.allData = @[@"One", @"Two", @"Three", @"Four", @"Five",
                      @"Six", @"Seven", @"Eight", @"Nine", @"Ten"];
+    
+    self.barButtonItem.target = self.revealViewController;
+    self.barButtonItem.action = @selector(revealToggle:);
+    
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

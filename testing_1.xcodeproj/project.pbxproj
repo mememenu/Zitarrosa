@@ -19,6 +19,7 @@
 		BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */; };
 		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
 		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
+		BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyTableViewController.h; sourceTree = "<group>"; };
 		BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewController.m; sourceTree = "<group>"; };
+		BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +81,10 @@
 			children = (
 				BE2CF41C1B7A73B10071A70D /* AppDelegate.h */,
 				BE2CF41D1B7A73B10071A70D /* AppDelegate.m */,
-				BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */,
-				BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */,
-				BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */,
-				BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */,
+				BEE3A2251B7D02680018CE10 /* Sidebar Navigation */,
 				BE2CF4361B7A9FC50071A70D /* Home */,
+				BEE3A2241B7D024D0018CE10 /* Nearby */,
+				BEE3A2291B7D03A80018CE10 /* Feed */,
 				BE2CF43D1B7AB8D00071A70D /* Places */,
 				BE2CF4221B7A73B10071A70D /* Main.storyboard */,
 				BE2CF4251B7A73B10071A70D /* Assets.xcassets */,
@@ -123,6 +125,33 @@
 				BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */,
 			);
 			name = Places;
+			sourceTree = "<group>";
+		};
+		BEE3A2241B7D024D0018CE10 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */,
+				BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */,
+			);
+			name = Nearby;
+			sourceTree = "<group>";
+		};
+		BEE3A2251B7D02680018CE10 /* Sidebar Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */,
+				BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */,
+			);
+			name = "Sidebar Navigation";
+			sourceTree = "<group>";
+		};
+		BEE3A2291B7D03A80018CE10 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */,
+				BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */,
+			);
+			name = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +230,7 @@
 				BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */,
 				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
+				BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,
 				BE2CF4351B7A98ED0071A70D /* HomeCollectionViewCell.m in Sources */,
