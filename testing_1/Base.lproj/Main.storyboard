@@ -5,77 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
-        <!--Home Collection View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController title="Home Collection View Controller" id="BYZ-38-t0r" customClass="HomeCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sjt-KV-oI2">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nVC-BH-FGt">
-                            <size key="itemSize" width="375" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" reuseIdentifier="Cell" id="lUG-UF-9tD" customClass="HomeCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-xp-Ugt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                            <animations/>
-                                        </imageView>
-                                    </subviews>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <animations/>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="GXL-xp-Ugt" firstAttribute="leading" secondItem="lUG-UF-9tD" secondAttribute="leading" id="0Ny-x7-O68"/>
-                                    <constraint firstAttribute="trailing" secondItem="GXL-xp-Ugt" secondAttribute="trailing" id="6U2-cT-ch1"/>
-                                    <constraint firstItem="GXL-xp-Ugt" firstAttribute="top" secondItem="lUG-UF-9tD" secondAttribute="top" id="9AE-5s-ZYa"/>
-                                    <constraint firstAttribute="bottom" secondItem="GXL-xp-Ugt" secondAttribute="bottom" id="zme-Kd-mbd"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="imageView" destination="GXL-xp-Ugt" id="Iyl-Jf-LW9"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="BYZ-38-t0r" id="GtM-uV-cgR"/>
-                            <outlet property="delegate" destination="BYZ-38-t0r" id="wfc-ET-GaY"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="MEME" id="5dE-hf-sRr">
-                        <barButtonItem key="backBarButtonItem" title=" " id="n4j-Vv-n60"/>
-                        <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="xHi-56-acz">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Ivi-uh-dXm">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="anT-fY-kgs" kind="show" id="b6y-zu-27S"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="barButtonItem" destination="xHi-56-acz" id="TEc-41-2WQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1011.5" y="-768.5"/>
-        </scene>
         <!--MEME-->
         <scene sceneID="pyL-kD-UjV">
             <objects>
@@ -209,6 +138,72 @@
             </objects>
             <point key="canvasLocation" x="197.5" y="1455.5"/>
         </scene>
+        <!--MEME-->
+        <scene sceneID="mRd-xd-DTk">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Qjv-st-SkT" customClass="HomeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="0lu-hT-Sls">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="Cell" id="ThA-Jc-MHp" customClass="HomeTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="ThA-Jc-MHp" id="Kn6-4a-BFj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-CP-biv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="vSL-CP-biv" firstAttribute="top" secondItem="Kn6-4a-BFj" secondAttribute="top" id="4zf-fK-4AB"/>
+                                        <constraint firstAttribute="trailing" secondItem="vSL-CP-biv" secondAttribute="trailing" id="ghx-NQ-0Ae"/>
+                                        <constraint firstItem="vSL-CP-biv" firstAttribute="leading" secondItem="Kn6-4a-BFj" secondAttribute="leading" id="rzc-Te-OvZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="vSL-CP-biv" secondAttribute="bottom" id="wi8-Ve-MlS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="cellImageView" destination="vSL-CP-biv" id="UEH-FI-BeW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Qjv-st-SkT" id="cX0-qs-dR6"/>
+                            <outlet property="delegate" destination="Qjv-st-SkT" id="Kbf-1h-zDh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MEME" id="wmk-bk-JEA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aPh-c3-OTi"/>
+                        <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="VZp-CT-YRK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="cba-xz-PZL">
+                            <connections>
+                                <segue destination="anT-fY-kgs" kind="show" id="6JA-Tr-Kpq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="barButtonItem" destination="VZp-CT-YRK" id="neu-Xb-5pl"/>
+                        <outlet property="searchBarButtonItem" destination="cba-xz-PZL" id="eS2-yT-Qgd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMa-v4-gOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978.5" y="-768.5"/>
+        </scene>
         <!--Home-->
         <scene sceneID="V98-Xt-5Uy">
             <objects>
@@ -222,12 +217,12 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xNj-lg-DKo"/>
                         <segue destination="TlO-d9-mpz" kind="show" identifier="showNearby" id="FZV-Sl-zvK"/>
                         <segue destination="mrp-rX-AGk" kind="show" identifier="showFeed" id="DhL-Ww-ZBY"/>
                         <segue destination="a1Q-Gz-gg5" kind="show" identifier="showLists" id="c7p-rV-xKq"/>
                         <segue destination="AgE-iL-K0r" kind="show" identifier="showPlaces" id="seT-Ew-P8p"/>
                         <segue destination="JMv-LY-6gV" kind="show" identifier="showYourList" id="JjU-Z6-dng"/>
+                        <segue destination="Qjv-st-SkT" kind="relationship" relationship="rootViewController" id="6HE-x4-hf7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lt-to-qQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYP-3v-zbK">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166" y="291" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,6 +278,15 @@
                     <view key="view" contentMode="scaleToFill" id="Cgh-ds-g40">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjo-qU-Qxk">
+                                <rect key="frame" x="166" y="291" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -432,7 +436,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSegue" id="X3Y-hi-xbr"/>
+                                    <segue destination="Qjv-st-SkT" kind="custom" customClass="SWRevealViewControllerSegue" id="Jbl-sa-fdD"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
@@ -636,12 +640,12 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r91-PT-9Jp"/>
-        <segue reference="pIm-KL-JPd"/>
-        <segue reference="NDg-Fw-EtW"/>
-        <segue reference="h4X-1B-Saf"/>
-        <segue reference="cdM-2D-3Gt"/>
-        <segue reference="X3Y-hi-xbr"/>
+        <segue reference="JjU-Z6-dng"/>
+        <segue reference="DhL-Ww-ZBY"/>
+        <segue reference="FZV-Sl-zvK"/>
+        <segue reference="seT-Ew-P8p"/>
+        <segue reference="6HE-x4-hf7"/>
+        <segue reference="c7p-rV-xKq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
