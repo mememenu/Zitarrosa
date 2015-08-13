@@ -370,6 +370,12 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
 }
 
 
+- (CGAffineTransform)targetTransform  {
+    
+    return self.targetTransform;
+}
+
+
 - (id)initWithRevealController:(SWRevealViewController*)revealVC containerView:(UIView*)view fromVC:(UIViewController*)fromVC
     toVC:(UIViewController*)toVC completion:(void (^)(void))completion
 {
@@ -685,12 +691,13 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    // we could have simply not implemented this, but we choose to call super to make explicit that we
-    // want the default behavior.
-    return [super supportedInterfaceOrientations];
-}
+//   Commented out because was giving warning with return types 
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    // we could have simply not implemented this, but we choose to call super to make explicit that we
+//    // want the default behavior.
+//    return [super supportedInterfaceOrientations];
+//}
 
 
 #pragma mark - Public methods and property accessors
