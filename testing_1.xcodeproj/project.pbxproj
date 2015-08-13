@@ -16,8 +16,9 @@
 		BE2CF4351B7A98ED0071A70D /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF4341B7A98ED0071A70D /* HomeCollectionViewCell.m */; };
 		BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF4381B7AB8820071A70D /* PlacesTableViewController.m */; };
 		BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */; };
-		BE6477BA1B7ADA1900CC5387 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477B91B7ADA1900CC5387 /* SWRevealViewController.m */; };
+		BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */; };
 		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
+		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +38,12 @@
 		BE2CF4381B7AB8820071A70D /* PlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewController.m; sourceTree = "<group>"; };
 		BE2CF43A1B7AB8C20071A70D /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
 		BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
-		BE6477B81B7ADA1900CC5387 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		BE6477B91B7ADA1900CC5387 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyTableViewController.h; sourceTree = "<group>"; };
+		BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +80,10 @@
 				BE2CF41D1B7A73B10071A70D /* AppDelegate.m */,
 				BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */,
 				BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */,
-				BE2CF43D1B7AB8D00071A70D /* Places */,
+				BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */,
+				BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */,
 				BE2CF4361B7A9FC50071A70D /* Home */,
+				BE2CF43D1B7AB8D00071A70D /* Places */,
 				BE2CF4221B7A73B10071A70D /* Main.storyboard */,
 				BE2CF4251B7A73B10071A70D /* Assets.xcassets */,
 				BE2CF4271B7A73B10071A70D /* LaunchScreen.storyboard */,
@@ -92,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				BE2CF41A1B7A73B10071A70D /* main.m */,
-				BE6477B81B7ADA1900CC5387 /* SWRevealViewController.h */,
-				BE6477B91B7ADA1900CC5387 /* SWRevealViewController.m */,
+				BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */,
+				BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,9 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */,
-				BE6477BA1B7ADA1900CC5387 /* SWRevealViewController.m in Sources */,
 				BE2CF4321B7A978F0071A70D /* HomeCollectionViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
+				BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */,
+				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,

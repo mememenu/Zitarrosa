@@ -17,10 +17,19 @@
     NSArray *menu;
 }
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"Home", @"Around You", @"Feed", @"Lists", @"Places", @"Your List"];
+    menu = @[@"Home", @"Around You", @"Feed", @"Lists", @"Places", @"Your List", @"Settings"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,10 +51,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-//    cell.textLabel.text = [menu objectAtIndex:indexPath.row];
-    
-    // Configure the cell...
+
     
     return cell;
 }
@@ -54,10 +60,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ( [segue isKindOfClass: [SWRevealViewControllerSegueSetController class]] ) {
-        SWRevealViewControllerSegueSetController *swSegue = (SWRevealViewControllerSegueSetController*) segue;
-//        error is view controller being called
-        swSegue.performBlock  = ^(SWRevealViewControllerSegueSetController* rvc_segue, UIViewController* svc, UIViewController* dvc) {
+    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
+        SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;
+        
+        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
             
             UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
             [navController setViewControllers: @[dvc] animated: NO ];
