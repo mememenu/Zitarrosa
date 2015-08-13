@@ -88,13 +88,8 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Places, Cuisines, Zones" translatesAutoresizingMaskIntoConstraints="NO" id="4a7-br-KiL">
-                                <rect key="frame" x="0.0" y="8" width="375" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
-                            </searchBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GL5-md-tJq">
-                                <rect key="frame" x="67" y="234" width="240" height="199"/>
+                                <rect key="frame" x="67" y="202" width="240" height="199"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending Topics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scq-Cm-H7m">
                                         <rect key="frame" x="45" y="18" width="150" height="21"/>
@@ -138,6 +133,11 @@
                                 </subviews>
                                 <animations/>
                             </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Places, Zones, Cuisines" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-zj-hZE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.97088068183737375" green="0.97088068183737375" blue="0.97088068183737375" alpha="1" colorSpace="calibratedRGB"/>
