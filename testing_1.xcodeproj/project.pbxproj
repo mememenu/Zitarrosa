@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */; };
+		BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */; };
+		BE07AA9F1B7E8BD500B8FA00 /* HomeScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9E1B7E8BD500B8FA00 /* HomeScrollViewController.m */; };
 		BE2CF41B1B7A73B10071A70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF41A1B7A73B10071A70D /* main.m */; };
 		BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF41D1B7A73B10071A70D /* AppDelegate.m */; };
 		BE2CF4241B7A73B10071A70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2CF4221B7A73B10071A70D /* Main.storyboard */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE07AA971B7E817000B8FA00 /* SpotlightCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewController.h; sourceTree = "<group>"; };
+		BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewController.m; sourceTree = "<group>"; };
+		BE07AA9A1B7E83CD00B8FA00 /* FeaturedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedCollectionViewController.h; sourceTree = "<group>"; };
+		BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewController.m; sourceTree = "<group>"; };
+		BE07AA9D1B7E8BD500B8FA00 /* HomeScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScrollViewController.h; sourceTree = "<group>"; };
+		BE07AA9E1B7E8BD500B8FA00 /* HomeScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScrollViewController.m; sourceTree = "<group>"; };
 		BE2CF4161B7A73B10071A70D /* testing_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2CF41A1B7A73B10071A70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE2CF41C1B7A73B10071A70D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,10 +121,16 @@
 		BE2CF4361B7A9FC50071A70D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BE07AA9D1B7E8BD500B8FA00 /* HomeScrollViewController.h */,
+				BE07AA9E1B7E8BD500B8FA00 /* HomeScrollViewController.m */,
 				BE8009351B7D52D2008B963F /* HomeTableViewController.h */,
 				BE8009361B7D52D2008B963F /* HomeTableViewController.m */,
 				BE8009381B7D54AF008B963F /* HomeTableViewCell.h */,
 				BE8009391B7D54AF008B963F /* HomeTableViewCell.m */,
+				BE07AA971B7E817000B8FA00 /* SpotlightCollectionViewController.h */,
+				BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */,
+				BE07AA9A1B7E83CD00B8FA00 /* FeaturedCollectionViewController.h */,
+				BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -240,14 +255,17 @@
 				BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
 				BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */,
+				BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */,
 				BE8009371B7D52D2008B963F /* HomeTableViewController.m in Sources */,
 				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
 				BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */,
+				BE07AA9F1B7E8BD500B8FA00 /* HomeScrollViewController.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE80093A1B7D54AF008B963F /* HomeTableViewCell.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,
 				BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */,
+				BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
