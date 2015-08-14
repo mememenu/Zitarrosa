@@ -10,7 +10,4 @@
 
 @interface HomeTableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
-
 @end
