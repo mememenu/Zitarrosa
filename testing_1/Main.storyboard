@@ -216,6 +216,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MEME" id="eKR-IL-qHI">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6Uh-ct-F1f"/>
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="MeG-cr-6u1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="iAj-eT-6z6">
                             <connections>
@@ -259,7 +260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lt-to-qQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1464.5" y="-768.5"/>
+            <point key="canvasLocation" x="-1744.5" y="-744.5"/>
         </scene>
         <!--Feed-->
         <scene sceneID="i4I-8Q-Npu">
@@ -435,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDy-7y-9kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2714.5" y="17.5"/>
+            <point key="canvasLocation" x="-3034.5" y="21.5"/>
         </scene>
         <!--Sidebar Table View Controller-->
         <scene sceneID="Szl-Jz-Ac1">
@@ -468,7 +469,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="DC1-go-LWJ" kind="custom" identifier="" customClass="SWRevealViewControllerSegue" id="4dA-Rt-lb7"/>
+                                    <segue destination="2Gz-QW-LIb" kind="custom" customClass="SWRevealViewControllerSegue" id="7qz-2D-DQR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
@@ -605,7 +606,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqF-oT-ulM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2148.5" y="25.5"/>
+            <point key="canvasLocation" x="-2500.5" y="-14.5"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="LJI-XK-dTJ">
@@ -764,13 +765,13 @@
         <scene sceneID="Kj9-9v-2Qf">
             <objects>
                 <tableViewController title="HomeTableViewController" id="MTb-gh-CSj" customClass="HomeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="sm5-cx-c83">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="sm5-cx-c83">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="meB-u6-K2z" customClass="HomeTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="meB-u6-K2z" customClass="HomeTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="meB-u6-K2z" id="nVx-T0-07B">
@@ -815,12 +816,12 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JjU-Z6-dng"/>
-        <segue reference="q4M-O1-LVu"/>
-        <segue reference="FZV-Sl-zvK"/>
-        <segue reference="c7p-rV-xKq"/>
-        <segue reference="seT-Ew-P8p"/>
-        <segue reference="DhL-Ww-ZBY"/>
+        <segue reference="Nhd-Ne-z5V"/>
+        <segue reference="h4X-1B-Saf"/>
+        <segue reference="r91-PT-9Jp"/>
+        <segue reference="cdM-2D-3Gt"/>
+        <segue reference="NDg-Fw-EtW"/>
+        <segue reference="pIm-KL-JPd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
