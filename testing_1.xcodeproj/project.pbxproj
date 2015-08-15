@@ -21,6 +21,7 @@
 		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
 		BE8009371B7D52D2008B963F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8009361B7D52D2008B963F /* HomeTableViewController.m */; };
 		BE80093A1B7D54AF008B963F /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8009391B7D54AF008B963F /* HomeTableViewCell.m */; };
+		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
 		BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD8BE81B7D10720093A047 /* ListsViewController.m */; };
 		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
 		BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */; };
@@ -53,6 +54,8 @@
 		BE8009361B7D52D2008B963F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = ../HomeTableViewController.m; sourceTree = "<group>"; };
 		BE8009381B7D54AF008B963F /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		BE8009391B7D54AF008B963F /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		BEA9807E1B7EC0FF0050C40E /* SpotlightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewCell.h; sourceTree = "<group>"; };
+		BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewCell.m; sourceTree = "<group>"; };
 		BEDD8BE71B7D10720093A047 /* ListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsViewController.h; sourceTree = "<group>"; };
 		BEDD8BE81B7D10720093A047 /* ListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsViewController.m; sourceTree = "<group>"; };
 		BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyTableViewController.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				BE8009391B7D54AF008B963F /* HomeTableViewCell.m */,
 				BE2CF43A1B7AB8C20071A70D /* PlacesTableViewCell.h */,
 				BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */,
+				BEA9807E1B7EC0FF0050C40E /* SpotlightCollectionViewCell.h */,
+				BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				BE5D0F161B7EAD99005AD297 /* HomeViewController.m in Sources */,
 				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
+				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
 				BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE80093A1B7D54AF008B963F /* HomeTableViewCell.m in Sources */,
