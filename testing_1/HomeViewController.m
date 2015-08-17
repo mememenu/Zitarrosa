@@ -24,6 +24,7 @@
     
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
 }
 
 - (void)didReceiveMemoryWarning {
