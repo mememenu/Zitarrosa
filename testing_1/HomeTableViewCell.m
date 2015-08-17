@@ -2,7 +2,7 @@
 //  HomeTableViewCell.m
 //  testing_1
 //
-//  Created by Alfonso Pintos on 8/13/15.
+//  Created by Alfonso Pintos on 8/17/15.
 //  Copyright © 2015 Meme Menu. All rights reserved.
 //
 
@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

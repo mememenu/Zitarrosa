@@ -2,7 +2,7 @@
 //  HomeTableViewCell.h
 //  testing_1
 //
-//  Created by Alfonso Pintos on 8/13/15.
+//  Created by Alfonso Pintos on 8/17/15.
 //  Copyright © 2015 Meme Menu. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface HomeTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end
