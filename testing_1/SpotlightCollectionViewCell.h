@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpotlightCollectionViewCell : UICollectionViewCell
+@interface SpotlightCollectionViewCell : UICollectionViewCell <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *spotlightImageView;
+@property (weak, nonatomic) IBOutlet UILabel *spotlightName;
+@property (weak, nonatomic) IBOutlet UILabel *spotlightType;
 
 @end

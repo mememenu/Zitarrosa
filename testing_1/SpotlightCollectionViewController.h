@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpotlightCollectionViewController : UICollectionViewController
+@interface SpotlightCollectionViewController : UICollectionViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+
+@property (nonatomic) NSArray *spotlightItems;
 
 @end
