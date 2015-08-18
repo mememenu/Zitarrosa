@@ -11,12 +11,11 @@
 
 @interface SpotlightItem : NSObject
 
-//@property (nonatomic, copy) int *spotlightId;
-//@property (nonatomic, copy) int *spotableId;
-//@property (nonatomic, copy) int *position;
-//@property (nonatomic, copy) NSString *spotableType;
-//@property (nonatomic, copy) NSURL *avatarURL;
-//
-//-(id)initWithDictionary:(NSDictionary *)dictionary;
+
+@property (nonatomic, copy) NSString *spotlightType;
+@property (nonatomic, copy) NSString *spotlightName;
+@property (nonatomic, copy) NSURL *avatarURL;
+
+-(id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

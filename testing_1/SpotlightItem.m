@@ -10,15 +10,14 @@
 
 @implementation SpotlightItem
 
-//-(id)initWithDictionary:(NSDictionary *)dictionary {
-//    self = [super init];
-//    if (self) {
-//        self.spotlightId = ;
-//        self.spotableId = ;
-//        self.position = ;
-//        self.spotableType = ;
-//        self.avatarURL = ;
-//    }
-//}
+-(id)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        self.spotlightName = [[dictionary objectForKey:@"spotable"] objectForKey:@"name"];
+        self.spotlightType = [[dictionary objectForKey:@"spotable"] objectForKey:@"type"];
+        self.avatarURL = [NSURL URLWithString:[dictionary objectForKey:@"image_url"]];
+    }
+    return self;
+}
 
 @end
