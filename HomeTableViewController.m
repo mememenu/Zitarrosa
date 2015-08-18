@@ -45,7 +45,7 @@
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.backgroundImageView.image = [UIImage imageNamed:@"5"];
+    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li", 6 -indexPath.row]];
     
     return cell;
 }
