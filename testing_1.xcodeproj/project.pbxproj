@@ -25,6 +25,7 @@
 		BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD8BE81B7D10720093A047 /* ListsViewController.m */; };
 		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
 		BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */; };
+		BEEA3A4C1B836827002606B5 /* SpotlightItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEA3A4B1B836827002606B5 /* SpotlightItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewController.m; sourceTree = "<group>"; };
 		BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		BEEA3A4A1B836827002606B5 /* SpotlightItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightItem.h; sourceTree = "<group>"; };
+		BEEA3A4B1B836827002606B5 /* SpotlightItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 		BE5D0F181B7EAE77005AD297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BEEA3A4A1B836827002606B5 /* SpotlightItem.h */,
+				BEEA3A4B1B836827002606B5 /* SpotlightItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */,
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
 				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
+				BEEA3A4C1B836827002606B5 /* SpotlightItem.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
 				BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */,
