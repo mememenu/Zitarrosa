@@ -8,6 +8,8 @@
 
 #import "FeaturedCollectionViewController.h"
 #import "FeaturedCollectionViewCell.h"
+#import <AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface FeaturedCollectionViewController ()
 
@@ -19,15 +21,25 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchFeaturedItems];
     
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) fetchFeaturedItems {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/home_pages.json"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *featuredArray = [[[responseObject objectForKey:@"home_page"] objectForKey:@"featured_list"] objectForKey:@"places"];
+        self.featuredItems = featuredArray;
+        [self.collectionView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // insert failure block here
+    }];
+    [operation start];
 }
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -37,14 +49,19 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return self.featuredItems.count;
 }
 
 - (FeaturedCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FeaturedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+
+    NSDictionary *featuredItem = [self.featuredItems objectAtIndex: indexPath.row];
+    NSString *image_url = [featuredItem objectForKey:@"logo"];
+    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
-    // Configure the cell
-    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"featured_%li", indexPath.row +1]];
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+    cell.featuredName.text = [featuredItem objectForKey:@"name"];
+    cell.featuredType.text = [featuredItem objectForKey:@"type"];
     
     return cell;
 }

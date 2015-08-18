@@ -11,5 +11,7 @@
 @interface FeaturedCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *featuredName;
+@property (weak, nonatomic) IBOutlet UILabel *featuredType;
 
 @end

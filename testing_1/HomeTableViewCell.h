@@ -11,5 +11,7 @@
 @interface HomeTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *listName;
+@property (weak, nonatomic) IBOutlet UILabel *listType;
 
 @end

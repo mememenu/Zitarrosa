@@ -10,4 +10,6 @@
 
 @interface FeaturedCollectionViewController : UICollectionViewController
 
+@property (nonatomic) NSArray *featuredItems;
+
 @end

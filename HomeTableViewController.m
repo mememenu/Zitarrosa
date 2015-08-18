@@ -9,6 +9,8 @@
 #import "HomeTableViewController.h"
 #import "HomeTableViewCell.h"
 #import "SWRevealViewController.h"
+#import <AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface HomeTableViewController ()
 
@@ -23,11 +25,26 @@
     self.navigationBarButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    self.listItems = [[NSMutableArray alloc] init];
+    [self fetchHomePage];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) fetchHomePage {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/home_pages.json"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *genericListArray = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
+        NSArray *contributorListArray = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
+        [self.listItems addObjectsFromArray:genericListArray];
+        [self.listItems addObjectsFromArray:contributorListArray];
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // insert failure block here
+    }];
+    [operation start];
 }
 
 #pragma mark - Table view data source
@@ -37,15 +54,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.listItems.count;
 }
 
 
 - (HomeTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
+    
     cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li", 6 -indexPath.row]];
+    cell.listName.text = [listItem objectForKey:@"name"];
+    cell.listType.text = [listItem objectForKey:@"type"];
     
     return cell;
 }
