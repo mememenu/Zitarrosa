@@ -57,7 +57,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex: indexPath.row];
     NSString *image_url = [spotlightItem objectForKey:@"image_url"];
-//    image_url = [image_url stringByReplacingOccurrencesOfString:@"http" withString:@"https"];
+    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+    
     // Configure the cell
     [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
     cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
