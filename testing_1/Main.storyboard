@@ -152,11 +152,10 @@
         <scene sceneID="ESH-21-oQn">
             <objects>
                 <tableViewController storyboardIdentifier="HomeTableViewController" title="HomeTableViewController" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Oik-YT-E3O">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,8 +164,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="ewT-pR-aFG"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="qkb-xH-CDh"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ewT-pR-aFG"/>
+                                            <exclude reference="qkb-xH-CDh"/>
+                                        </mask>
+                                    </variation>
                                     <connections>
                                         <segue destination="tmM-kN-XiC" kind="embed" identifier="embedSpotlight" id="8Hu-MV-h20"/>
                                     </connections>
@@ -175,8 +181,18 @@
                                     <rect key="frame" x="0.0" y="210" width="375" height="200"/>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="Fso-BC-D6Z"/>
+                                        <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="VwC-Jo-u3R"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="vfs-eb-tmq"/>
+                                        <constraint firstAttribute="height" constant="200" id="wpC-eP-GjA"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Fso-BC-D6Z"/>
+                                            <exclude reference="VwC-Jo-u3R"/>
+                                            <exclude reference="vfs-eb-tmq"/>
+                                        </mask>
+                                    </variation>
                                     <connections>
                                         <segue destination="jfS-V1-uLK" kind="embed" identifier="embedFeatured" id="vdd-uI-Tny"/>
                                     </connections>
@@ -201,7 +217,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-cm-cio">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-cm-cio">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -240,7 +256,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="jDW-cm-cio" id="RLb-FE-mMb"/>
                                     <outlet property="listName" destination="eJ1-Gs-6GI" id="JDz-uh-hVM"/>
@@ -713,7 +728,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="EGQ-3F-wSy">
                             <size key="itemSize" width="375" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -728,7 +743,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKg-5w-Coi">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="XKg-5w-Coi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <animations/>
                                         </imageView>
@@ -792,7 +807,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="Cmv-sI-u7k">
                             <size key="itemSize" width="187" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -807,7 +822,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-nM-Jjf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featured_1" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-nM-Jjf">
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
                                             <animations/>
                                         </imageView>
@@ -865,15 +880,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="720" height="384"/>
+        <image name="featured_1" width="670" height="720"/>
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pIm-KL-JPd"/>
-        <segue reference="h4X-1B-Saf"/>
-        <segue reference="r91-PT-9Jp"/>
-        <segue reference="cdM-2D-3Gt"/>
-        <segue reference="seX-BY-9Br"/>
-        <segue reference="NDg-Fw-EtW"/>
+        <segue reference="FZV-Sl-zvK"/>
+        <segue reference="Apb-8D-TsU"/>
+        <segue reference="c7p-rV-xKq"/>
+        <segue reference="DhL-Ww-ZBY"/>
+        <segue reference="seT-Ew-P8p"/>
+        <segue reference="JjU-Z6-dng"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -39,7 +39,7 @@
     image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
     // Configure the cell
-    [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
+//    [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
     cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
     cell.spotlightType.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"type"];
     

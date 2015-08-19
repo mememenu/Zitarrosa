@@ -39,7 +39,7 @@
     NSString *image_url = [featuredItem objectForKey:@"logo"];
     image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
-    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+//    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
     cell.featuredName.text = [featuredItem objectForKey:@"name"];
     cell.featuredType.text = [featuredItem objectForKey:@"type"];
     
