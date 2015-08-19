@@ -46,5 +46,10 @@
     return cell;
 }
 
+#pragma mark <UICollectionViewDelegate>
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"featured cell %li selected", indexPath.row);
+}
 
 @end

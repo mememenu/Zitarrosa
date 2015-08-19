@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self loadHomePage];
     
     self.navigationBarButtonItem.target = self.revealViewController;
@@ -63,7 +62,7 @@
     [operation start];
 }
 
-#pragma mark - Table view data source
+#pragma mark - TableView Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -85,6 +84,14 @@
     
     return cell;
 }
+
+#pragma mark - TableView Delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"list tableview cell %li selected", indexPath.row);
+}
+
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedSpotlight"]) {
