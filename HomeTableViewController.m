@@ -88,7 +88,12 @@
 #pragma mark - TableView Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"list tableview cell %li selected", indexPath.row);
+    NSDictionary *list = [self.listItems objectAtIndex: indexPath.row];
+    
+    NSLog(@"list type is: %@, name is: %@, id is %@",
+          [list objectForKey:@"type"],
+          [list objectForKey:@"name"],
+          [list objectForKey:@"id"]);
 }
 
 #pragma mark - Navigation

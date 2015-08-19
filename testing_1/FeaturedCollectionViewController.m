@@ -49,7 +49,12 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"featured cell %li selected", indexPath.row);
+    NSDictionary *featuredItem = [self.featuredItems objectAtIndex:indexPath.row];
+    
+    NSLog(@"featured item type is: %@, name is: %@, id is %@",
+          [featuredItem objectForKey:@"type"],
+          [featuredItem objectForKey:@"name"],
+          [featuredItem objectForKey:@"id"]);
 }
 
 @end

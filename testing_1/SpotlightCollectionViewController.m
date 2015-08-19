@@ -49,7 +49,12 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"spotlight cell %li selected", indexPath.row);
+    NSDictionary *spotable = [[self.spotlightItems objectAtIndex: indexPath.row] objectForKey:@"spotable"];
+
+    NSLog(@"spotlight item type is: %@, name is: %@, spotable id is %@",
+          [spotable objectForKey:@"type"],
+          [spotable objectForKey:@"name"],
+          [spotable objectForKey:@"id"]);
 }
 
 @end
