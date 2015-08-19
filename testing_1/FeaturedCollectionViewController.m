@@ -17,29 +17,10 @@
 
 @implementation FeaturedCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fetchFeaturedItems];
-    
-
 }
 
-- (void) fetchFeaturedItems {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/home_pages.json"]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *featuredArray = [[[responseObject objectForKey:@"home_page"] objectForKey:@"featured_list"] objectForKey:@"places"];
-        self.featuredItems = featuredArray;
-        [self.collectionView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // insert failure block here
-    }];
-    [operation start];
-}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -53,7 +34,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (FeaturedCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    FeaturedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    FeaturedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *featuredItem = [self.featuredItems objectAtIndex: indexPath.row];
     NSString *image_url = [featuredItem objectForKey:@"logo"];

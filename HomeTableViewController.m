@@ -11,7 +11,7 @@
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
-
+ 
 @interface HomeTableViewController ()
 
 @end
@@ -21,29 +21,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.listItems = [[NSMutableArray alloc] init];
+    [self loadHomePage];
+    
     self.navigationBarButtonItem.target = self.revealViewController;
     self.navigationBarButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
-    self.listItems = [[NSMutableArray alloc] init];
-    [self fetchHomePage];
-    
 }
 
-- (void) fetchHomePage {
+- (void) loadHomePage {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/home_pages.json"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *genericListArray = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
-        NSArray *contributorListArray = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
-        [self.listItems addObjectsFromArray:genericListArray];
-        [self.listItems addObjectsFromArray:contributorListArray];
+        
+//        set class variable listItems equal to combination of generic_lists & contributor arrays
+        NSArray *genericLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
+        NSArray *contributorLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
+ 
+        [self.listItems addObjectsFromArray:genericLists];
+        [self.listItems addObjectsFromArray:contributorLists];
+        
+//        set spotlight and featured itemArrays equal to response 
+        self.spotlightCVC.spotlightItems = [[[responseObject objectForKey:@"home_page"] objectForKey:@"spotlight"] objectForKey:@"spotlight_items"];
+        self.featuredCVC.featuredItems = [[[responseObject objectForKey:@"home_page"] objectForKey:@"featured_list"] objectForKey:@"places"];
+        
+//        reload data on all views in homepage
+        [self.spotlightCVC.collectionView reloadData];
+        [self.featuredCVC.collectionView reloadData];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // insert failure block here
     }];
+    
     [operation start];
 }
 
@@ -68,6 +79,14 @@
     cell.listType.text = [listItem objectForKey:@"type"];
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"embedSpotlight"]) {
+        self.spotlightCVC = (SpotlightCollectionViewController *)segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"embedFeatured"]) {
+        self.featuredCVC = (FeaturedCollectionViewController *)segue.destinationViewController;
+    }
 }
 
 @end
