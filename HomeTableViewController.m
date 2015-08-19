@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.listItems = [[NSMutableArray alloc] init];
+    
     [self loadHomePage];
     
     self.navigationBarButtonItem.target = self.revealViewController;
@@ -35,6 +35,7 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.listItems = [[NSMutableArray alloc] init];
         
 //        set class variable listItems equal to combination of generic_lists & contributor arrays
         NSArray *genericLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
