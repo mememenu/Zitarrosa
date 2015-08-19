@@ -15,9 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *navigationBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
 
-@property (nonatomic) SpotlightCollectionViewController *spotlightCVC;
-@property (nonatomic) FeaturedCollectionViewController *featuredCVC;
-
 @property (nonatomic) NSMutableArray *listItems;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "FeaturedCollectionViewController.h"
 #import "FeaturedCollectionViewCell.h"
-#import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
 @interface FeaturedCollectionViewController ()

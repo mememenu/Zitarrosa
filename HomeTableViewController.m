@@ -14,6 +14,9 @@
  
 @interface HomeTableViewController ()
 
+@property (strong, nonatomic) SpotlightCollectionViewController *spotlightCVC;
+@property (strong, nonatomic) FeaturedCollectionViewController *featuredCVC;
+
 @end
 
 @implementation HomeTableViewController
@@ -21,12 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self loadHomePage];
     
     self.navigationBarButtonItem.target = self.revealViewController;
     self.navigationBarButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
 }
 
 - (void) loadHomePage {
@@ -35,6 +38,7 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
         self.listItems = [[NSMutableArray alloc] init];
         
 //        set class variable listItems equal to combination of generic_lists & contributor arrays
