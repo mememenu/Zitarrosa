@@ -8,8 +8,6 @@
 
 #import "SpotlightCollectionViewController.h"
 #import "SpotlightCollectionViewCell.h"
-#import "SpotlightItem.h"
-#import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
 @interface SpotlightCollectionViewController ()
@@ -18,27 +16,8 @@
 
 @implementation SpotlightCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fetchSpotlightItems];
-    
-}
-
-- (void) fetchSpotlightItems {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/home_pages.json"]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *spotlightArray = [[[responseObject objectForKey:@"home_page"] objectForKey:@"spotlight"] objectForKey:@"spotlight_items"];
-        self.spotlightItems = spotlightArray;
-        [self.collectionView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // insert failure block here
-    }];
-    [operation start];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -53,7 +32,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (SpotlightCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SpotlightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    SpotlightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex: indexPath.row];
     NSString *image_url = [spotlightItem objectForKey:@"image_url"];

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpotlightCollectionViewController.h"
+#import "FeaturedCollectionViewController.h"
 
 @interface HomeTableViewController : UITableViewController
 
@@ -14,6 +16,5 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
 
 @property (nonatomic) NSMutableArray *listItems;
-
 
 @end
