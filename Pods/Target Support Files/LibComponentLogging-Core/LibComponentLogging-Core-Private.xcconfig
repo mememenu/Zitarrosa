@@ -1,5 +1,0 @@
-#include "LibComponentLogging-Core.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/LibComponentLogging-Core" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FileMD5Hash" "${PODS_ROOT}/Headers/Public/ISO8601DateFormatter" "${PODS_ROOT}/Headers/Public/JSONKit" "${PODS_ROOT}/Headers/Public/LibComponentLogging-Core" "${PODS_ROOT}/Headers/Public/LibComponentLogging-NSLog" "${PODS_ROOT}/Headers/Public/NSData+Base64" "${PODS_ROOT}/Headers/Public/RestKit" "${PODS_ROOT}/Headers/Public/SOCKit" "${PODS_ROOT}/Headers/Public/cocoa-oauth" ${LIBCOMPONENTLOGGING_CORE_HEADER_SEARCH_PATHS}
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES

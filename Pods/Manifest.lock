@@ -20,61 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - cocoa-oauth (0.0.1):
-    - NSData+Base64 (~> 1.0)
-  - FileMD5Hash (2.0.0)
-  - ISO8601DateFormatter (0.7)
-  - JSONKit (1.5pre)
-  - LibComponentLogging-Core (1.3.3)
-  - LibComponentLogging-NSLog (1.1.1):
-    - LibComponentLogging-Core (>= 1.3.1)
-  - NSData+Base64 (1.0.0)
-  - RestKit (0.10.2):
-    - RestKit/JSON (= 0.10.2)
-  - RestKit/JSON (0.10.2):
-    - RestKit/Network
-    - RestKit/ObjectMapping/CoreData
-    - RestKit/ObjectMapping/JSON
-    - RestKit/UI
-  - RestKit/Network (0.10.2):
-    - cocoa-oauth
-    - FileMD5Hash
-    - LibComponentLogging-NSLog (>= 1.0.4)
-    - SOCKit
-  - RestKit/ObjectMapping/CoreData (0.10.2):
-    - ISO8601DateFormatter (>= 0.6)
-    - RestKit/Network
-  - RestKit/ObjectMapping/JSON (0.10.2):
-    - ISO8601DateFormatter (>= 0.6)
-    - JSONKit (>= 1.5pre)
-    - RestKit/Network
-  - RestKit/UI (0.10.2)
-  - SOCKit (1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - FileMD5Hash (from `git@github.com:Tomusm/FileMD5Hash.git`)
-  - RestKit
-
-EXTERNAL SOURCES:
-  FileMD5Hash:
-    :git: git@github.com:Tomusm/FileMD5Hash.git
-
-CHECKOUT OPTIONS:
-  FileMD5Hash:
-    :commit: cc8e232fbc201fc2efd8af40afc7ef2a378356f7
-    :git: git@github.com:Tomusm/FileMD5Hash.git
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  cocoa-oauth: 1200a2170276a62a975f2786d505dab6e2db1fa8
-  FileMD5Hash: 282dba6fc17ef3428fed6d61b2b4d7a971b26a34
-  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
-  JSONKit: bae313ce6a6c444f40489a6c0b023f399888871f
-  LibComponentLogging-Core: 769c6f596b96348911fe75f9825728213d334941
-  LibComponentLogging-NSLog: ae0ad111653e6c955e3f93b95386285fcdf94ab3
-  NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
-  RestKit: 7880203bca97309b359429940cba5c9df0b43bdd
-  SOCKit: c7376ac262bea9115b8f749358f762522a47d392
 
 COCOAPODS: 0.38.2
