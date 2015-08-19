@@ -8,7 +8,6 @@
 
 #import "SpotlightCollectionViewController.h"
 #import "SpotlightCollectionViewCell.h"
-#import "SpotlightItem.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface SpotlightCollectionViewController ()
