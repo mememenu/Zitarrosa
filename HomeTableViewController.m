@@ -21,9 +21,24 @@
 
 @implementation HomeTableViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    UIView *containerView = [self.view.subviews objectAtIndex:1];
+    
+    //    iPhone 4 - 5 - 6 - 6 Plus
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    if (screenHeight == 480){
+        [containerView setFrame:CGRectMake(0, 0, 320, 302)];
+    }else if (screenHeight == 568){
+        [containerView setFrame:CGRectMake(0, 0, 320, 358)];
+    }else if (screenHeight == 667){
+        [containerView setFrame:CGRectMake(0, 0, 375, 420)];
+    }else{
+        [containerView setFrame:CGRectMake(0, 0, 414, 463)];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self loadHomePage];
     
     self.navigationBarButtonItem.target = self.revealViewController;
@@ -63,7 +78,7 @@
     [operation start];
 }
 
-#pragma mark - Table view data source
+#pragma mark - TableView Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -79,12 +94,39 @@
     
     NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
     
-//    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li", 6 -indexPath.row]];
-    cell.listName.text = [listItem objectForKey:@"name"];
-    cell.listType.text = [listItem objectForKey:@"type"];
+    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li", 6 -indexPath.row]];
+//    cell.listName.text = [listItem objectForKey:@"name"];
+//    cell.listType.text = [listItem objectForKey:@"type"];
     
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    iPhone 4 - 5 - 6 - 6 Plus
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    if (screenHeight == 480){
+        return (screenHeight * 0.30);
+    }else if (screenHeight == 568){
+        return (screenHeight * 0.30);
+    }else if (screenHeight == 667){
+        return (screenHeight * 0.30);
+    }else{
+        return (screenHeight * 0.30);
+    }
+}
+
+#pragma mark - TableView Delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *list = [self.listItems objectAtIndex: indexPath.row];
+    
+    NSLog(@"list type is: %@, name is: %@, id is %@",
+          [list objectForKey:@"type"],
+          [list objectForKey:@"name"],
+          [list objectForKey:@"id"]);
+}
+
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedSpotlight"]) {
