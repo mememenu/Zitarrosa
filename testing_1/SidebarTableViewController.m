@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"Home", @"Around You", @"Feed", @"Lists", @"Places", @"Your List"];
+    menu = @[@"Home", @"Nearby", @"Feed", @"Lists", @"Places", @"Your List"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,7 @@
 
 @interface PlacesTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *placeNameLabel;
+
 @end

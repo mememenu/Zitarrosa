@@ -524,14 +524,14 @@
                                     <segue destination="cgG-hi-A6g" kind="custom" identifier="showHomePage" customClass="SWRevealViewControllerSegue" id="seX-BY-9Br"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Nearby" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CXh-bX-OdQ" id="G8l-CO-gJ1">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Around You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wnf-mJ-Dza">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nearby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wnf-mJ-Dza">
                                             <rect key="frame" x="15" y="0.0" width="345" height="79"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -663,30 +663,48 @@
         <!--Nearby-->
         <scene sceneID="LJI-XK-dTJ">
             <objects>
-                <tableViewController title="Nearby" id="TlO-d9-mpz" customClass="PlacesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vIi-Lk-8MS">
+                <tableViewController title="Nearby" id="TlO-d9-mpz" customClass="NearbyTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="vIi-Lk-8MS">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="9si-Yz-FHh">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="TlO-d9-mpz" id="Tbp-ae-iqc"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="iTe-BZ-cUq">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="iTe-BZ-cUq" customClass="PlacesTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="161"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTe-BZ-cUq" id="qdQ-HO-Wlj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wqa-zy-MaU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-Gt-cxk">
+                                            <rect key="frame" x="35" y="62" width="305" height="35"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="mgh-Gt-cxk" firstAttribute="top" secondItem="qdQ-HO-Wlj" secondAttribute="top" constant="62" id="CTl-q2-JUG"/>
+                                        <constraint firstItem="mgh-Gt-cxk" firstAttribute="leading" secondItem="qdQ-HO-Wlj" secondAttribute="leading" constant="35" id="KB0-3T-g6g"/>
+                                        <constraint firstAttribute="trailing" secondItem="mgh-Gt-cxk" secondAttribute="trailing" constant="35" id="blK-zn-DUX"/>
+                                        <constraint firstAttribute="trailing" secondItem="wqa-zy-MaU" secondAttribute="trailing" id="cew-eu-Iws"/>
+                                        <constraint firstAttribute="bottom" secondItem="wqa-zy-MaU" secondAttribute="bottom" id="h2W-HL-Iqo"/>
+                                        <constraint firstItem="wqa-zy-MaU" firstAttribute="top" secondItem="qdQ-HO-Wlj" secondAttribute="top" id="hFy-h4-FWU"/>
+                                        <constraint firstItem="wqa-zy-MaU" firstAttribute="leading" secondItem="qdQ-HO-Wlj" secondAttribute="leading" id="ise-cL-deK"/>
+                                        <constraint firstAttribute="bottom" secondItem="mgh-Gt-cxk" secondAttribute="bottom" constant="63" id="tuZ-rl-jtP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="wqa-zy-MaU" id="yiQ-Nf-B3n"/>
+                                    <outlet property="placeNameLabel" destination="mgh-Gt-cxk" id="ie3-5e-ciy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -694,7 +712,7 @@
                             <outlet property="delegate" destination="TlO-d9-mpz" id="zev-xw-Snl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Around You" id="elc-65-c3Z">
+                    <navigationItem key="navigationItem" title="Nearby" id="elc-65-c3Z">
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="uue-MI-acr"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
@@ -703,7 +721,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="barButtonItem" destination="uue-MI-acr" id="eN7-Uh-qMa"/>
-                        <outlet property="searchBar" destination="9si-Yz-FHh" id="x4V-ma-xN8"/>
                         <outlet property="searchDisplayController" destination="wXm-yo-Wgp" id="F6g-Xb-fSG"/>
                     </connections>
                 </tableViewController>
@@ -711,7 +728,6 @@
                 <searchDisplayController id="wXm-yo-Wgp">
                     <connections>
                         <outlet property="delegate" destination="TlO-d9-mpz" id="b93-uh-IR6"/>
-                        <outlet property="searchBar" destination="9si-Yz-FHh" id="sGy-Fn-wkA"/>
                         <outlet property="searchContentsController" destination="TlO-d9-mpz" id="1fW-bv-7BK"/>
                         <outlet property="searchResultsDataSource" destination="TlO-d9-mpz" id="f6O-i2-Phy"/>
                         <outlet property="searchResultsDelegate" destination="TlO-d9-mpz" id="dx3-4A-exe"/>
@@ -886,12 +902,12 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FZV-Sl-zvK"/>
-        <segue reference="Apb-8D-TsU"/>
-        <segue reference="c7p-rV-xKq"/>
-        <segue reference="DhL-Ww-ZBY"/>
-        <segue reference="seT-Ew-P8p"/>
-        <segue reference="JjU-Z6-dng"/>
+        <segue reference="cdM-2D-3Gt"/>
+        <segue reference="r91-PT-9Jp"/>
+        <segue reference="h4X-1B-Saf"/>
+        <segue reference="NDg-Fw-EtW"/>
+        <segue reference="pIm-KL-JPd"/>
+        <segue reference="seX-BY-9Br"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

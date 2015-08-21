@@ -11,5 +11,6 @@
 @interface NearbyTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+@property (nonatomic) NSArray *nearbyItems;
 
 @end

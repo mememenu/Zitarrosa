@@ -7,7 +7,10 @@
 //
 
 #import "NearbyTableViewController.h"
+#import "PlacesTableViewCell.h"
 #import "SWRevealViewController.h"
+#import <AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface NearbyTableViewController ()
 
@@ -19,17 +22,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadNearbyItems];
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -39,54 +37,44 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.nearbyItems count];
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+- (PlacesTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
+    NSString *image_url = [place objectForKey:@"logo"];
+    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
-    // Configure the cell...
-    
+    // Configure the cell
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+//    cell.placeNameLabel.text = [place objectForKey:@"name"];
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - Table View Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - API Calls
+
+- (void) loadNearbyItems {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=25.77699&location[]=-80.1887980&distance=5"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.nearbyItems = [responseObject objectForKey:@"places"];
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // insert failure block here
+    }];
+    
+    [operation start];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -94,6 +82,6 @@ static NSString * const reuseIdentifier = @"Cell";
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
