@@ -53,6 +53,11 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    return screenHeight * 0.24;
+}
+
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
