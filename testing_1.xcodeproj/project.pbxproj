@@ -10,6 +10,8 @@
 		BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */; };
 		BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */; };
 		BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */; };
+		BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */; };
+		BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */; };
 		BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2175951B828D2B00EA7165 /* HomeTableViewCell.m */; };
 		BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2175981B828D4200EA7165 /* HomeTableViewController.m */; };
 		BE2CF41B1B7A73B10071A70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF41A1B7A73B10071A70D /* main.m */; };
@@ -24,7 +26,6 @@
 		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
 		BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD8BE81B7D10720093A047 /* ListsViewController.m */; };
 		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
-		BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */; };
 		BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */; };
 		F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,10 @@
 		BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewController.m; sourceTree = "<group>"; };
 		BE11FBD61B82ADBC00892E33 /* FeaturedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedCollectionViewCell.h; sourceTree = "<group>"; };
 		BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewCell.m; sourceTree = "<group>"; };
+		BE19FD6E1B87C110008DBA0A /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		BE19FD711B87C8B0008DBA0A /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		BE2175941B828D2B00EA7165 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		BE2175951B828D2B00EA7165 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		BE2175971B828D4200EA7165 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = ../HomeTableViewController.h; sourceTree = "<group>"; };
@@ -64,8 +69,6 @@
 		BEDD8BE81B7D10720093A047 /* ListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsViewController.m; sourceTree = "<group>"; };
 		BEE3A2211B7D001D0018CE10 /* NearbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyTableViewController.h; sourceTree = "<group>"; };
 		BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewController.m; sourceTree = "<group>"; };
-		BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D8E7E9E3E8A35A23A1A4AE77 /* Pods-testing_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +150,8 @@
 				BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */,
 				BE11FBD61B82ADBC00892E33 /* FeaturedCollectionViewCell.h */,
 				BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */,
+				BE19FD711B87C8B0008DBA0A /* FeedTableViewCell.h */,
+				BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -189,8 +194,8 @@
 		BE5D0F1B1B7EAEA3005AD297 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */,
-				BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */,
+				BE19FD6E1B87C110008DBA0A /* FeedTableViewController.h */,
+				BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -341,17 +346,18 @@
 				BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
 				BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */,
+				BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */,
 				BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */,
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
 				BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
 				BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */,
-				BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,
 				BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */,
 				BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */,
+				BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
