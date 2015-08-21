@@ -40,19 +40,14 @@
 - (FeedTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    
     NSDictionary *feedItem = [self.feedItems objectAtIndex:indexPath.row];
-    
-    
     NSString *logoImageURL = [feedItem objectForKey:@"restaurant_avatar"];
     logoImageURL = [logoImageURL stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
-    
     NSString *dishImageURL = [feedItem objectForKey:@"cloud_front"];
-    dishImageURL = [dishImageURL stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
     
     // Configure the cell
     [cell.logoImageView setImageWithURL:[NSURL URLWithString:logoImageURL]];
-    [cell.dishImageView setImageWithURL:[NSURL URLWithString:dishImageURL]];
+    [cell.dishImageView setImageWithURL:[NSURL URLWithString:dishImageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     
     cell.placeName.text = [feedItem objectForKey:@"restaurant_name"];
     cell.zoneLabel.text = [feedItem objectForKey:@"restaurant_zone"];
@@ -64,7 +59,7 @@
 
 
 - (void) loadFeed {
-    NSURL *url = [NSURL URLWithString:@"https://mememenu-development.herokuapp.com/ios/paginated_dish_feed?page=1"];
+    NSURL *url = [NSURL URLWithString:@"https://mememenu-production.herokuapp.com/ios/paginated_dish_feed?page=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];

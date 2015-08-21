@@ -89,7 +89,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - API Calls
 
 - (void) loadNearbyItems {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=5",_latitude, _longitude]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=3",_latitude, _longitude]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
