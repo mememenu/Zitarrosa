@@ -61,7 +61,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
+    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
 }
 
 #pragma mark - Core Location Delegate
