@@ -11,5 +11,10 @@
 @interface FeedTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
-@property (nonatomic) NSArray *feedItems;
+@property (nonatomic) NSMutableArray *feedItems;
+
+@property (nonatomic) NSInteger currentPage;
+@property (nonatomic) NSInteger totalPages;
+
+
 @end

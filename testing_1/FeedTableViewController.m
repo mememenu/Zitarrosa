@@ -12,6 +12,7 @@
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
+const int KLoadingCellTag = 12345;
 @interface FeedTableViewController ()
 
 @end
@@ -20,10 +21,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.feedItems = [[NSMutableArray alloc] init];
+    self.currentPage = 0;
+    self.totalPages = 10;
+    
     [self loadFeed];
+    
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+}
+
+- (void) loadFeed {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-staging.herokuapp.com/ios/paginated_dish_feed?page=%ld", (long)_currentPage]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        for (id feedItem in responseObject) {
+            if (![self.feedItems containsObject:feedItem]) {
+                [self.feedItems addObject:feedItem];
+            }
+        }
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // insert failure block here
+    }];
+    
+    [operation start];
 }
 
 #pragma mark - Table view data source
@@ -33,12 +61,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (_currentPage == 0) return 1;
+    if (_currentPage < _totalPages) return self.feedItems.count + 1;
     return self.feedItems.count;
 }
 
-
-- (FeedTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+-(FeedTableViewCell *)dishCellForIndexPath:(NSIndexPath *)indexPath {
+    FeedTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *feedItem = [self.feedItems objectAtIndex:indexPath.row];
     NSString *logoImageURL = [feedItem objectForKey:@"restaurant_avatar"];
@@ -57,24 +87,28 @@
     return cell;
 }
 
+#pragma mark - Infinite Scrolling Methods
 
-- (void) loadFeed {
-    NSURL *url = [NSURL URLWithString:@"https://mememenu-production.herokuapp.com/ios/paginated_dish_feed?page=1"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.feedItems = responseObject;
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // insert failure block here
-    }];
-    
-    [operation start];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row < self.feedItems.count) {
+        return [self dishCellForIndexPath:indexPath];
+    } else {
+        return [self loadingCell];
+    }
 }
 
+-(UITableViewCell *)loadingCell {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.tag = KLoadingCellTag;
+    return cell;
+}
 
-
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (cell.tag == KLoadingCellTag) {
+        _currentPage++;
+        [self loadFeed];
+    }
+}
 /*
 #pragma mark - Navigation
 
