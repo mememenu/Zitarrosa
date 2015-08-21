@@ -20,13 +20,13 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadNearbyItems];
+    [self locateUser];
+     
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
-    
-    
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
@@ -54,14 +54,37 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark - Table View Delegate
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
+//    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
+}
+
+#pragma mark - Core Location Delegate
+
+-(void)locateUser {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager requestWhenInUseAuthorization];
+    
+    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
+        [self.locationManager startUpdatingLocation];
+        self.location = [[CLLocation alloc] init];
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    self.location = locations.lastObject;
+    [self.locationManager stopUpdatingLocation];
+    self.latitude = [NSString stringWithFormat:@"%f", self.location.coordinate.latitude];
+    self.longitude = [NSString stringWithFormat:@"%f", self.location.coordinate.longitude];
+    [self loadNearbyItems];
 }
 
 #pragma mark - API Calls
 
 - (void) loadNearbyItems {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=25.77699&location[]=-80.1887980&distance=5"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=5",_latitude, _longitude]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];

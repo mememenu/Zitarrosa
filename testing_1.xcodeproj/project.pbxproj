@@ -25,6 +25,7 @@
 		BEDD8BE91B7D10720093A047 /* ListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD8BE81B7D10720093A047 /* ListsViewController.m */; };
 		BEE3A2231B7D001D0018CE10 /* NearbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */; };
 		BEE3A2281B7D02AB0018CE10 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */; };
+		BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */; };
 		F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		BEE3A2221B7D001D0018CE10 /* NearbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyTableViewController.m; sourceTree = "<group>"; };
 		BEE3A2261B7D02AB0018CE10 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		BEE3A2271B7D02AB0018CE10 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D8E7E9E3E8A35A23A1A4AE77 /* Pods-testing_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */,
 				F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,7 +115,6 @@
 			children = (
 				BE2CF41C1B7A73B10071A70D /* AppDelegate.h */,
 				BE2CF41D1B7A73B10071A70D /* AppDelegate.m */,
-				BE5D0F181B7EAE77005AD297 /* Models */,
 				BE5D0F101B7EAC54005AD297 /* Controllers */,
 				BE5D0F0F1B7EAC3E005AD297 /* Views */,
 				BE4A90AA1B7EB62F00C904B1 /* Main.storyboard */,
@@ -160,13 +162,6 @@
 				BE5D0F1D1B7EAEC4005AD297 /* Lists */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		BE5D0F181B7EAE77005AD297 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		BE5D0F191B7EAE8B005AD297 /* Home */ = {
@@ -230,6 +225,7 @@
 		DB2C3980A30D614C7D2B0AFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */,
 				5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */,
 			);
 			name = Frameworks;
