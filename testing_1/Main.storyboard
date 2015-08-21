@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
@@ -331,38 +332,53 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="549"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZ5-5A-gE6">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZ5-5A-gE6">
                                             <rect key="frame" x="8" y="10" width="50" height="50"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="sHK-LJ-exj"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-em-nbg">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-em-nbg">
                                             <rect key="frame" x="66" y="10" width="301" height="28"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="nTi-AI-KTn"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place Zone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXv-pL-FgU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Zone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXv-pL-FgU">
                                             <rect key="frame" x="66" y="42" width="301" height="18"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="zn1-6z-n9Q"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-cJ-qq0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-cJ-qq0">
                                             <rect key="frame" x="0.0" y="68" width="375" height="375"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ivx-cJ-qq0" secondAttribute="height" multiplier="1:1" id="tx5-DR-IJs"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faC-7H-XkQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faC-7H-XkQ">
                                             <rect key="frame" x="8" y="451" width="359" height="20"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJe-ED-c13">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJe-ED-c13">
                                             <rect key="frame" x="8" y="479" width="359" height="62"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="62" id="Irq-v1-2YQ"/>
+                                            </constraints>
                                             <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </string>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -370,6 +386,27 @@
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="TDu-em-nbg" firstAttribute="leading" secondItem="PZ5-5A-gE6" secondAttribute="trailing" constant="8" symbolic="YES" id="0pz-9q-aaS"/>
+                                        <constraint firstItem="faC-7H-XkQ" firstAttribute="leading" secondItem="WJe-ED-c13" secondAttribute="leading" id="1Uk-oA-0sx"/>
+                                        <constraint firstItem="WJe-ED-c13" firstAttribute="leading" secondItem="B5N-gJ-bmY" secondAttribute="leadingMargin" id="1de-8w-kaD"/>
+                                        <constraint firstItem="WJe-ED-c13" firstAttribute="trailing" secondItem="faC-7H-XkQ" secondAttribute="trailing" id="2Bq-Dj-s8c"/>
+                                        <constraint firstItem="KXv-pL-FgU" firstAttribute="trailing" secondItem="faC-7H-XkQ" secondAttribute="trailing" id="Dhd-W4-ic4"/>
+                                        <constraint firstItem="Ivx-cJ-qq0" firstAttribute="leading" secondItem="B5N-gJ-bmY" secondAttribute="leading" id="Ey6-LD-ATP"/>
+                                        <constraint firstItem="WJe-ED-c13" firstAttribute="bottom" secondItem="B5N-gJ-bmY" secondAttribute="bottomMargin" id="PlF-0K-sOU"/>
+                                        <constraint firstItem="TDu-em-nbg" firstAttribute="leading" secondItem="KXv-pL-FgU" secondAttribute="leading" id="ZWB-7s-s4Q"/>
+                                        <constraint firstItem="faC-7H-XkQ" firstAttribute="centerX" secondItem="Ivx-cJ-qq0" secondAttribute="centerX" id="eIB-Lt-tpF"/>
+                                        <constraint firstItem="PZ5-5A-gE6" firstAttribute="top" secondItem="TDu-em-nbg" secondAttribute="top" id="ego-ZE-zVR"/>
+                                        <constraint firstItem="Ivx-cJ-qq0" firstAttribute="top" secondItem="PZ5-5A-gE6" secondAttribute="bottom" constant="8" symbolic="YES" id="fjd-D1-0qq"/>
+                                        <constraint firstItem="PZ5-5A-gE6" firstAttribute="top" secondItem="B5N-gJ-bmY" secondAttribute="topMargin" constant="2" id="gqz-se-EO1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ivx-cJ-qq0" secondAttribute="trailing" id="hnE-EV-zRx"/>
+                                        <constraint firstItem="faC-7H-XkQ" firstAttribute="leading" secondItem="PZ5-5A-gE6" secondAttribute="leading" id="itl-xv-MJR"/>
+                                        <constraint firstItem="WJe-ED-c13" firstAttribute="top" secondItem="faC-7H-XkQ" secondAttribute="bottom" constant="8" symbolic="YES" id="kGY-5V-7MI"/>
+                                        <constraint firstItem="KXv-pL-FgU" firstAttribute="top" secondItem="TDu-em-nbg" secondAttribute="bottom" constant="4" id="mRs-jx-yDv"/>
+                                        <constraint firstItem="faC-7H-XkQ" firstAttribute="top" secondItem="Ivx-cJ-qq0" secondAttribute="bottom" constant="8" symbolic="YES" id="oVR-Oh-ejG"/>
+                                        <constraint firstItem="Ivx-cJ-qq0" firstAttribute="top" secondItem="KXv-pL-FgU" secondAttribute="bottom" constant="8" symbolic="YES" id="r7s-Ac-Ce2"/>
+                                        <constraint firstItem="KXv-pL-FgU" firstAttribute="trailing" secondItem="TDu-em-nbg" secondAttribute="trailing" id="zBn-nK-AcQ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>

@@ -67,6 +67,11 @@ const int KLoadingCellTag = 12345;
     return self.feedItems.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    return screenHeight * 0.825;
+}
+
 -(FeedTableViewCell *)dishCellForIndexPath:(NSIndexPath *)indexPath {
     FeedTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
