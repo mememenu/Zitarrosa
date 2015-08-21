@@ -34,7 +34,7 @@ const int KLoadingCellTag = 12345;
 }
 
 - (void) loadFeed {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-staging.herokuapp.com/ios/paginated_dish_feed?page=%ld", (long)_currentPage]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-production.herokuapp.com/ios/paginated_dish_feed?page=%ld", (long)_currentPage]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
