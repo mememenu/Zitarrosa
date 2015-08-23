@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWRevealViewController.h"
 
-@interface SidebarTableViewController : UITableViewController
+@interface SidebarTableViewController : UITableViewController <SWRevealViewControllerDelegate>
 
 @end
