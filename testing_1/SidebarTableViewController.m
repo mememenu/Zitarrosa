@@ -17,21 +17,29 @@
     NSArray *menu;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+-(void)viewDidAppear:(BOOL)animated {
+    if ([self.tableView indexPathForSelectedRow] == NULL) {
+        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:NO scrollPosition:0];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.revealViewController.delegate = self;
-    menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List"];
     
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
+    self.revealViewController.delegate = self;
     [self setClearsSelectionOnViewWillAppear:NO];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
+    menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List"];
 }
 
-#pragma mark - Reveal View Controller Delegate
 
+#pragma mark - Status Bar Style
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+
+#pragma mark - Reveal View Controller Delegate
 -(void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
     if (revealController.frontViewPosition == 4) {
         UIView *lockingView = [[UIView alloc] initWithFrame:revealController.frontViewController.view.frame];
@@ -44,8 +52,8 @@
         [[revealController.frontViewController.view viewWithTag:1000] removeFromSuperview];
 }
 
-#pragma mark - Table view data source
 
+#pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -63,7 +71,6 @@
     
 //    Set selected cell attributes
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-    
     UIView *selectedView = [[UIView alloc] init];
     selectedView.backgroundColor = [UIColor clearColor];
     cell.selectedBackgroundView = selectedView;
@@ -71,8 +78,8 @@
     return cell;
 }
 
-#pragma mark - Navigation
 
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
