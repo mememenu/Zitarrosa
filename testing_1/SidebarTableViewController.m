@@ -61,12 +61,13 @@
     
     cell.backgroundColor = [UIColor clearColor];
     
+//    Set selected cell attributes
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-    cell.textLabel.highlightedTextColor = [UIColor greenColor];
+    
     UIView *selectedView = [[UIView alloc] init];
     selectedView.backgroundColor = [UIColor clearColor];
     cell.selectedBackgroundView = selectedView;
-    
+    cell.textLabel.highlightedTextColor = [UIColor greenColor];
     return cell;
 }
 
