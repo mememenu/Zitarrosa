@@ -93,7 +93,7 @@
     UIView *selectedView = [[UIView alloc] init];
     selectedView.backgroundColor = [UIColor clearColor];
     cell.selectedBackgroundView = selectedView;
-    cell.textLabel.highlightedTextColor = [UIColor greenColor];
+    cell.textLabel.highlightedTextColor = [UIColor darkGrayColor];
     return cell;
 }
 
