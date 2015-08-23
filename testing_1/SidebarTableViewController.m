@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.revealViewController.delegate = self;
-    menu = @[@"Home", @"Around You", @"Feed", @"Lists", @"Your List"];
+    menu = @[@"Home", @"Around You", @"Feed", @"Your List"];
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
 }

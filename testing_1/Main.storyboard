@@ -147,7 +147,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-324.5" y="1441.5"/>
+            <point key="canvasLocation" x="-870.5" y="1463.5"/>
         </scene>
         <!--HomeTableViewController-->
         <scene sceneID="ESH-21-oQn">
@@ -304,7 +304,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="TlO-d9-mpz" kind="show" identifier="showNearby" id="FZV-Sl-zvK"/>
-                        <segue destination="a1Q-Gz-gg5" kind="show" identifier="showLists" id="c7p-rV-xKq"/>
                         <segue destination="JMv-LY-6gV" kind="show" identifier="showYourList" id="JjU-Z6-dng"/>
                         <segue destination="cgG-hi-A6g" kind="relationship" relationship="rootViewController" id="Apb-8D-TsU"/>
                         <segue destination="laE-zZ-6hU" kind="show" identifier="showFeed" id="TbC-IR-3mX"/>
@@ -439,44 +438,6 @@
             </objects>
             <point key="canvasLocation" x="-1322.5" y="1463.5"/>
         </scene>
-        <!--Lists-->
-        <scene sceneID="oPb-9T-Lhg">
-            <objects>
-                <viewController title="Lists" id="a1Q-Gz-gg5" customClass="ListsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tCj-5Z-BmG"/>
-                        <viewControllerLayoutGuide type="bottom" id="iKq-3A-iFE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cgh-ds-g40">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjo-qU-Qxk">
-                                <rect key="frame" x="166" y="291" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Lists" id="DXV-Jq-Ys9">
-                        <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="mnt-LB-rIF"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="barButtonItem" destination="mnt-LB-rIF" id="egd-sB-Fkn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rwF-uo-2re" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-823.5" y="1441.5"/>
-        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="YPO-ir-1Se">
             <objects>
@@ -565,7 +526,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Rt7-9k-yhq">
-                            <rect key="frame" x="0.0" y="448" width="375" height="110"/>
+                            <rect key="frame" x="0.0" y="398" width="375" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esr-Y8-l15">
@@ -656,14 +617,14 @@
                                     <segue destination="laE-zZ-6hU" kind="custom" customClass="SWRevealViewControllerSegue" id="7Uy-zQ-MnJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Lists" textLabel="8Yh-Lx-uDa" style="IBUITableViewCellStyleDefault" id="gsR-Qv-eBM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Your List" textLabel="8Yh-Lx-uDa" style="IBUITableViewCellStyleDefault" id="gsR-Qv-eBM">
                                 <rect key="frame" x="0.0" y="348" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsR-Qv-eBM" id="fru-Ph-6Lf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Lists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Yh-Lx-uDa">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Yh-Lx-uDa">
                                             <rect key="frame" x="15" y="0.0" width="345" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -676,30 +637,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="a1Q-Gz-gg5" kind="custom" customClass="SWRevealViewControllerSegue" id="NDg-Fw-EtW"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Your List" textLabel="eXb-yX-fAj" style="IBUITableViewCellStyleDefault" id="zLz-aw-Feo">
-                                <rect key="frame" x="0.0" y="398" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zLz-aw-Feo" id="vrf-oL-mVi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Your List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eXb-yX-fAj">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <segue destination="JMv-LY-6gV" kind="show" id="pzX-5r-X62"/>
+                                    <segue destination="JMv-LY-6gV" kind="custom" customClass="SWRevealViewControllerSegue" id="zkd-GS-kbe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -958,9 +896,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="seX-BY-9Br"/>
-        <segue reference="NDg-Fw-EtW"/>
-        <segue reference="pzX-5r-X62"/>
         <segue reference="7Uy-zQ-MnJ"/>
+        <segue reference="zkd-GS-kbe"/>
         <segue reference="h4X-1B-Saf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
