@@ -17,25 +17,30 @@
     NSArray *menu;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.revealViewController.delegate = self;
     menu = @[@"Home", @"Nearby", @"Feed", @"Lists", @"Places", @"Your List"];
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+#pragma mark - Reveal View Controller Delegate
+
+-(void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
+    if (revealController.frontViewPosition == 4) {
+        UIView *lockingView = [[UIView alloc] initWithFrame:revealController.frontViewController.view.frame];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:revealController action:@selector(revealToggle:)];
+        [lockingView addGestureRecognizer:tap];
+        [lockingView setTag:1000];
+        [revealController.frontViewController.view addSubview:lockingView];
+    }
+    else
+        [[revealController.frontViewController.view viewWithTag:1000] removeFromSuperview];
 }
 
 #pragma mark - Table view data source
