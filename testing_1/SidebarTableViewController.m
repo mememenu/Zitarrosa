@@ -27,6 +27,7 @@
     menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List"];
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
+    [self setClearsSelectionOnViewWillAppear:NO];
 }
 
 #pragma mark - Reveal View Controller Delegate
@@ -57,7 +58,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
     cell.backgroundColor = [UIColor clearColor];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    cell.textLabel.highlightedTextColor = [UIColor greenColor];
+    UIView *selectedView = [[UIView alloc] init];
+    selectedView.backgroundColor = [UIColor clearColor];
+    cell.selectedBackgroundView = selectedView;
+    
     return cell;
 }
 
