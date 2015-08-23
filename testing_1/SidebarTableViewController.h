@@ -11,4 +11,9 @@
 
 @interface SidebarTableViewController : UITableViewController <SWRevealViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
+
 @end
+

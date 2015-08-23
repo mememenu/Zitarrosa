@@ -25,21 +25,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setBackgroundImage];
+    [self setFooterHeight];
     
     self.revealViewController.delegate = self;
     [self setClearsSelectionOnViewWillAppear:NO];
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sidebar-background"]];
     menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List"];
+    
 }
 
+-(void)setBackgroundImage {
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sidebar-background.png"]];
+    [tempImageView setFrame:self.tableView.frame];
+    tempImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.tableView.backgroundView = tempImageView;
+}
+
+-(void)setFooterHeight{
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    self.tableView.tableHeaderView = self.headerView;
+    self.tableView.tableFooterView = self.footerView;
+    [self.tableView.tableFooterView setFrame: CGRectMake(0, 180, screenWidth, screenHeight * 0.24)];
+    [self.tableView.tableHeaderView setFrame: CGRectMake(0, 0, screenWidth, screenHeight * 0.27)];
+}
 
 #pragma mark - Status Bar Style
+
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
 
 #pragma mark - Reveal View Controller Delegate
+
 -(void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
     if (revealController.frontViewPosition == 4) {
         UIView *lockingView = [[UIView alloc] initWithFrame:revealController.frontViewController.view.frame];
@@ -54,6 +74,7 @@
 
 
 #pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -78,8 +99,14 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    return screenHeight * 0.07;
+}
+
 
 #pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
