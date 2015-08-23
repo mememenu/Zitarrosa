@@ -307,6 +307,7 @@
                         <segue destination="JMv-LY-6gV" kind="show" identifier="showYourList" id="JjU-Z6-dng"/>
                         <segue destination="cgG-hi-A6g" kind="relationship" relationship="rootViewController" id="Apb-8D-TsU"/>
                         <segue destination="laE-zZ-6hU" kind="show" identifier="showFeed" id="TbC-IR-3mX"/>
+                        <segue destination="L7d-7c-jwi" kind="show" identifier="showSearch" id="7Mr-bm-kzi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lt-to-qQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -526,7 +527,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Rt7-9k-yhq">
-                            <rect key="frame" x="0.0" y="398" width="375" height="110"/>
+                            <rect key="frame" x="0.0" y="448" width="375" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esr-Y8-l15">
@@ -548,14 +549,37 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Home" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Search" textLabel="QpT-7M-xMg" style="IBUITableViewCellStyleDefault" id="hGR-tE-ovb">
                                 <rect key="frame" x="0.0" y="198" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGR-tE-ovb" id="o7M-gz-j8K">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QpT-7M-xMg">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="L7d-7c-jwi" kind="custom" customClass="SWRevealViewControllerSegue" id="Pgf-7g-hAr"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Browse" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7">
+                                <rect key="frame" x="0.0" y="248" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2jj-yd-Rm7" id="mLv-fA-AAl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hvd-AC-Xwh">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Browse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hvd-AC-Xwh">
                                             <rect key="frame" x="15" y="0.0" width="345" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -572,7 +596,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
-                                <rect key="frame" x="0.0" y="248" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="298" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CXh-bX-OdQ" id="G8l-CO-gJ1">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -595,7 +619,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Feed" textLabel="wGg-2c-P7B" style="IBUITableViewCellStyleDefault" id="mL3-7z-ze8">
-                                <rect key="frame" x="0.0" y="298" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="348" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mL3-7z-ze8" id="bwd-hX-Y8F">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -618,7 +642,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Your List" textLabel="8Yh-Lx-uDa" style="IBUITableViewCellStyleDefault" id="gsR-Qv-eBM">
-                                <rect key="frame" x="0.0" y="348" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="398" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsR-Qv-eBM" id="fru-Ph-6Lf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -887,6 +911,87 @@
             </objects>
             <point key="canvasLocation" x="-629.5" y="-660"/>
         </scene>
+        <!--Search -->
+        <scene sceneID="XXt-7W-yqb">
+            <objects>
+                <viewController title="Search " id="L7d-7c-jwi" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pE8-li-M4N"/>
+                        <viewControllerLayoutGuide type="bottom" id="OTj-yX-ymh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6ec-dU-PwO">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eb-nM-wbM">
+                                <rect key="frame" x="67" y="202" width="240" height="199"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending Topics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-Gt-I6q">
+                                        <rect key="frame" x="45" y="18" width="150" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-PT-EjG">
+                                        <rect key="frame" x="45" y="61" width="150" height="20"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Mignonette">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-oc-mW8">
+                                        <rect key="frame" x="45" y="117" width="150" height="20"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Brunch">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="326-17-nEd">
+                                        <rect key="frame" x="45" y="89" width="150" height="20"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Brickell">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-F5-qUL">
+                                        <rect key="frame" x="45" y="145" width="150" height="20"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Mimosas">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Places, Zones, Cuisines" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-Ys-UcM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.97088068179999998" green="0.97088068179999998" blue="0.97088068179999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Search" id="n7Y-8C-jpx">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bxe-Kn-DMz"/>
+                        <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="5Uo-XR-Iop"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="navigationBarButtonItem" destination="5Uo-XR-Iop" id="BhP-6b-dri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiF-U8-0oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.5" y="1463.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="720" height="384"/>
@@ -895,10 +1000,11 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="h4X-1B-Saf"/>
         <segue reference="seX-BY-9Br"/>
+        <segue reference="Pgf-7g-hAr"/>
         <segue reference="7Uy-zQ-MnJ"/>
         <segue reference="zkd-GS-kbe"/>
-        <segue reference="h4X-1B-Saf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
