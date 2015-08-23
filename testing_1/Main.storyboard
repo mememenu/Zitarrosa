@@ -586,7 +586,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="buy-mF-l9D">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -627,7 +626,6 @@
                                 </label>
                             </subviews>
                             <animations/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="lHn-Gj-wX2" firstAttribute="leading" secondItem="buy-mF-l9D" secondAttribute="leading" constant="20" id="2ca-jT-h1b"/>
                                 <constraint firstItem="QYU-hK-SQu" firstAttribute="top" secondItem="lHn-Gj-wX2" secondAttribute="bottom" id="CAU-GZ-903"/>
@@ -656,7 +654,6 @@
                                 </label>
                             </subviews>
                             <animations/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="esr-Y8-l15" secondAttribute="bottom" constant="8" id="lM3-0w-w0q"/>
                                 <constraint firstItem="esr-Y8-l15" firstAttribute="leading" secondItem="Rt7-9k-yhq" secondAttribute="leading" constant="20" id="vta-GX-ERn"/>
@@ -682,7 +679,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="cgG-hi-A6g" kind="custom" identifier="showHomePage" customClass="SWRevealViewControllerSegue" id="seX-BY-9Br"/>
                                 </connections>
@@ -706,7 +702,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="TlO-d9-mpz" kind="custom" customClass="SWRevealViewControllerSegue" id="h4X-1B-Saf"/>
                                 </connections>
@@ -730,7 +725,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="laE-zZ-6hU" kind="custom" customClass="SWRevealViewControllerSegue" id="7Uy-zQ-MnJ"/>
                                 </connections>
@@ -754,7 +748,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="a1Q-Gz-gg5" kind="custom" customClass="SWRevealViewControllerSegue" id="NDg-Fw-EtW"/>
                                 </connections>
@@ -778,7 +771,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="AgE-iL-K0r" kind="custom" customClass="SWRevealViewControllerSegue" id="r91-PT-9Jp"/>
                                 </connections>
@@ -802,7 +794,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="JMv-LY-6gV" kind="custom" customClass="SWRevealViewControllerSegue" id="cdM-2D-3Gt"/>
                                 </connections>
@@ -813,8 +804,6 @@
                             <outlet property="delegate" destination="0Xs-vg-ggb" id="bwj-oX-Nwb"/>
                         </connections>
                     </tableView>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqF-oT-ulM" userLabel="First Responder" sceneMemberID="firstResponder"/>
