@@ -486,15 +486,15 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10407034_10152794024739033_5504058733825816286_n" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-fJ-JYB">
-                                    <rect key="frame" x="20" y="30" width="54" height="54"/>
+                                    <rect key="frame" x="20" y="30" width="58" height="58"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="54" id="S5V-Rh-XEg"/>
-                                        <constraint firstAttribute="width" constant="54" id="aJ8-vz-yrD"/>
+                                        <constraint firstAttribute="height" constant="58" id="S5V-Rh-XEg"/>
+                                        <constraint firstAttribute="width" constant="58" id="aJ8-vz-yrD"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="27"/>
+                                            <integer key="value" value="29"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
@@ -529,45 +529,8 @@
                                 <constraint firstItem="Pf8-fJ-JYB" firstAttribute="leading" secondItem="buy-mF-l9D" secondAttribute="leading" constant="20" id="YG4-P8-p7R"/>
                                 <constraint firstItem="QYU-hK-SQu" firstAttribute="leading" secondItem="buy-mF-l9D" secondAttribute="leading" constant="20" id="Yxp-h5-BKM"/>
                                 <constraint firstItem="Pf8-fJ-JYB" firstAttribute="top" secondItem="buy-mF-l9D" secondAttribute="top" constant="30" id="dkm-mS-LKu"/>
-                                <constraint firstItem="lHn-Gj-wX2" firstAttribute="top" secondItem="Pf8-fJ-JYB" secondAttribute="bottom" constant="6" id="uRR-Or-Owg"/>
+                                <constraint firstItem="lHn-Gj-wX2" firstAttribute="top" secondItem="Pf8-fJ-JYB" secondAttribute="bottom" constant="2" id="uRR-Or-Owg"/>
                             </constraints>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="Rt7-9k-yhq">
-                            <rect key="frame" x="0.0" y="443" width="375" height="160"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x27-wb-BNW">
-                                    <rect key="frame" x="20" y="134" width="113" height="25"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="113" id="EZH-v9-fUg"/>
-                                        <constraint firstAttribute="height" constant="25" id="sMF-Xu-6Rs"/>
-                                        <constraint firstAttribute="width" constant="113" id="uET-ZT-MGP"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                    <state key="normal" title="Settings">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="uET-ZT-MGP"/>
-                                        </mask>
-                                    </variation>
-                                </button>
-                            </subviews>
-                            <animations/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="x27-wb-BNW" secondAttribute="bottom" constant="1" id="JDO-j0-OBR"/>
-                                <constraint firstItem="x27-wb-BNW" firstAttribute="leading" secondItem="Rt7-9k-yhq" secondAttribute="leading" constant="20" id="Ja6-pY-Wq6"/>
-                                <constraint firstAttribute="bottom" secondItem="x27-wb-BNW" secondAttribute="bottom" constant="1" id="Ti7-7V-dhB"/>
-                                <constraint firstAttribute="trailing" secondItem="x27-wb-BNW" secondAttribute="trailing" constant="242" id="yrU-Vn-XZH"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="Ti7-7V-dhB"/>
-                                    <exclude reference="yrU-Vn-XZH"/>
-                                </mask>
-                            </variation>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Search" textLabel="QpT-7M-xMg" style="IBUITableViewCellStyleDefault" id="hGR-tE-ovb">
@@ -581,7 +544,7 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -604,7 +567,7 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -627,7 +590,7 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -650,7 +613,7 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -673,7 +636,7 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -685,6 +648,26 @@
                                     <segue destination="JMv-LY-6gV" kind="custom" customClass="SWRevealViewControllerSegue" id="zkd-GS-kbe"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings" textLabel="Nhl-AF-zN9" style="IBUITableViewCellStyleDefault" id="UUK-SN-nuT">
+                                <rect key="frame" x="0.0" y="443" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UUK-SN-nuT" id="5Vg-8d-hSC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhl-AF-zN9">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="47"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="0Xs-vg-ggb" id="1lk-9F-Aox"/>
@@ -693,9 +676,7 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="footerView" destination="Rt7-9k-yhq" id="1dt-cs-Y8h"/>
                         <outlet property="headerView" destination="buy-mF-l9D" id="Ik5-ZA-6nB"/>
-                        <outlet property="settingsButton" destination="x27-wb-BNW" id="ewB-mK-dnm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqF-oT-ulM" userLabel="First Responder" sceneMemberID="firstResponder"/>

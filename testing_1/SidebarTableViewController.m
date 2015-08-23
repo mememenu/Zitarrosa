@@ -26,11 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBackgroundImage];
-    [self setFooterHeight];
+    [self setHeaderHeight];
     
     self.revealViewController.delegate = self;
     [self setClearsSelectionOnViewWillAppear:NO];
-    menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List"];
+    menu = @[@"Search", @"Browse", @"Around You", @"Feed", @"Your List", @"Settings"];
     
 }
 
@@ -41,14 +41,12 @@
     self.tableView.backgroundView = tempImageView;
 }
 
--(void)setFooterHeight{
+-(void)setHeaderHeight{
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     
     self.tableView.tableHeaderView = self.headerView;
-    self.tableView.tableFooterView = self.footerView;
-    [self.tableView.tableFooterView setFrame: CGRectMake(0, 180, screenWidth, screenHeight * 0.24)];
-    [self.tableView.tableHeaderView setFrame: CGRectMake(0, 0, screenWidth, screenHeight * 0.27)];
+    [self.tableView.tableHeaderView setFrame: CGRectMake(0, 0, screenWidth, screenHeight * 0.30)];
 }
 
 #pragma mark - Status Bar Style
