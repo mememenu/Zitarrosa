@@ -24,79 +24,6 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Search -->
-        <scene sceneID="pyL-kD-UjV">
-            <objects>
-                <viewController title="Search " id="anT-fY-kgs" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="naq-zS-xw8"/>
-                        <viewControllerLayoutGuide type="bottom" id="X8y-DF-d4q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yNk-oy-fKn">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GL5-md-tJq">
-                                <rect key="frame" x="67" y="202" width="240" height="199"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending Topics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scq-Cm-H7m">
-                                        <rect key="frame" x="45" y="18" width="150" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ub-45-qQm">
-                                        <rect key="frame" x="45" y="61" width="150" height="20"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <state key="normal" title="Mignonette">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-fg-kOF">
-                                        <rect key="frame" x="45" y="117" width="150" height="20"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <state key="normal" title="Brunch">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peS-lo-IYr">
-                                        <rect key="frame" x="45" y="89" width="150" height="20"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <state key="normal" title="Brickell">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="004-Ff-gvq">
-                                        <rect key="frame" x="45" y="145" width="150" height="20"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <state key="normal" title="Mimosas">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                            </view>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Places, Zones, Cuisines" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-zj-hZE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.97088068183737375" green="0.97088068183737375" blue="0.97088068183737375" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lL4-Ow-iUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-754.5" y="-1551.5"/>
-        </scene>
         <!--Your List-->
         <scene sceneID="Xgu-7C-xcu">
             <objects>
@@ -158,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-890.5" y="1463.5"/>
         </scene>
-        <!--HomeTableViewController-->
+        <!--Browse-->
         <scene sceneID="ESH-21-oQn">
             <objects>
-                <tableViewController storyboardIdentifier="HomeTableViewController" title="HomeTableViewController" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeTableViewController" title="Browse" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,31 +205,25 @@
                             <outlet property="delegate" destination="cgG-hi-A6g" id="QkB-h9-aGb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MEME" id="Jel-qB-Jmz">
+                    <navigationItem key="navigationItem" title="Browse" id="Jel-qB-Jmz">
                         <barButtonItem key="backBarButtonItem" title=" " id="bpp-86-VIx"/>
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="n5R-iB-3Ob"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="fxc-y1-Xtv">
-                            <connections>
-                                <segue destination="anT-fY-kgs" kind="show" id="91y-YP-iue"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navigationBarButtonItem" destination="n5R-iB-3Ob" id="HJC-AK-Cb8"/>
-                        <outlet property="searchBarButtonItem" destination="fxc-y1-Xtv" id="yt9-0v-OGQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yj-ts-BOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1190.5" y="-716.5"/>
         </scene>
-        <!--Home Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="V98-Xt-5Uy">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" title="Home Navigation Controller" id="DC1-go-LWJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" title="Navigation Controller" id="DC1-go-LWJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="TO4-mU-Q2Z"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -449,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="-1322.5" y="1463.5"/>
         </scene>
-        <!--Reveal View Controller-->
+        <!--SW Reveal-->
         <scene sceneID="YPO-ir-1Se">
             <objects>
-                <viewController storyboardIdentifier="RevealViewController" id="P3X-jb-LWS" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RevealViewController" title="SW Reveal" id="P3X-jb-LWS" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4a3-iN-HdN"/>
                         <viewControllerLayoutGuide type="bottom" id="iSh-hd-f4b"/>
@@ -477,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="-3034.5" y="21.5"/>
         </scene>
-        <!--Sidebar Table View Controller-->
+        <!--Sidebar-->
         <scene sceneID="Szl-Jz-Ac1">
             <objects>
-                <tableViewController storyboardIdentifier="SideBarTableViewController" clearsSelectionOnViewWillAppear="NO" id="0Xs-vg-ggb" customClass="SidebarTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SideBarTableViewController" title="Sidebar" clearsSelectionOnViewWillAppear="NO" id="0Xs-vg-ggb" customClass="SidebarTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="MHV-fM-FXk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,10 +611,10 @@
             </objects>
             <point key="canvasLocation" x="-2520.5" y="21.5"/>
         </scene>
-        <!--Nearby-->
+        <!--Around You-->
         <scene sceneID="LJI-XK-dTJ">
             <objects>
-                <tableViewController title="Nearby" id="TlO-d9-mpz" customClass="NearbyTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Around You" id="TlO-d9-mpz" customClass="NearbyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="vIi-Lk-8MS">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -742,7 +663,7 @@
                             <outlet property="delegate" destination="TlO-d9-mpz" id="zev-xw-Snl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nearby" id="elc-65-c3Z">
+                    <navigationItem key="navigationItem" title="Around You" id="elc-65-c3Z">
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="uue-MI-acr"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
@@ -1100,13 +1021,15 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="81I-zA-Mtt"/>
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="dsj-JG-Rrt"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navigationBarButtonItem" destination="dsj-JG-Rrt" id="746-7w-lCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJC-ND-BKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-460.5" y="1463.5"/>
+            <point key="canvasLocation" x="-443.5" y="1463.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1117,11 +1040,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="seX-BY-9Br"/>
-        <segue reference="jsd-Lz-3bk"/>
-        <segue reference="h4X-1B-Saf"/>
+        <segue reference="zkd-GS-kbe"/>
+        <segue reference="PoO-xW-Qd2"/>
         <segue reference="7Uy-zQ-MnJ"/>
         <segue reference="Pgf-7g-hAr"/>
-        <segue reference="zkd-GS-kbe"/>
+        <segue reference="h4X-1B-Saf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
