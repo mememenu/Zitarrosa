@@ -45,10 +45,13 @@ static NSString * const reuseIdentifier = @"Cell";
     PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
     NSString *image_url = [place objectForKey:@"logo"];
-    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
-    // Configure the cell
-    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+    if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
+        image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+        image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"original"];
+    }
+    
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
 //    cell.placeNameLabel.text = [place objectForKey:@"name"];
     return cell;
 }
