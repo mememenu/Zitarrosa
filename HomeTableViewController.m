@@ -102,17 +102,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    iPhone 4 - 5 - 6 - 6 Plus
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    if (screenHeight == 480){
-        return (screenHeight * 0.30);
-    }else if (screenHeight == 568){
-        return (screenHeight * 0.30);
-    }else if (screenHeight == 667){
-        return (screenHeight * 0.30);
-    }else{
-        return (screenHeight * 0.30);
-    }
+    return (screenHeight * 0.30);
 }
 
 #pragma mark - TableView Delegate

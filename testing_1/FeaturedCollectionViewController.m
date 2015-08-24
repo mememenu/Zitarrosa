@@ -49,10 +49,14 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
     //    iPhone 4 - 5 - 6 - 6 Plus
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    if (screenHeight == 480){ return CGSizeMake(159, 144);
-    }else if (screenHeight == 568){ return CGSizeMake(159, 170);
-    }else if (screenHeight == 667){ return CGSizeMake(186.5, 200);
-    }else{ return CGSizeMake(206, 220);
+    if (screenHeight == 480) {
+        return CGSizeMake(159, 144);
+    } else if (screenHeight == 568) {
+        return CGSizeMake(159, 170);
+    } else if (screenHeight == 667) {
+        return CGSizeMake(186.5, 200);
+    } else {
+        return CGSizeMake(206, 220);
     }
     
 }
