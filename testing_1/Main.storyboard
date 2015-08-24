@@ -458,7 +458,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Search" textLabel="QpT-7M-xMg" style="IBUITableViewCellStyleDefault" id="hGR-tE-ovb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Search" textLabel="QpT-7M-xMg" style="IBUITableViewCellStyleDefault" id="hGR-tE-ovb" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="208" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGR-tE-ovb" id="o7M-gz-j8K">
@@ -481,7 +481,7 @@
                                     <segue destination="L7d-7c-jwi" kind="custom" customClass="SWRevealViewControllerSegue" id="Pgf-7g-hAr"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Browse" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Browse" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="258" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2jj-yd-Rm7" id="mLv-fA-AAl">
@@ -504,7 +504,7 @@
                                     <segue destination="cgG-hi-A6g" kind="custom" identifier="showHomePage" customClass="SWRevealViewControllerSegue" id="seX-BY-9Br"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="308" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CXh-bX-OdQ" id="G8l-CO-gJ1">
@@ -527,7 +527,7 @@
                                     <segue destination="TlO-d9-mpz" kind="custom" customClass="SWRevealViewControllerSegue" id="h4X-1B-Saf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Feed" textLabel="wGg-2c-P7B" style="IBUITableViewCellStyleDefault" id="mL3-7z-ze8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Feed" textLabel="wGg-2c-P7B" style="IBUITableViewCellStyleDefault" id="mL3-7z-ze8" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="358" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mL3-7z-ze8" id="bwd-hX-Y8F">
@@ -550,7 +550,7 @@
                                     <segue destination="laE-zZ-6hU" kind="custom" customClass="SWRevealViewControllerSegue" id="7Uy-zQ-MnJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Your List" textLabel="8Yh-Lx-uDa" style="IBUITableViewCellStyleDefault" id="gsR-Qv-eBM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Your List" textLabel="8Yh-Lx-uDa" style="IBUITableViewCellStyleDefault" id="gsR-Qv-eBM" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="408" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsR-Qv-eBM" id="fru-Ph-6Lf">
@@ -573,7 +573,7 @@
                                     <segue destination="JMv-LY-6gV" kind="custom" customClass="SWRevealViewControllerSegue" id="zkd-GS-kbe"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings" textLabel="Nhl-AF-zN9" style="IBUITableViewCellStyleDefault" id="UUK-SN-nuT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings" textLabel="Nhl-AF-zN9" style="IBUITableViewCellStyleDefault" id="UUK-SN-nuT" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="458" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UUK-SN-nuT" id="5Vg-8d-hSC">

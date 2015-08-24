@@ -7,7 +7,7 @@
 //
 
 #import "SidebarTableViewController.h"
-
+#import "SidebarTableViewCell.h"
 
 @interface SidebarTableViewController ()
 
@@ -82,9 +82,9 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (SidebarTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    SidebarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor clearColor];
     
