@@ -57,7 +57,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     float distance = [[place objectForKey:@"distance"] floatValue];
 //    float newDistance = [[NSString stringWithFormat:@"%.2f",distance]floatValue];
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away",distance];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f miles away",distance];
     return cell;
 }
 
