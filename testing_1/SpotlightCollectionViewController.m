@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionView.scrollsToTop = NO;
 }
 
 #pragma mark <UICollectionViewDataSource>
