@@ -683,6 +683,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Around You" id="elc-65-c3Z">
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="uue-MI-acr"/>
+                        <barButtonItem key="rightBarButtonItem" image="white_sidebar" id="A1o-BG-0WY"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -690,6 +691,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="barButtonItem" destination="uue-MI-acr" id="eN7-Uh-qMa"/>
+                        <outlet property="distanceBarButtonItem" destination="A1o-BG-0WY" id="UUm-AF-AKg"/>
                         <outlet property="searchDisplayController" destination="wXm-yo-Wgp" id="F6g-Xb-fSG"/>
                     </connections>
                 </tableViewController>

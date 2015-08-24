@@ -28,6 +28,9 @@ static NSString * const reuseIdentifier = @"Cell";
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    self.distanceBarButtonItem.target = self;
+    self.distanceBarButtonItem.action = @selector(revealSortView);
 }
 
 #pragma mark - Table view data source
@@ -109,6 +112,11 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
     
     [operation start];
+}
+
+#pragma mark - Sort View
+-(void) revealSortView {
+    NSLog(@"open sort window");
 }
 
 #pragma mark - Navigation

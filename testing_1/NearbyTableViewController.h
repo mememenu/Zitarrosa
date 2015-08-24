@@ -11,12 +11,16 @@
 
 @interface NearbyTableViewController : UITableViewController <CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *distanceBarButtonItem;
+
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 @property (nonatomic) NSString *latitude;
 @property (nonatomic) NSString *longitude;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+
 @property (nonatomic) NSArray *nearbyItems;
+@property (nonatomic) int *distanceFilter;
 
 @end
