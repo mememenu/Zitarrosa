@@ -46,13 +46,18 @@ static NSString * const reuseIdentifier = @"Cell";
     NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
     NSString *image_url = [place objectForKey:@"logo"];
     
+//    check place has a banner object present
     if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
         image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
         image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"original"];
     }
     
     [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
-//    cell.placeNameLabel.text = [place objectForKey:@"name"];
+    cell.placeNameLabel.text = [place objectForKey:@"name"];
+    
+    float distance = [[place objectForKey:@"distance"] floatValue];
+//    float newDistance = [[NSString stringWithFormat:@"%.2f",distance]floatValue];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away",distance];
     return cell;
 }
 

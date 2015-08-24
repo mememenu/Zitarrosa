@@ -631,18 +631,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-Gt-cxk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baccano" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-Gt-cxk">
                                             <rect key="frame" x="35" y="62" width="305" height="35"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.6 Miles Away" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZP-ve-A1k">
+                                            <rect key="frame" x="186" y="129" width="179" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="179" id="4P3-BQ-1RG"/>
+                                                <constraint firstAttribute="height" constant="21" id="PZY-J2-tVn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="0.0"/>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="QZP-ve-A1k" secondAttribute="trailing" constant="10" id="865-ul-Dzy"/>
                                         <constraint firstItem="mgh-Gt-cxk" firstAttribute="top" secondItem="qdQ-HO-Wlj" secondAttribute="top" constant="62" id="CTl-q2-JUG"/>
                                         <constraint firstItem="mgh-Gt-cxk" firstAttribute="leading" secondItem="qdQ-HO-Wlj" secondAttribute="leading" constant="35" id="KB0-3T-g6g"/>
+                                        <constraint firstAttribute="bottom" secondItem="QZP-ve-A1k" secondAttribute="bottom" constant="10" id="XeA-CQ-cst"/>
                                         <constraint firstAttribute="trailing" secondItem="mgh-Gt-cxk" secondAttribute="trailing" constant="35" id="blK-zn-DUX"/>
                                         <constraint firstAttribute="trailing" secondItem="wqa-zy-MaU" secondAttribute="trailing" id="cew-eu-Iws"/>
                                         <constraint firstAttribute="bottom" secondItem="wqa-zy-MaU" secondAttribute="bottom" id="h2W-HL-Iqo"/>
@@ -654,6 +671,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="wqa-zy-MaU" id="yiQ-Nf-B3n"/>
+                                    <outlet property="distanceLabel" destination="QZP-ve-A1k" id="7pS-gq-X2P"/>
                                     <outlet property="placeNameLabel" destination="mgh-Gt-cxk" id="ie3-5e-ciy"/>
                                 </connections>
                             </tableViewCell>
