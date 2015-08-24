@@ -94,7 +94,7 @@
     
 //    NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
     
-    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li", 6 -indexPath.row]];
+    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long)6 - indexPath.row]];
 //    cell.listName.text = [listItem objectForKey:@"name"];
 //    cell.listType.text = [listItem objectForKey:@"type"];
     
