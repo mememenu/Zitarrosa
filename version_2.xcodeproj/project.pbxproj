@@ -50,7 +50,7 @@
 		BE2175951B828D2B00EA7165 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		BE2175971B828D4200EA7165 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = ../HomeTableViewController.h; sourceTree = "<group>"; };
 		BE2175981B828D4200EA7165 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = ../HomeTableViewController.m; sourceTree = "<group>"; };
-		BE2CF4161B7A73B10071A70D /* testing_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2CF4161B7A73B10071A70D /* version_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = version_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2CF41A1B7A73B10071A70D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE2CF41C1B7A73B10071A70D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE2CF41D1B7A73B10071A70D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		BE2CF4171B7A73B10071A70D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE2CF4161B7A73B10071A70D /* testing_1.app */,
+				BE2CF4161B7A73B10071A70D /* version_2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE2CF4151B7A73B10071A70D /* testing_1 */ = {
+		BE2CF4151B7A73B10071A70D /* version_2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE2CF42D1B7A73B10071A70D /* Build configuration list for PBXNativeTarget "testing_1" */;
+			buildConfigurationList = BE2CF42D1B7A73B10071A70D /* Build configuration list for PBXNativeTarget "version_2" */;
 			buildPhases = (
 				31522D789766C09B7EB7CD50 /* Check Pods Manifest.lock */,
 				BE2CF4121B7A73B10071A70D /* Sources */,
@@ -292,9 +292,9 @@
 			);
 			dependencies = (
 			);
-			name = testing_1;
+			name = version_2;
 			productName = testing_1;
-			productReference = BE2CF4161B7A73B10071A70D /* testing_1.app */;
+			productReference = BE2CF4161B7A73B10071A70D /* version_2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -312,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE2CF4111B7A73B10071A70D /* Build configuration list for PBXProject "testing_1" */;
+			buildConfigurationList = BE2CF4111B7A73B10071A70D /* Build configuration list for PBXProject "version_2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -325,7 +325,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE2CF4151B7A73B10071A70D /* testing_1 */,
+				BE2CF4151B7A73B10071A70D /* version_2 */,
 			);
 		};
 /* End PBXProject section */
@@ -508,7 +508,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "menu.meme.testing-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = version_2;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -524,7 +524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "menu.meme.testing-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = version_2;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE2CF4111B7A73B10071A70D /* Build configuration list for PBXProject "testing_1" */ = {
+		BE2CF4111B7A73B10071A70D /* Build configuration list for PBXProject "version_2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE2CF42B1B7A73B10071A70D /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE2CF42D1B7A73B10071A70D /* Build configuration list for PBXNativeTarget "testing_1" */ = {
+		BE2CF42D1B7A73B10071A70D /* Build configuration list for PBXNativeTarget "version_2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE2CF42E1B7A73B10071A70D /* Debug */,
