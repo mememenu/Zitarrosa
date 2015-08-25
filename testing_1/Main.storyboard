@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="-890.5" y="1463.5"/>
         </scene>
-        <!--Browse-->
+        <!--Home-->
         <scene sceneID="ESH-21-oQn">
             <objects>
-                <tableViewController storyboardIdentifier="HomeTableViewController" title="Browse" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeTableViewController" title="Home" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
                             <outlet property="delegate" destination="cgG-hi-A6g" id="QkB-h9-aGb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Browse" id="Jel-qB-Jmz">
+                    <navigationItem key="navigationItem" title="Home" id="Jel-qB-Jmz">
                         <barButtonItem key="backBarButtonItem" title=" " id="bpp-86-VIx"/>
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="n5R-iB-3Ob"/>
                     </navigationItem>
@@ -483,14 +483,14 @@
                                     <segue destination="L7d-7c-jwi" kind="custom" customClass="SWRevealViewControllerSegue" id="Pgf-7g-hAr"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Browse" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7" customClass="SidebarTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Home" textLabel="Hvd-AC-Xwh" style="IBUITableViewCellStyleDefault" id="2jj-yd-Rm7" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="258" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2jj-yd-Rm7" id="mLv-fA-AAl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Browse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hvd-AC-Xwh">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hvd-AC-Xwh">
                                             <rect key="frame" x="15" y="0.0" width="345" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
