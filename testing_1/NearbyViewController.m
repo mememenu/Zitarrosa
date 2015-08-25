@@ -1,32 +1,30 @@
 //
-//  NearbyTableViewController.m
-//  testing_1
+//  NearbyViewController.m
+//  version_2
 //
-//  Created by Alfonso Pintos on 8/13/15.
+//  Created by Alfonso Pintos on 8/25/15.
 //  Copyright © 2015 Meme Menu. All rights reserved.
 //
 
-#import "NearbyTableViewController.h"
+#import "NearbyViewController.h"
 #import "PlacesTableViewCell.h"
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
-
-@interface NearbyTableViewController ()
+@interface NearbyViewController ()
 
 @end
 
-@implementation NearbyTableViewController
-
-static NSString * const reuseIdentifier = @"Cell";
+@implementation NearbyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.nearbyItems = [[NSMutableArray alloc] init];
     self.distanceFilter = 5;
     [self locateUser];
-     
+    
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -39,16 +37,17 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.refreshControl addTarget:self
                             action:@selector(locateUser)
                   forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([self.nearbyItems count] > 0) {
-        self.tableView.tableHeaderView.hidden = NO;
+//        self.tableView.tableHeaderView.hidden = NO;
         return 1;
     } else {
-        self.tableView.tableHeaderView.hidden = YES;
+//        self.tableView.tableHeaderView.hidden = YES;
         [self setErrorMessage];
     }
     
@@ -61,16 +60,16 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (PlacesTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
     NSString *image_url = [place objectForKey:@"logo"];
     
-//    check place has a banner object present
+    //    check place has a banner object present
     if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
         image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
         image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"original"];
     }
-//    !!!!!!!!replace with proper placeholder!!!!!!
+    //    !!!!!!!!replace with proper placeholder!!!!!!
     [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     cell.placeNameLabel.text = [place objectForKey:@"name"];
     
@@ -125,8 +124,8 @@ static NSString * const reuseIdentifier = @"Cell";
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         self.nearbyItems = nil;
-//        uncomment the line below to remove results if connection is lost during use
-//        [self.tableView reloadData];
+        //        uncomment the line below to remove results if connection is lost during use
+        //        [self.tableView reloadData];
     }];
     
     [self.refreshControl endRefreshing];
@@ -159,6 +158,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.tableView.tableHeaderView.hidden = YES;
 }
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -166,6 +166,6 @@ static NSString * const reuseIdentifier = @"Cell";
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end
