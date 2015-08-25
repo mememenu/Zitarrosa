@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.backgroundView.hidden = YES;
     self.nearbyItems = [[NSMutableArray alloc] init];
     self.distanceFilter = 5;
     [self locateUser];
@@ -28,8 +28,6 @@
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
-    self.tableView.tableHeaderView = self.distanceHeaderView;
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor clearColor];
@@ -44,13 +42,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([self.nearbyItems count] > 0) {
-//        self.tableView.tableHeaderView.hidden = NO;
         return 1;
     } else {
-//        self.tableView.tableHeaderView.hidden = YES;
         [self setErrorMessage];
-    }
     
+    }
     return 0;
 }
 
@@ -100,6 +96,9 @@
     if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
         [self.locationManager startUpdatingLocation];
         self.location = [[CLLocation alloc] init];
+    } else {
+//        show no location error alert here
+        [self.refreshControl endRefreshing];
     }
 }
 
@@ -114,18 +113,18 @@
 #pragma mark - API Calls
 
 - (void) loadNearbyItems {
-    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-development.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=%i",_latitude, _longitude, _distanceFilter]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.nearbyItems = [responseObject objectForKey:@"places"];
+        self.tableView.backgroundView.hidden = YES;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         self.nearbyItems = nil;
-        //        uncomment the line below to remove results if connection is lost during use
-        //        [self.tableView reloadData];
+        self.tableView.backgroundView.hidden = NO;
+        [self.tableView reloadData];
     }];
     
     [self.refreshControl endRefreshing];
@@ -140,11 +139,10 @@
     [self loadNearbyItems];
 }
 
-#pragma mark - Rescue View
+#pragma mark - Connection Error Rescue View
 
 -(void)setErrorMessage {
-    // Display a message when the table is empty
-    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
     
     messageLabel.text = @"No data is currently available. Please pull down to refresh.";
     messageLabel.textColor = [UIColor blackColor];
@@ -154,8 +152,6 @@
     [messageLabel sizeToFit];
     
     self.tableView.backgroundView = messageLabel;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.tableHeaderView.hidden = YES;
 }
 
 /*

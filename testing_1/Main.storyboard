@@ -627,9 +627,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-GK-UwA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2in-Yo-4xU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2in-Yo-4xU">
                                         <rect key="frame" x="38" y="5" width="50" height="40"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2in-Yo-4xU" secondAttribute="height" multiplier="5:4" id="vL5-Ju-MZc"/>
+                                        </constraints>
                                         <state key="normal" title="1">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -637,9 +640,12 @@
                                             <action selector="didChangeDistance:" destination="b7c-eA-m2A" eventType="touchUpInside" id="S7F-gJ-vdV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-49-CQQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-49-CQQ">
                                         <rect key="frame" x="100" y="5" width="50" height="40"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LZ9-49-CQQ" secondAttribute="height" multiplier="5:4" id="lfN-WU-HkB"/>
+                                        </constraints>
                                         <state key="normal" title="3">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -647,9 +653,12 @@
                                             <action selector="didChangeDistance:" destination="b7c-eA-m2A" eventType="touchUpInside" id="Ye5-k6-HKQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bl-Ef-Zxm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bl-Ef-Zxm">
                                         <rect key="frame" x="162" y="5" width="50" height="40"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6bl-Ef-Zxm" secondAttribute="height" multiplier="5:4" id="qnQ-sk-VvR"/>
+                                        </constraints>
                                         <state key="normal" title="5">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -657,9 +666,12 @@
                                             <action selector="didChangeDistance:" destination="b7c-eA-m2A" eventType="touchUpInside" id="MwS-ar-ar9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-Jn-SVj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-Jn-SVj">
                                         <rect key="frame" x="224" y="5" width="50" height="40"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VNs-Jn-SVj" secondAttribute="height" multiplier="5:4" id="oJ7-di-RtC"/>
+                                        </constraints>
                                         <state key="normal" title="10">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -667,12 +679,20 @@
                                             <action selector="didChangeDistance:" destination="b7c-eA-m2A" eventType="touchUpInside" id="tXf-On-b98"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-dR-u19">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-dR-u19">
                                         <rect key="frame" x="286" y="5" width="50" height="40"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lt3-dR-u19" secondAttribute="height" multiplier="5:4" id="Q6e-My-2eS"/>
+                                        </constraints>
                                         <state key="normal" title="20">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Q6e-My-2eS"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="didChangeDistance:" destination="b7c-eA-m2A" eventType="touchUpInside" id="3et-b7-8Yz"/>
                                         </connections>
@@ -681,10 +701,26 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="6bl-Ef-Zxm" firstAttribute="leading" secondItem="LZ9-49-CQQ" secondAttribute="trailing" constant="12" id="2Ak-7C-i28"/>
+                                    <constraint firstItem="lt3-dR-u19" firstAttribute="top" secondItem="TNP-GK-UwA" secondAttribute="top" constant="5" id="6eP-J3-0jT"/>
+                                    <constraint firstItem="6bl-Ef-Zxm" firstAttribute="top" secondItem="TNP-GK-UwA" secondAttribute="top" constant="5" id="AXP-JY-Kcl"/>
+                                    <constraint firstItem="lt3-dR-u19" firstAttribute="leading" secondItem="VNs-Jn-SVj" secondAttribute="trailing" constant="12" id="BtI-42-occ"/>
                                     <constraint firstAttribute="width" secondItem="TNP-GK-UwA" secondAttribute="height" multiplier="15:2" id="Fua-2O-TJo"/>
+                                    <constraint firstAttribute="bottom" secondItem="2in-Yo-4xU" secondAttribute="bottom" constant="5" id="Ism-D5-4Gb"/>
+                                    <constraint firstItem="LZ9-49-CQQ" firstAttribute="top" secondItem="TNP-GK-UwA" secondAttribute="top" constant="5" id="L6H-sk-KYn"/>
+                                    <constraint firstItem="VNs-Jn-SVj" firstAttribute="leading" secondItem="6bl-Ef-Zxm" secondAttribute="trailing" constant="12" id="QQ7-nK-nYm"/>
+                                    <constraint firstItem="VNs-Jn-SVj" firstAttribute="top" secondItem="TNP-GK-UwA" secondAttribute="top" constant="5" id="XM5-Oe-ooT"/>
+                                    <constraint firstAttribute="bottom" secondItem="6bl-Ef-Zxm" secondAttribute="bottom" constant="5" id="a48-QR-TEd"/>
+                                    <constraint firstItem="LZ9-49-CQQ" firstAttribute="leading" secondItem="2in-Yo-4xU" secondAttribute="trailing" constant="12" id="c4p-AC-9hU"/>
+                                    <constraint firstAttribute="bottom" secondItem="lt3-dR-u19" secondAttribute="bottom" constant="5" id="q8X-Tl-JHC"/>
+                                    <constraint firstAttribute="bottom" secondItem="VNs-Jn-SVj" secondAttribute="bottom" constant="5" id="r6I-Xb-LtC"/>
+                                    <constraint firstAttribute="bottom" secondItem="LZ9-49-CQQ" secondAttribute="bottom" constant="5" id="whx-1C-nqc"/>
+                                    <constraint firstAttribute="trailing" secondItem="lt3-dR-u19" secondAttribute="trailing" constant="39" id="xaZ-DG-WzQ"/>
+                                    <constraint firstItem="2in-Yo-4xU" firstAttribute="top" secondItem="TNP-GK-UwA" secondAttribute="top" constant="5" id="yRa-wQ-4dU"/>
+                                    <constraint firstItem="2in-Yo-4xU" firstAttribute="leading" secondItem="TNP-GK-UwA" secondAttribute="leading" constant="38" id="yhh-vV-SdH"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-ur-Avb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-ur-Avb">
                                 <rect key="frame" x="0.0" y="50" width="375" height="555"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -693,7 +729,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uB0-18-t7m" id="jZh-Yh-VWH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XhS-le-CJj">
@@ -729,14 +765,14 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="XhS-le-CJj" secondAttribute="bottom" constant="2" id="1tZ-Ok-9xY"/>
+                                                <constraint firstAttribute="bottom" secondItem="XhS-le-CJj" secondAttribute="bottom" constant="3" id="1tZ-Ok-9xY"/>
                                                 <constraint firstItem="BJh-BH-tYW" firstAttribute="centerX" secondItem="XhS-le-CJj" secondAttribute="centerX" id="IV3-E6-D0i"/>
                                                 <constraint firstAttribute="trailing" secondItem="spC-qF-lhU" secondAttribute="trailing" constant="10" id="Krb-km-31l"/>
                                                 <constraint firstItem="BJh-BH-tYW" firstAttribute="centerY" secondItem="XhS-le-CJj" secondAttribute="centerY" id="LG9-bd-AGz"/>
                                                 <constraint firstAttribute="trailing" secondItem="XhS-le-CJj" secondAttribute="trailing" id="cfH-Vb-QQk"/>
                                                 <constraint firstItem="XhS-le-CJj" firstAttribute="top" secondItem="jZh-Yh-VWH" secondAttribute="top" id="lE1-St-b2G"/>
                                                 <constraint firstItem="XhS-le-CJj" firstAttribute="leading" secondItem="jZh-Yh-VWH" secondAttribute="leading" id="mNo-dt-pch"/>
-                                                <constraint firstAttribute="bottom" secondItem="spC-qF-lhU" secondAttribute="bottom" constant="12" id="v3o-eY-pxG"/>
+                                                <constraint firstAttribute="bottom" secondItem="spC-qF-lhU" secondAttribute="bottom" constant="13" id="v3o-eY-pxG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>

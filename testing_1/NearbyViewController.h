@@ -12,20 +12,15 @@
 @interface NearbyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 @property (nonatomic) NSString *latitude;
 @property (nonatomic) NSString *longitude;
-
-
-@property (nonatomic) NSMutableArray *nearbyItems;
-@property (nonatomic) int distanceFilter;
-
-@property (weak, nonatomic) IBOutlet UIView *distanceHeaderView;
-
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) UIRefreshControl *refreshControl;
+@property (nonatomic) NSMutableArray *nearbyItems;
+
+@property (nonatomic) int distanceFilter;
 
 @end
