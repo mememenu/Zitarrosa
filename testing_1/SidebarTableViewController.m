@@ -46,7 +46,7 @@
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     
     self.tableView.tableHeaderView = self.headerView;
-    [self.tableView.tableHeaderView setFrame: CGRectMake(0, 0, screenWidth, screenHeight * 0.30)];
+    [self.tableView.tableHeaderView setFrame: CGRectMake(0, 0, screenWidth, screenHeight * 0.26)];
 }
 
 #pragma mark - Status Bar Style
