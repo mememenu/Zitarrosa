@@ -51,7 +51,7 @@
     return cell;
 }
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
      CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
 //    return cell size
     return CGSizeMake(screenWidth / 2, self.dynamicHeight);

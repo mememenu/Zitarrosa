@@ -106,6 +106,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="7at-xN-DIl"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="DFr-OU-gix"/>
+                                        <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="OL0-uu-mkO"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="ewT-pR-aFG"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="opL-lP-Lkn"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="qkb-xH-CDh"/>
@@ -131,6 +132,7 @@
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="74d-jn-Xeh"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="Fso-BC-D6Z"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="PfP-lm-YLs"/>
+                                        <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="Tbu-cd-LFd"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="VwC-Jo-u3R"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="jJ0-DW-nYg"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="vfs-eb-tmq"/>
@@ -140,6 +142,7 @@
                                             <exclude reference="4nO-YE-z5s"/>
                                             <exclude reference="74d-jn-Xeh"/>
                                             <exclude reference="Fso-BC-D6Z"/>
+                                            <exclude reference="PfP-lm-YLs"/>
                                             <exclude reference="VwC-Jo-u3R"/>
                                             <exclude reference="jJ0-DW-nYg"/>
                                             <exclude reference="vfs-eb-tmq"/>
@@ -154,17 +157,16 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="8wS-IX-sRa" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="4KN-QS-mno"/>
-                                <constraint firstItem="8wS-IX-sRa" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="BJ2-52-HcG"/>
-                                <constraint firstItem="8wS-IX-sRa" firstAttribute="top" secondItem="bef-yC-ca9" secondAttribute="bottom" constant="5" id="CFb-VH-tIm"/>
+                                <constraint firstAttribute="trailing" secondItem="bef-yC-ca9" secondAttribute="trailing" id="7aS-wX-SL6"/>
+                                <constraint firstItem="8wS-IX-sRa" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="Az9-b7-6Ip"/>
                                 <constraint firstItem="8wS-IX-sRa" firstAttribute="centerX" secondItem="Oik-YT-E3O" secondAttribute="centerX" id="EAg-s5-TjF"/>
                                 <constraint firstItem="bef-yC-ca9" firstAttribute="centerX" secondItem="Oik-YT-E3O" secondAttribute="centerX" id="HL4-YX-zcD"/>
                                 <constraint firstItem="bef-yC-ca9" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="JKc-Xs-QEu"/>
-                                <constraint firstItem="bef-yC-ca9" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="M00-BQ-KyX"/>
-                                <constraint firstItem="bef-yC-ca9" firstAttribute="top" secondItem="Oik-YT-E3O" secondAttribute="top" id="S0C-fR-leV"/>
-                                <constraint firstAttribute="trailing" secondItem="bef-yC-ca9" secondAttribute="trailing" id="e6n-r8-FlN"/>
-                                <constraint firstAttribute="bottom" secondItem="8wS-IX-sRa" secondAttribute="bottom" constant="5" id="ish-oX-BlK"/>
+                                <constraint firstAttribute="trailing" secondItem="8wS-IX-sRa" secondAttribute="trailing" id="MGa-WO-yeF"/>
+                                <constraint firstItem="bef-yC-ca9" firstAttribute="top" secondItem="Oik-YT-E3O" secondAttribute="top" id="TlT-sU-RuR"/>
+                                <constraint firstItem="bef-yC-ca9" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="a7c-Y1-iMM"/>
+                                <constraint firstAttribute="bottom" secondItem="8wS-IX-sRa" secondAttribute="bottom" constant="5" id="hmN-mr-WiU"/>
                                 <constraint firstAttribute="trailing" secondItem="bef-yC-ca9" secondAttribute="trailing" id="kA7-CS-FNw"/>
-                                <constraint firstAttribute="trailing" secondItem="8wS-IX-sRa" secondAttribute="trailing" id="soK-aF-IZw"/>
                                 <constraint firstAttribute="trailing" secondItem="8wS-IX-sRa" secondAttribute="trailing" id="zvK-bI-vJw"/>
                             </constraints>
                             <variation key="default">
@@ -865,7 +867,7 @@
         <!--Spotlight Collection View Controller-->
         <scene sceneID="wVz-UE-cDB">
             <objects>
-                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="tmM-kN-XiC" customClass="SpotlightCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController wantsFullScreenLayout="YES" id="tmM-kN-XiC" customClass="SpotlightCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="2XK-nU-kG4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -954,7 +956,7 @@
         <!--Featured Collection View Controller-->
         <scene sceneID="TRj-et-OmS">
             <objects>
-                <collectionViewController title="Featured Collection View Controller" automaticallyAdjustsScrollViewInsets="NO" id="jfS-V1-uLK" customClass="FeaturedCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController title="Featured Collection View Controller" id="jfS-V1-uLK" customClass="FeaturedCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="wkG-Ga-ErL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
