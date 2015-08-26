@@ -89,26 +89,30 @@
         <scene sceneID="ESH-21-oQn">
             <objects>
                 <tableViewController storyboardIdentifier="HomeTableViewController" title="Home" id="cgG-hi-A6g" customClass="HomeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="205" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6b-Rs-g66">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Oik-YT-E3O">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="420"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bef-yC-ca9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="2B8-nf-TXw"/>
+                                        <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="DFr-OU-gix"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="ewT-pR-aFG"/>
+                                        <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="opL-lP-Lkn"/>
                                         <constraint firstAttribute="width" secondItem="bef-yC-ca9" secondAttribute="height" multiplier="15:8" id="qkb-xH-CDh"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="DFr-OU-gix"/>
                                             <exclude reference="ewT-pR-aFG"/>
+                                            <exclude reference="opL-lP-Lkn"/>
                                             <exclude reference="qkb-xH-CDh"/>
                                         </mask>
                                     </variation>
@@ -117,11 +121,11 @@
                                     </connections>
                                 </containerView>
                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wS-IX-sRa">
-                                    <rect key="frame" x="0.0" y="210" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="205" width="375" height="200"/>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="4nO-YE-z5s"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="Fso-BC-D6Z"/>
-                                        <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="NSc-uB-Dsq"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="VwC-Jo-u3R"/>
                                         <constraint firstAttribute="width" secondItem="8wS-IX-sRa" secondAttribute="height" multiplier="15:8" id="vfs-eb-tmq"/>
                                     </constraints>
@@ -138,21 +142,29 @@
                                 </containerView>
                             </subviews>
                             <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="bef-yC-ca9" firstAttribute="top" secondItem="Oik-YT-E3O" secondAttribute="top" id="HaO-jZ-9E0"/>
-                                <constraint firstAttribute="trailing" secondItem="8wS-IX-sRa" secondAttribute="trailing" id="b0K-dw-H8x"/>
-                                <constraint firstItem="8wS-IX-sRa" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="g06-bX-VPh"/>
-                                <constraint firstAttribute="trailing" secondItem="bef-yC-ca9" secondAttribute="trailing" id="jPr-Af-ghj"/>
-                                <constraint firstItem="8wS-IX-sRa" firstAttribute="top" secondItem="bef-yC-ca9" secondAttribute="bottom" constant="10" id="rX2-PG-tcb"/>
-                                <constraint firstItem="bef-yC-ca9" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="usD-yh-BCG"/>
+                                <constraint firstItem="8wS-IX-sRa" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="4KN-QS-mno"/>
+                                <constraint firstItem="8wS-IX-sRa" firstAttribute="top" secondItem="bef-yC-ca9" secondAttribute="bottom" constant="5" id="5wo-T3-shk"/>
+                                <constraint firstItem="bef-yC-ca9" firstAttribute="centerX" secondItem="Oik-YT-E3O" secondAttribute="centerX" id="HL4-YX-zcD"/>
+                                <constraint firstItem="bef-yC-ca9" firstAttribute="leading" secondItem="Oik-YT-E3O" secondAttribute="leading" id="JKc-Xs-QEu"/>
+                                <constraint firstAttribute="bottom" secondItem="8wS-IX-sRa" secondAttribute="bottom" constant="5" id="S5S-5X-53l"/>
+                                <constraint firstAttribute="trailing" secondItem="bef-yC-ca9" secondAttribute="trailing" id="kA7-CS-FNw"/>
+                                <constraint firstItem="bef-yC-ca9" firstAttribute="top" secondItem="Oik-YT-E3O" secondAttribute="top" id="ta9-XC-bfk"/>
+                                <constraint firstAttribute="trailing" secondItem="8wS-IX-sRa" secondAttribute="trailing" id="zvK-bI-vJw"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="HL4-YX-zcD"/>
+                                </mask>
+                            </variation>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="P8V-0T-J3C" customClass="HomeTableViewCell">
-                                <rect key="frame" x="0.0" y="448" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="438" width="375" height="205"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8V-0T-J3C" id="LI6-8C-8MT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-cm-cio">
@@ -181,14 +193,14 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="eJ1-Gs-6GI" secondAttribute="trailing" constant="85" id="2Ap-X4-RwU"/>
-                                        <constraint firstAttribute="bottom" secondItem="eJ1-Gs-6GI" secondAttribute="bottom" constant="85" id="3Y0-QZ-gzb"/>
+                                        <constraint firstAttribute="bottom" secondItem="eJ1-Gs-6GI" secondAttribute="bottom" constant="89" id="3Y0-QZ-gzb"/>
                                         <constraint firstItem="eJ1-Gs-6GI" firstAttribute="top" secondItem="LI6-8C-8MT" secondAttribute="top" constant="84" id="3jU-8I-mkB"/>
                                         <constraint firstItem="jDW-cm-cio" firstAttribute="leading" secondItem="LI6-8C-8MT" secondAttribute="leading" id="Lco-sf-G6V"/>
                                         <constraint firstAttribute="trailing" secondItem="tOq-Kz-2xc" secondAttribute="trailing" constant="220" id="SOE-Dt-atr"/>
                                         <constraint firstAttribute="trailing" secondItem="jDW-cm-cio" secondAttribute="trailing" id="VUD-wn-3Rx"/>
                                         <constraint firstItem="jDW-cm-cio" firstAttribute="top" secondItem="LI6-8C-8MT" secondAttribute="top" id="YrK-xu-Rd2"/>
                                         <constraint firstItem="tOq-Kz-2xc" firstAttribute="leading" secondItem="LI6-8C-8MT" secondAttribute="leading" constant="8" id="dvu-Q2-snq"/>
-                                        <constraint firstAttribute="bottom" secondItem="jDW-cm-cio" secondAttribute="bottom" id="h08-5b-fZ9"/>
+                                        <constraint firstAttribute="bottom" secondItem="jDW-cm-cio" secondAttribute="bottom" constant="4" id="h08-5b-fZ9"/>
                                         <constraint firstItem="tOq-Kz-2xc" firstAttribute="top" secondItem="LI6-8C-8MT" secondAttribute="top" constant="8" id="pu0-dh-gQE"/>
                                         <constraint firstItem="eJ1-Gs-6GI" firstAttribute="leading" secondItem="LI6-8C-8MT" secondAttribute="leading" constant="85" id="xI0-Ce-qCq"/>
                                     </constraints>

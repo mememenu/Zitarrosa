@@ -29,11 +29,11 @@
     if (screenHeight == 480){
         [containerView setFrame:CGRectMake(0, 0, 320, 302)];
     }else if (screenHeight == 568){
-        [containerView setFrame:CGRectMake(0, 0, 320, 358)];
+        [containerView setFrame:CGRectMake(0, 0, 320, 350)];
     }else if (screenHeight == 667){
-        [containerView setFrame:CGRectMake(0, 0, 375, 420)];
+        [containerView setFrame:CGRectMake(0, 0, 375, 410)];
     }else{
-        [containerView setFrame:CGRectMake(0, 0, 414, 463)];
+        [containerView setFrame:CGRectMake(0, 0, 414, 451)];
     }
 }
 
@@ -103,7 +103,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    return (screenHeight * 0.30);
+    return (screenHeight * 0.306);
 }
 
 #pragma mark - TableView Delegate
