@@ -11,5 +11,6 @@
 @interface SpotlightCollectionViewController : UICollectionViewController
 
 @property (nonatomic) NSArray *spotlightItems;
+@property (nonatomic) int dynamicHeight;
 
 @end

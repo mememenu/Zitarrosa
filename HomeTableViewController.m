@@ -21,22 +21,6 @@
 
 @implementation HomeTableViewController
 
--(void)viewWillAppear:(BOOL)animated {
-    UIView *containerView = [self.view.subviews objectAtIndex:1];
-    
-    //    iPhone 4 - 5 - 6 - 6 Plus
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    if (screenHeight == 480){
-        [containerView setFrame:CGRectMake(0, 0, 320, 302)];
-    }else if (screenHeight == 568){
-        [containerView setFrame:CGRectMake(0, 0, 320, 350)];
-    }else if (screenHeight == 667){
-        [containerView setFrame:CGRectMake(0, 0, 375, 410)];
-    }else{
-        [containerView setFrame:CGRectMake(0, 0, 414, 451)];
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadHomePage];
@@ -45,6 +29,12 @@
     self.navigationBarButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+//    Set size for spotlight and featured container view
+    UIView *containerView = [self.view.subviews objectAtIndex:1];
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    int containerHeight = screenHeight * 0.615;
+    [containerView setFrame:CGRectMake(0, 0, screenWidth, containerHeight)];
 }
 
 - (void) loadHomePage {

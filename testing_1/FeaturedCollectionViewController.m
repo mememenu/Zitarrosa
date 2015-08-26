@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.scrollsToTop = NO;
+    
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    int containerHeight = (screenHeight * 0.615);
+    self.dynamicHeight = ((containerHeight / 2) - (screenHeight * 0.007));
 }
 
 
@@ -40,26 +44,17 @@
     NSString *image_url = [featuredItem objectForKey:@"logo"];
     image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
+//    set for real content to load from call
 //    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
 //    cell.featuredName.text = [featuredItem objectForKey:@"name"];
 //    cell.featuredType.text = [featuredItem objectForKey:@"type"];
-    
     return cell;
 }
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
-    //    iPhone 4 - 5 - 6 - 6 Plus
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    if (screenHeight == 480) {
-        return CGSizeMake(159, 144);
-    } else if (screenHeight == 568) {
-        return CGSizeMake(159, 170);
-    } else if (screenHeight == 667) {
-        return CGSizeMake(186.5, 200);
-    } else {
-        return CGSizeMake(206, 220);
-    }
-    
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
+     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+//    return cell size
+    return CGSizeMake(screenWidth / 2, self.dynamicHeight);
 }
 
 #pragma mark <UICollectionViewDelegate>

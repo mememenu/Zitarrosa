@@ -11,5 +11,5 @@
 @interface FeaturedCollectionViewController : UICollectionViewController
 
 @property (nonatomic) NSArray *featuredItems;
-
+@property (nonatomic) int dynamicHeight;
 @end
