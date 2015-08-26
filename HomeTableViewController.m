@@ -33,8 +33,8 @@
     UIView *containerView = [self.view.subviews objectAtIndex:1];
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    int containerHeight = screenHeight * 0.615;
-    [containerView setFrame:CGRectMake(0, 0, screenWidth, containerHeight)];
+    [containerView setFrame:CGRectMake(0, 0, screenWidth, screenHeight * 0.615)];
+    self.cellHeight = (screenHeight * 0.306);
 }
 
 - (void) loadHomePage {
@@ -91,8 +91,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    return (screenHeight * 0.306);
+    return self.cellHeight;
 }
 
 #pragma mark - TableView Delegate

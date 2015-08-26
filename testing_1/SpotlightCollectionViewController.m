@@ -19,10 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.scrollsToTop = NO;
-    
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    int containerHeight = (screenHeight * 0.615);
-    self.dynamicHeight = ((containerHeight / 2) - (screenHeight * 0.007));
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -52,9 +48,7 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-//    return cell size
-    return CGSizeMake(screenWidth, self.dynamicHeight);
+    return collectionView.frame.size;
     
 }
 

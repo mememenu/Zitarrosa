@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *navigationBarButtonItem;
 @property (nonatomic) NSMutableArray *listItems;
 
+@property (nonatomic) float cellHeight;
 @end

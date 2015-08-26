@@ -970,10 +970,10 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Y3c-Ib-Vpt" customClass="FeaturedCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="186.5" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featured_2" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-nM-Jjf">
