@@ -53,13 +53,12 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *genericLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
+        NSArray *contributorLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
         
         self.listItems = [[NSMutableArray alloc] init];
         
 //        set class variable listItems equal to combination of generic_lists & contributor arrays
-        NSArray *genericLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
-        NSArray *contributorLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
- 
         [self.listItems addObjectsFromArray:genericLists];
         [self.listItems addObjectsFromArray:contributorLists];
         
