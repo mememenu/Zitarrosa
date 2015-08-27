@@ -55,20 +55,18 @@ const int KLoadingCellTag = 12345;
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        refactor
-        if (self.refreshControl.refreshing) {
-            self.feedItems = [responseObject mutableCopy];
-            
-        } else {
+        if (!self.refreshControl.refreshing) {
             for (id feedItem in responseObject) {
                 if (![self.feedItems containsObject:feedItem]) {
                     [self.feedItems addObject:feedItem];
                 }
             }
+        } else {
+            self.feedItems = [responseObject mutableCopy];
         }
+        
         [self.refreshControl endRefreshing];
         [self.tableView reloadData];
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // insert failure block here
         [self.refreshControl endRefreshing];
