@@ -21,16 +21,12 @@ const int KLoadingCellTag = 12345;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.feedItems = [[NSMutableArray alloc] init];
-//    self.currentPage = 0;
-    self.totalPages = 10;
-    
-    
-    
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    self.feedItems = [[NSMutableArray alloc] init];
+    self.totalPages = 20;
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor clearColor];
@@ -38,7 +34,6 @@ const int KLoadingCellTag = 12345;
     [self.refreshControl addTarget:self
                             action:@selector(updateFeed)
                   forControlEvents:UIControlEventValueChanged];
-//    [self loadFeed];
     [self.refreshControl beginRefreshing];
 }
 
@@ -46,7 +41,6 @@ const int KLoadingCellTag = 12345;
     self.currentPage = 1;
     [self loadFeed];
 }
-
 
 - (void) loadFeed {
     
