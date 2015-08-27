@@ -23,34 +23,56 @@ const int KLoadingCellTag = 12345;
     [super viewDidLoad];
     
     self.feedItems = [[NSMutableArray alloc] init];
-    self.currentPage = 0;
+//    self.currentPage = 0;
     self.totalPages = 10;
     
-    [self loadFeed];
+    
     
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor grayColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(updateFeed)
+                  forControlEvents:UIControlEventValueChanged];
+//    [self loadFeed];
+    [self.refreshControl beginRefreshing];
 }
 
+-(void) updateFeed {
+    self.currentPage = 1;
+    [self loadFeed];
+}
+
+
 - (void) loadFeed {
+    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-production.herokuapp.com/ios/paginated_dish_feed?page=%ld", (long)_currentPage]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        for (id feedItem in responseObject) {
-            if (![self.feedItems containsObject:feedItem]) {
-                [self.feedItems addObject:feedItem];
+//        refactor
+        if (self.refreshControl.refreshing) {
+            self.feedItems = [responseObject mutableCopy];
+            
+        } else {
+            for (id feedItem in responseObject) {
+                if (![self.feedItems containsObject:feedItem]) {
+                    [self.feedItems addObject:feedItem];
+                }
             }
         }
+        [self.refreshControl endRefreshing];
         [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // insert failure block here
+        [self.refreshControl endRefreshing];
     }];
-    
     [operation start];
 }
 
@@ -114,6 +136,24 @@ const int KLoadingCellTag = 12345;
         [self loadFeed];
     }
 }
+
+
+#pragma mark - Connection Error Rescue View
+
+-(void)setErrorMessage {
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
+    
+    messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    [messageLabel sizeToFit];
+    
+    self.tableView.backgroundView = messageLabel;
+}
+
+
 /*
 #pragma mark - Navigation
 
