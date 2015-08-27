@@ -30,7 +30,7 @@
     
     self.revealViewController.delegate = self;
     [self setClearsSelectionOnViewWillAppear:NO];
-    menu = @[@"Search", @"Home", @"Around You", @"Feed", @"Your List", @"Settings"];
+    menu = @[@"Search", @"Home", @"Nearby", @"Feed", @"Your List", @"Settings"];
     
 }
 

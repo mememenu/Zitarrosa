@@ -538,14 +538,14 @@
                                     <segue destination="cgG-hi-A6g" kind="custom" identifier="showHomePage" customClass="SWRevealViewControllerSegue" id="seX-BY-9Br"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Around You" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ" customClass="SidebarTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Nearby" textLabel="wnf-mJ-Dza" style="IBUITableViewCellStyleDefault" id="CXh-bX-OdQ" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="308" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CXh-bX-OdQ" id="G8l-CO-gJ1">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Around You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wnf-mJ-Dza">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nearby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wnf-mJ-Dza">
                                             <rect key="frame" x="15" y="0.0" width="345" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -857,6 +857,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="barButtonItem" destination="52Z-H6-A30" id="9OH-Li-2r5"/>
+                        <outlet property="sortView" destination="TNP-GK-UwA" id="NXc-tc-SAy"/>
                         <outlet property="tableView" destination="Clx-ur-Avb" id="UBV-Ho-WSl"/>
                     </connections>
                 </viewController>
@@ -1245,7 +1246,7 @@
                                     <constraint firstAttribute="width" constant="200" id="yIe-6P-l4w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built in Miami" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIC-hJ-a6F">
@@ -1256,7 +1257,7 @@
                                     <constraint firstAttribute="width" constant="200" id="r2B-QG-6Z1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meme Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O36-Li-3Bv">
@@ -1267,7 +1268,7 @@
                                     <constraint firstAttribute="width" constant="200" id="oQM-3c-Lr3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1324,12 +1325,12 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rWg-i6-Af8"/>
-        <segue reference="TbC-IR-3mX"/>
-        <segue reference="JjU-Z6-dng"/>
-        <segue reference="Apb-8D-TsU"/>
+        <segue reference="seX-BY-9Br"/>
         <segue reference="7Mr-bm-kzi"/>
-        <segue reference="jsd-Lz-3bk"/>
+        <segue reference="rWg-i6-Af8"/>
+        <segue reference="7Uy-zQ-MnJ"/>
+        <segue reference="zkd-GS-kbe"/>
+        <segue reference="PoO-xW-Qd2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

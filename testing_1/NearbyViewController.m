@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.backgroundView.hidden = YES;
+    self.sortView.hidden = YES;
     self.nearbyItems = [[NSMutableArray alloc] init];
     self.distanceFilter = 5;
     [self locateUser];
@@ -40,20 +40,17 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if ([self.nearbyItems count] > 0) {
-        return 1;
-    } else {
-        [self setErrorMessage];
-    
-    }
-    return 0;
-}
+//  test out performance differences with and without this method
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    if ([self.nearbyItems count] > 0) {
+//        return 1;
+//    }
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.nearbyItems count];
 }
-
 
 - (PlacesTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -93,11 +90,14 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager requestWhenInUseAuthorization];
     
-    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
+    if ([CLLocationManager locationServicesEnabled] && [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
         [self.locationManager startUpdatingLocation];
         self.location = [[CLLocation alloc] init];
     } else {
-//        show no location error alert here
+        UIAlertView* noLocationAlert=[[UIAlertView alloc] initWithTitle:@"This app does not have access to Location service" message:@"You can enable access in Settings to view nearby Places"
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Settings", nil];
+        noLocationAlert.tag=121;
+        [noLocationAlert show];
         [self.refreshControl endRefreshing];
     }
 }
@@ -110,6 +110,10 @@
     [self loadNearbyItems];
 }
 
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    NSLog(@"did change authorization status");
+}
+
 #pragma mark - API Calls
 
 - (void) loadNearbyItems {
@@ -119,15 +123,17 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.nearbyItems = [responseObject objectForKey:@"places"];
+        self.sortView.hidden = NO;
         self.tableView.backgroundView.hidden = YES;
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self setErrorMessage];
         self.nearbyItems = nil;
-        self.tableView.backgroundView.hidden = NO;
+        self.sortView.hidden = YES;
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     }];
-    
-    [self.refreshControl endRefreshing];
     [operation start];
 }
 
@@ -139,7 +145,7 @@
     [self loadNearbyItems];
 }
 
-#pragma mark - Connection Error Rescue View
+#pragma mark - Error Messages
 
 -(void)setErrorMessage {
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
@@ -154,7 +160,12 @@
     self.tableView.backgroundView = messageLabel;
 }
 
-/*
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 121 && buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL  URLWithString:UIApplicationOpenSettingsURLString]];
+    }
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -162,6 +173,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
