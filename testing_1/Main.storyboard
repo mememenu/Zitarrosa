@@ -423,7 +423,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="TIh-bh-yI2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="TIh-bh-yI2" customClass="ListsTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIh-bh-yI2" id="NlX-yw-1Rm">
@@ -434,6 +434,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                     <animations/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiB-3R-9gq">
+                                                    <rect key="frame" x="88" y="91" width="200" height="21"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="MrU-7X-eeF"/>
+                                                        <constraint firstAttribute="height" constant="21" id="qQq-kM-3Am"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -441,10 +452,16 @@
                                                 <constraint firstAttribute="trailing" secondItem="350-OG-7s3" secondAttribute="trailing" id="BEF-0D-mQ1"/>
                                                 <constraint firstItem="350-OG-7s3" firstAttribute="leading" secondItem="NlX-yw-1Rm" secondAttribute="leading" id="FdD-nW-gbx"/>
                                                 <constraint firstItem="350-OG-7s3" firstAttribute="top" secondItem="NlX-yw-1Rm" secondAttribute="top" id="Gxp-N2-REb"/>
+                                                <constraint firstItem="NiB-3R-9gq" firstAttribute="centerY" secondItem="NlX-yw-1Rm" secondAttribute="centerY" id="Hup-0s-5hD"/>
+                                                <constraint firstItem="NiB-3R-9gq" firstAttribute="centerX" secondItem="NlX-yw-1Rm" secondAttribute="centerX" id="cgu-Dg-RSe"/>
                                                 <constraint firstAttribute="bottom" secondItem="350-OG-7s3" secondAttribute="bottom" constant="3" id="v4v-y9-kTH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="350-OG-7s3" id="E3s-NN-qUB"/>
+                                            <outlet property="listNameLabel" destination="NiB-3R-9gq" id="Q2B-Z6-CB6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -469,6 +486,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="barButtonItem" destination="vyc-G9-jE6" id="4bs-Mr-Bga"/>
+                        <outlet property="tableView" destination="sih-6r-BKd" id="4nU-X9-15e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNE-Ap-RRz" userLabel="First Responder" sceneMemberID="firstResponder"/>

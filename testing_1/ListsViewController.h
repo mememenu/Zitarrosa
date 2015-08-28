@@ -13,4 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic) NSMutableArray *listItems;
+@property (nonatomic) UIRefreshControl *refreshControl;
+@property (nonatomic) NSInteger currentPage;
+@property (nonatomic) NSInteger totalPages;
 @end

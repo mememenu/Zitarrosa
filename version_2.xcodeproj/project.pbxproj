@@ -21,6 +21,7 @@
 		BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF4381B7AB8820071A70D /* PlacesTableViewController.m */; };
 		BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */; };
 		BE4A90AB1B7EB62F00C904B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4A90AA1B7EB62F00C904B1 /* Main.storyboard */; };
+		BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5170981B90C590008256D5 /* ListsTableViewCell.m */; };
 		BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */; };
 		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
 		BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CA1B8A4A99008302F6 /* SearchViewController.m */; };
@@ -62,6 +63,8 @@
 		BE2CF43A1B7AB8C20071A70D /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
 		BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
 		BE4A90AA1B7EB62F00C904B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BE5170971B90C590008256D5 /* ListsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewCell.h; sourceTree = "<group>"; };
+		BE5170981B90C590008256D5 /* ListsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewCell.m; sourceTree = "<group>"; };
 		BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */,
 				BE19FD711B87C8B0008DBA0A /* FeedTableViewCell.h */,
 				BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */,
+				BE5170971B90C590008256D5 /* ListsTableViewCell.h */,
+				BE5170981B90C590008256D5 /* ListsTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */,
 				BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */,
 				BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */,
+				BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */,
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
 				BE2CF4391B7AB8820071A70D /* PlacesTableViewController.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
