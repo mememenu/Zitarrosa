@@ -1458,41 +1458,67 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eb-nM-wbM">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Places, Zones, Cuisines" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-Ys-UcM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Keb-tj-8hH"/>
+                                    <constraint firstAttribute="height" constant="44" id="f9v-RD-fBv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Keb-tj-8hH"/>
+                                    </mask>
+                                </variation>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eb-nM-wbM">
                                 <rect key="frame" x="67" y="202" width="240" height="199"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending Topics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-Gt-I6q">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending Topics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-Gt-I6q">
                                         <rect key="frame" x="45" y="18" width="150" height="21"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="1Go-oQ-c0n"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-PT-EjG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-PT-EjG">
                                         <rect key="frame" x="45" y="61" width="150" height="20"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="qLk-xn-mxY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="Mignonette">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-oc-mW8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-oc-mW8">
                                         <rect key="frame" x="45" y="117" width="150" height="20"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="UMD-IR-iHy"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="Brunch">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="326-17-nEd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="326-17-nEd">
                                         <rect key="frame" x="45" y="89" width="150" height="20"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="wwP-We-AAd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <state key="normal" title="Brickell">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-F5-qUL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-F5-qUL">
                                         <rect key="frame" x="45" y="145" width="150" height="20"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -1502,15 +1528,49 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="7V9-PT-EjG" firstAttribute="top" secondItem="xc0-Gt-I6q" secondAttribute="bottom" constant="22" id="5zn-pM-Khw"/>
+                                    <constraint firstItem="xc0-Gt-I6q" firstAttribute="centerX" secondItem="8eb-nM-wbM" secondAttribute="centerX" id="9Te-U7-6As"/>
+                                    <constraint firstItem="8bR-oc-mW8" firstAttribute="leading" secondItem="326-17-nEd" secondAttribute="leading" id="C6f-vP-b2A"/>
+                                    <constraint firstItem="xc0-Gt-I6q" firstAttribute="leading" secondItem="7V9-PT-EjG" secondAttribute="leading" id="FxO-Ml-DCD"/>
+                                    <constraint firstItem="8bR-oc-mW8" firstAttribute="trailing" secondItem="7nb-F5-qUL" secondAttribute="trailing" id="Gvo-k5-f9r"/>
+                                    <constraint firstItem="xc0-Gt-I6q" firstAttribute="trailing" secondItem="7V9-PT-EjG" secondAttribute="trailing" id="Ks3-vR-XIa"/>
+                                    <constraint firstAttribute="bottom" secondItem="7nb-F5-qUL" secondAttribute="bottom" constant="34" id="PdW-hb-Hia"/>
+                                    <constraint firstItem="8bR-oc-mW8" firstAttribute="centerX" secondItem="8eb-nM-wbM" secondAttribute="centerX" id="TbX-BS-gpS"/>
+                                    <constraint firstItem="326-17-nEd" firstAttribute="centerY" secondItem="8eb-nM-wbM" secondAttribute="centerY" id="UPU-bl-dBS"/>
+                                    <constraint firstItem="7nb-F5-qUL" firstAttribute="leading" secondItem="8bR-oc-mW8" secondAttribute="leading" id="VVu-cf-2bt"/>
+                                    <constraint firstItem="326-17-nEd" firstAttribute="top" secondItem="7V9-PT-EjG" secondAttribute="bottom" constant="8" symbolic="YES" id="Ywm-nv-boi"/>
+                                    <constraint firstItem="xc0-Gt-I6q" firstAttribute="leading" secondItem="8eb-nM-wbM" secondAttribute="leading" constant="45" id="l7r-Xd-hG9"/>
+                                    <constraint firstAttribute="height" constant="199" id="m0e-Db-OF3"/>
+                                    <constraint firstItem="8bR-oc-mW8" firstAttribute="top" secondItem="326-17-nEd" secondAttribute="bottom" constant="8" symbolic="YES" id="mod-OC-jzO"/>
+                                    <constraint firstItem="7V9-PT-EjG" firstAttribute="leading" secondItem="326-17-nEd" secondAttribute="leading" id="tyG-aG-ZYU"/>
+                                    <constraint firstItem="8bR-oc-mW8" firstAttribute="trailing" secondItem="326-17-nEd" secondAttribute="trailing" id="y77-sW-wHl"/>
+                                    <constraint firstItem="7V9-PT-EjG" firstAttribute="trailing" secondItem="326-17-nEd" secondAttribute="trailing" id="yPP-Ig-WH6"/>
+                                    <constraint firstItem="7nb-F5-qUL" firstAttribute="top" secondItem="8bR-oc-mW8" secondAttribute="bottom" constant="8" symbolic="YES" id="yed-fd-3oq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="l7r-Xd-hG9"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Places, Zones, Cuisines" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-Ys-UcM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.97088068179999998" green="0.97088068179999998" blue="0.97088068179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JHn-Ys-UcM" secondAttribute="trailing" id="DAY-h6-e28"/>
+                            <constraint firstAttribute="trailing" secondItem="8eb-nM-wbM" secondAttribute="trailing" constant="68" id="NDw-R5-rUg"/>
+                            <constraint firstItem="8eb-nM-wbM" firstAttribute="top" secondItem="JHn-Ys-UcM" secondAttribute="bottom" constant="158" id="aW4-YG-ubK"/>
+                            <constraint firstItem="JHn-Ys-UcM" firstAttribute="top" secondItem="6ec-dU-PwO" secondAttribute="top" id="gW7-J0-eLF"/>
+                            <constraint firstItem="8eb-nM-wbM" firstAttribute="leading" secondItem="6ec-dU-PwO" secondAttribute="leading" constant="67" id="jEH-kl-uKF"/>
+                            <constraint firstItem="JHn-Ys-UcM" firstAttribute="leading" secondItem="6ec-dU-PwO" secondAttribute="leading" id="xIo-Jk-36C"/>
+                            <constraint firstItem="OTj-yX-ymh" firstAttribute="top" secondItem="8eb-nM-wbM" secondAttribute="bottom" constant="202" id="zoD-5J-uJE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zoD-5J-uJE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Search" id="n7Y-8C-jpx">
