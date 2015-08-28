@@ -26,7 +26,21 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
+#pragma mark - Table View Data Source
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 15;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    return screenHeight * 0.304;
+}
 
 /*
 #pragma mark - Navigation

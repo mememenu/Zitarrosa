@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListsViewController : UIViewController
+@interface ListsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
