@@ -11,8 +11,12 @@
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlacesViewController.h"
 
 @interface ListsViewController ()
+
+
+@property (strong, nonatomic) PlacesViewController *placesVC;
 
 @end
 
@@ -45,6 +49,8 @@
 -(ListsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
+    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long) indexPath.row + 1]];
+    
     return cell;
 }
 
@@ -56,7 +62,9 @@
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"selected %@", [[self.listItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
+    NSDictionary *list = [self.listItems objectAtIndex:indexPath.row];
+    self.placesVC.placeItems = [list objectForKey:@"places"];
+    self.placesVC.title = [list objectForKey:@"name"];
 }
 
 
@@ -97,8 +105,9 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showListResults"]) {
+        self.placesVC = (PlacesViewController *)segue.destinationViewController;
+    }
 }
 
 

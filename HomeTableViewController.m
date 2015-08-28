@@ -11,11 +11,13 @@
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlacesViewController.h"
  
 @interface HomeTableViewController ()
 
 @property (strong, nonatomic) SpotlightCollectionViewController *spotlightCVC;
 @property (strong, nonatomic) FeaturedCollectionViewController *featuredCVC;
+@property (strong, nonatomic) PlacesViewController *placesVC;
 
 @end
 
@@ -98,11 +100,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *list = [self.listItems objectAtIndex: indexPath.row];
-    
-    NSLog(@"list type is: %@, name is: %@, id is %@",
-          [list objectForKey:@"type"],
-          [list objectForKey:@"name"],
-          [list objectForKey:@"id"]);
+    self.placesVC.placeItems = [list objectForKey:@"places"];
+    self.placesVC.title = [list objectForKey:@"name"];
 }
 
 #pragma mark - Navigation
@@ -112,6 +111,8 @@
         self.spotlightCVC = (SpotlightCollectionViewController *)segue.destinationViewController;
     } else if ([segue.identifier isEqualToString:@"embedFeatured"]) {
         self.featuredCVC = (FeaturedCollectionViewController *)segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"showListResults"]) {
+        self.placesVC = (PlacesViewController *)segue.destinationViewController;
     }
 }
 

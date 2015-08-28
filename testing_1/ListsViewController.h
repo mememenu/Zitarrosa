@@ -17,4 +17,5 @@
 @property (nonatomic) UIRefreshControl *refreshControl;
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) NSInteger totalPages;
+
 @end
