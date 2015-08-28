@@ -20,10 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sortView.hidden = YES;
+    self.sortBottomView.hidden = YES;
     self.nearbyItems = [[NSMutableArray alloc] init];
     self.distanceFilter = 5;
     [self locateUser];
+    
+//    self.tableView.tableHeaderView = self.sortTopView;
     
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
@@ -123,14 +125,15 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.nearbyItems = [responseObject objectForKey:@"places"];
-        self.sortView.hidden = NO;
+        self.sortBottomView.hidden = NO;
         self.tableView.backgroundView.hidden = YES;
+        self.placesCountLabel.text = [NSString stringWithFormat:@"%lu Places", (unsigned long)[self.nearbyItems count]];
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self setErrorMessage];
         self.nearbyItems = nil;
-        self.sortView.hidden = YES;
+        self.sortBottomView.hidden = YES;
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
     }];
@@ -138,6 +141,12 @@
 }
 
 #pragma mark - IB Actions
+- (IBAction)sortButtonPressed:(id)sender {
+//    left off here trying to hide bottom view and move tableview up
+//    self.sortBottomView.hidden ^= YES;
+    self.sortBottomView.hidden = !self.sortBottomView.hidden;
+    
+}
 
 - (IBAction)didChangeDistance:(id)sender {
     UIButton* distancebutton = (UIButton*)sender;

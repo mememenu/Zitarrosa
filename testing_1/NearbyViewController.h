@@ -13,7 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *sortView;
+@property (weak, nonatomic) IBOutlet UIView *sortTopView;
+@property (weak, nonatomic) IBOutlet UIView *sortBottomView;
+@property (weak, nonatomic) IBOutlet UILabel *placesCountLabel;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
