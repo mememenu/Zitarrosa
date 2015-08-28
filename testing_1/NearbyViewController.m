@@ -22,11 +22,8 @@
     [super viewDidLoad];
     self.sortBottomView.hidden = YES;
     self.nearbyItems = [[NSMutableArray alloc] init];
-    self.distanceFilter = 5;
+    self.distanceFilter = 3;
     [self locateUser];
-    
-//    self.tableView.tableHeaderView = self.sortTopView;
-    
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -142,14 +139,21 @@
 
 #pragma mark - IB Actions
 - (IBAction)sortButtonPressed:(id)sender {
-//    left off here trying to hide bottom view and move tableview up
-//    self.sortBottomView.hidden ^= YES;
-    self.sortBottomView.hidden = !self.sortBottomView.hidden;
-    
+    //    left off here trying to hide bottom view and move tableview up
+    //    self.sortBottomView.hidden ^= YES;
+    //    self.sortBottomView.hidden = !self.sortBottomView.hidden;
 }
 
 - (IBAction)didChangeDistance:(id)sender {
     UIButton* distancebutton = (UIButton*)sender;
+    // Unselect all the buttons in the parent view
+    for (UIView *button in distancebutton.superview.subviews) {
+        if ([button isKindOfClass:[UIButton class]]) {
+            [(UIButton *)button setSelected:NO];
+        }
+    }
+    //    set distance button selected and distance filter to button title text
+    [distancebutton setSelected:YES];
     self.distanceFilter = [distancebutton.titleLabel.text intValue];
     [self loadNearbyItems];
 }
