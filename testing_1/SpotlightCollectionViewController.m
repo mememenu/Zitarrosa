@@ -9,8 +9,11 @@
 #import "SpotlightCollectionViewController.h"
 #import "SpotlightCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "PlacesViewController.h"
 
 @interface SpotlightCollectionViewController ()
+
+@property (strong, nonatomic) PlacesViewController *placesVC;
 
 @end
 
@@ -34,15 +37,11 @@
 
 - (SpotlightCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SpotlightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex:indexPath.row];
     
-    NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex: indexPath.row];
     NSString *image_url = [spotlightItem objectForKey:@"image_url"];
     image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
-    
-    // Configure the cell
-//    [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
-//    cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
-//    cell.spotlightType.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"type"];
+    cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
     
     return cell;
 }
@@ -55,12 +54,14 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *spotable = [[self.spotlightItems objectAtIndex: indexPath.row] objectForKey:@"spotable"];
-
-    NSLog(@"spotlight item type is: %@, name is: %@, spotable id is %@",
-          [spotable objectForKey:@"type"],
-          [spotable objectForKey:@"name"],
-          [spotable objectForKey:@"id"]);
 }
+
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+}
+
 
 @end

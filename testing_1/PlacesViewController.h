@@ -10,7 +10,7 @@
 
 @interface PlacesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) NSMutableArray *placeItems;
+@property (nonatomic, readwrite) NSMutableArray *placeItems;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *placesCountLabel;
 

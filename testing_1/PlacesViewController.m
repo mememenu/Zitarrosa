@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.placesCountLabel.text = [NSString stringWithFormat:@"%lu Places", (unsigned long)[self.placeItems count]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View Data Source

@@ -48,9 +48,10 @@
 
 -(ListsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long) indexPath.row + 1]];
+    NSDictionary *list = [self.listItems objectAtIndex:indexPath.row];
     
+    cell.listNameLabel.text = [list objectForKey:@"name"];
+    cell.listType.text = [list objectForKey:@"type"];
     return cell;
 }
 

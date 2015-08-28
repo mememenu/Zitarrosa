@@ -83,11 +83,10 @@
 - (HomeTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-//    NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
+    NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
     
-    cell.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long)6 - indexPath.row]];
-//    cell.listName.text = [listItem objectForKey:@"name"];
-//    cell.listType.text = [listItem objectForKey:@"type"];
+    cell.listName.text = [listItem objectForKey:@"name"];
+    cell.listType.text = [listItem objectForKey:@"type"];
     
     return cell;
 }
