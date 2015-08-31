@@ -1,57 +1,55 @@
 //
-//  ListsViewController.m
-//  testing_1
+//  CollectionsTableViewController.m
+//  version_2
 //
-//  Created by Alfonso Pintos on 8/13/15.
+//  Created by Alfonso Pintos on 8/31/15.
 //  Copyright © 2015 Meme Menu. All rights reserved.
 //
 
-#import "ListsViewController.h"
+#import "CollectionsTableViewController.h"
 #import "ListsTableViewCell.h"
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 #import "PlacesViewController.h"
 
-@interface ListsViewController ()
-
+@interface CollectionsTableViewController ()
 
 @property (strong, nonatomic) PlacesViewController *placesVC;
 
 @end
 
-@implementation ListsViewController
+@implementation CollectionsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadLists];
+    [self loadCollections];
     
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-//     Refresh Control
+    //     Refresh Control
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor clearColor];
     self.refreshControl.tintColor = [UIColor grayColor];
     [self.refreshControl addTarget:self
-                            action:@selector(loadLists)
+                            action:@selector(loadCollections)
                   forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
 }
 
 #pragma mark - Table View Data Source
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.listItems count];
+    return [self.collections count];
 }
 
 -(ListsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *list = [self.listItems objectAtIndex:indexPath.row];
+    NSDictionary *collection = [self.collections objectAtIndex:indexPath.row];
     
-    cell.listNameLabel.text = [list objectForKey:@"name"];
-    cell.listType.text = [list objectForKey:@"type"];
+    cell.listNameLabel.text = [collection objectForKey:@"name"];
+    cell.listType.text = [collection objectForKey:@"type"];
     return cell;
 }
 
@@ -63,23 +61,23 @@
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *list = [self.listItems objectAtIndex:indexPath.row];
-    self.placesVC.placeItems = [list objectForKey:@"places"];
-    self.placesVC.title = [list objectForKey:@"name"];
+    NSDictionary *collection = [self.collections objectAtIndex:indexPath.row];
+    self.placesVC.placeItems = [collection objectForKey:@"places"];
+    self.placesVC.title = [collection objectForKey:@"name"];
 }
 
-
-- (void) loadLists {
+- (void) loadCollections {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-development.herokuapp.com/api/v1/lists.json"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.listItems = [[responseObject objectForKey:@"lists"] mutableCopy];
+        self.collections = [responseObject objectForKey:@"lists"];
         self.tableView.backgroundView.hidden = YES;
         [self.tableView reloadData];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        self.listItems = nil;
+        self.collections = nil;
         [self setErrorMessage];
         [self.tableView reloadData];
     }];
@@ -110,6 +108,4 @@
         self.placesVC = (PlacesViewController *)segue.destinationViewController;
     }
 }
-
-
 @end
