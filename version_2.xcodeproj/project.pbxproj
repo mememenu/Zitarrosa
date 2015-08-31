@@ -23,6 +23,7 @@
 		BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5170981B90C590008256D5 /* ListsTableViewCell.m */; };
 		BE51709C1B90DBC0008256D5 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51709B1B90DBC0008256D5 /* PlacesViewController.m */; };
 		BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */; };
+		BE63C40E1B94F7930062C81D /* PlaceShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63C40D1B94F7930062C81D /* PlaceShowViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */; };
 		BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CA1B8A4A99008302F6 /* SearchViewController.m */; };
 		BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CF1B8A8BE5008302F6 /* SettingsViewController.m */; };
@@ -67,6 +68,8 @@
 		BE51709B1B90DBC0008256D5 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
 		BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BE63C40C1B94F7930062C81D /* PlaceShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceShowViewController.h; sourceTree = "<group>"; };
+		BE63C40D1B94F7930062C81D /* PlaceShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceShowViewController.m; sourceTree = "<group>"; };
 		BE6477BE1B7AE25E00CC5387 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		BE6477BF1B7AE25E00CC5387 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		BE7379C91B8A4A99008302F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 			children = (
 				BE51709A1B90DBC0008256D5 /* PlacesViewController.h */,
 				BE51709B1B90DBC0008256D5 /* PlacesViewController.m */,
+				BE63C40C1B94F7930062C81D /* PlaceShowViewController.h */,
+				BE63C40D1B94F7930062C81D /* PlaceShowViewController.m */,
 			);
 			name = Places;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */,
 				BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */,
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
+				BE63C40E1B94F7930062C81D /* PlaceShowViewController.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
 				BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,

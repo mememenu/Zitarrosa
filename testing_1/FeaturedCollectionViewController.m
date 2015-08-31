@@ -9,8 +9,11 @@
 #import "FeaturedCollectionViewController.h"
 #import "FeaturedCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "PlaceShowViewController.h"
 
 @interface FeaturedCollectionViewController ()
+
+@property (strong, nonatomic) PlaceShowViewController *placeShowVC;
 
 @end
 
@@ -54,12 +57,16 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *featuredItem = [self.featuredItems objectAtIndex:indexPath.row];
-    
-    NSLog(@"featured item type is: %@, name is: %@, id is %@",
-          [featuredItem objectForKey:@"type"],
-          [featuredItem objectForKey:@"name"],
-          [featuredItem objectForKey:@"id"]);
+    self.placeShowVC.placeID = [[self.featuredItems objectAtIndex:indexPath.row] objectForKey:@"id"];
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showFeaturedPlace"]) {
+        self.placeShowVC = (PlaceShowViewController *)segue.destinationViewController;
+    }
 }
 
 @end

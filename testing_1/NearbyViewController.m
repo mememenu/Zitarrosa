@@ -11,8 +11,11 @@
 #import "SWRevealViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlaceShowViewController.h"
 
 @interface NearbyViewController ()
+
+@property (strong, nonatomic) PlaceShowViewController *placeShowVC;
 
 @end
 
@@ -41,14 +44,6 @@
 }
 
 #pragma mark - Table view data source
-
-//  test out performance differences with and without this method
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    if ([self.nearbyItems count] > 0) {
-//        return 1;
-//    }
-//    return 0;
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.nearbyItems count];
@@ -81,7 +76,9 @@
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"selected %@", [[self.nearbyItems objectAtIndex:indexPath.row] objectForKey:@"name"]);
+    NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
+    self.placeShowVC.placeID = [place objectForKey:@"id"];
+
 }
 
 #pragma mark - Core Location Delegate
@@ -186,8 +183,9 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showNearbyPlace"]) {
+        self.placeShowVC = (PlaceShowViewController *)segue.destinationViewController;
+    }
 }
 
 

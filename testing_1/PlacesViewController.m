@@ -10,8 +10,11 @@
 #import "PlacesTableViewCell.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlaceShowViewController.h"
 
 @interface PlacesViewController ()
+
+@property (strong, nonatomic) PlaceShowViewController *placeShowVC;
 
 @end
 
@@ -48,17 +51,18 @@
 #pragma mark - Table View Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"selected %@", [self.placeItems objectAtIndex:indexPath.row]);
+    self.placeShowVC.placeID = [[self.placeItems objectAtIndex:indexPath.row] objectForKey:@"id"];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showPlace"]) {
+        self.placeShowVC = (PlaceShowViewController *)segue.destinationViewController;
+    }
 }
-*/
+
 
 @end
