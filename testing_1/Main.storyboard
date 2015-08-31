@@ -188,6 +188,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="containerView" destination="Oik-YT-E3O" id="2hL-8X-IKH"/>
                         <outlet property="navigationBarButtonItem" destination="n5R-iB-3Ob" id="HJC-AK-Cb8"/>
                     </connections>
                 </tableViewController>
@@ -1781,11 +1782,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="Apb-8D-TsU"/>
         <segue reference="7Mr-bm-kzi"/>
-        <segue reference="jsd-Lz-3bk"/>
         <segue reference="rWg-i6-Af8"/>
-        <segue reference="8ME-Ne-ayo"/>
+        <segue reference="jsd-Lz-3bk"/>
         <segue reference="TbC-IR-3mX"/>
-        <segue reference="XQV-I6-uvg"/>
+        <segue reference="8ME-Ne-ayo"/>
+        <segue reference="4Wj-nA-ogK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

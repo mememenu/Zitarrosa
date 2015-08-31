@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.listItems = [[NSMutableArray alloc] init];
     [self loadHomePage];
     
     self.navigationBarButtonItem.target = self.revealViewController;
@@ -32,11 +33,18 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
 //    Set size for spotlight and featured container view
-    UIView *containerView = [self.view.subviews objectAtIndex:1];
+    self.containerView = [self.view.subviews objectAtIndex:1];
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    [containerView setFrame:CGRectMake(0, 0, screenWidth, screenHeight * 0.615)];
+    [self.containerView setFrame:CGRectMake(0, 0, screenWidth, screenHeight * 0.615)];
     self.cellHeight = (screenHeight * 0.306);
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor grayColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadHomePage)
+                  forControlEvents:UIControlEventValueChanged];
 }
 
 - (void) loadHomePage {
@@ -45,27 +53,21 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *genericLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"];
-        NSArray *contributorLists = [[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"];
+        [self removeErrorMessage];
         
-        self.listItems = [[NSMutableArray alloc] init];
-        
-//        set class variable listItems equal to combination of generic_lists & contributor arrays
-        [self.listItems addObjectsFromArray:genericLists];
-        [self.listItems addObjectsFromArray:contributorLists];
-        
-//        set spotlight and featured itemArrays equal to response 
+        self.listItems = [[[responseObject objectForKey:@"home_page"] objectForKey:@"generic_lists"] mutableCopy];
+        [self.listItems addObjectsFromArray:[[responseObject objectForKey:@"home_page"] objectForKey:@"contributor_lists"]];
         self.spotlightCVC.spotlightItems = [[[responseObject objectForKey:@"home_page"] objectForKey:@"spotlight"] objectForKey:@"spotlight_items"];
         self.featuredCVC.featuredItems = [[[responseObject objectForKey:@"home_page"] objectForKey:@"featured_list"] objectForKey:@"places"];
-        
-//        reload data on all views in homepage
+
         [self.spotlightCVC.collectionView reloadData];
         [self.featuredCVC.collectionView reloadData];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // insert failure block here
+        [self setErrorMessage];
+        
     }];
-    
+    [self.refreshControl endRefreshing];
     [operation start];
 }
 
@@ -101,6 +103,36 @@
     NSDictionary *list = [self.listItems objectAtIndex: indexPath.row];
     self.placesVC.placeItems = [list objectForKey:@"places"];
     self.placesVC.title = [list objectForKey:@"name"];
+}
+
+#pragma mark - Connection Error Rescue View
+
+-(void)setErrorMessage {
+    self.listItems = nil;
+    self.spotlightCVC.spotlightItems = nil;
+    self.featuredCVC.featuredItems = nil;
+    
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
+    
+    messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    [messageLabel sizeToFit];
+    
+    self.tableView.backgroundView = messageLabel;
+    self.tableView.backgroundView.hidden = NO;
+    self.containerView.hidden = YES;
+    
+    [self.spotlightCVC.collectionView reloadData];
+    [self.featuredCVC.collectionView reloadData];
+    [self.tableView reloadData];
+}
+
+-(void)removeErrorMessage {
+    self.tableView.backgroundView.hidden = YES;
+    self.containerView.hidden = NO;
 }
 
 #pragma mark - Navigation

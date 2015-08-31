@@ -13,7 +13,10 @@
 @interface HomeTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *navigationBarButtonItem;
-@property (nonatomic) NSMutableArray *listItems;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
+@property (nonatomic, readwrite) NSMutableArray *listItems;
 @property (nonatomic) float cellHeight;
+
+
 @end
