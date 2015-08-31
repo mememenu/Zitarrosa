@@ -44,6 +44,11 @@
     return [self.collections count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    return screenHeight * 0.304;
+}
+
 -(ListsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *collection = [self.collections objectAtIndex:indexPath.row];
@@ -51,11 +56,6 @@
     cell.listNameLabel.text = [collection objectForKey:@"name"];
     cell.listType.text = [collection objectForKey:@"type"];
     return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    return screenHeight * 0.304;
 }
 
 #pragma mark - Table View Delegate
@@ -72,16 +72,14 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.collections = [responseObject objectForKey:@"lists"];
         self.tableView.backgroundView.hidden = YES;
+        self.collections = [responseObject objectForKey:@"lists"];
         [self.tableView reloadData];
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         self.collections = nil;
         [self setErrorMessage];
         [self.tableView reloadData];
     }];
-    
     [self.refreshControl endRefreshing];
     [operation start];
 }
