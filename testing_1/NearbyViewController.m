@@ -20,9 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.sortBottomView.hidden = YES;
     self.nearbyItems = [[NSMutableArray alloc] init];
     self.distanceFilter = 3;
+    self.distanceButton2.selected = YES;
+    
     [self locateUser];
     self.barButtonItem.target = self.revealViewController;
     self.barButtonItem.action = @selector(revealToggle:);

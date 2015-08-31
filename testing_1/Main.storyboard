@@ -1249,6 +1249,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="barButtonItem" destination="52Z-H6-A30" id="9OH-Li-2r5"/>
+                        <outlet property="distanceButton1" destination="Hr5-YJ-vMU" id="KnP-cO-gcl"/>
+                        <outlet property="distanceButton2" destination="Hn3-pM-Kgl" id="1gR-2s-JtI"/>
+                        <outlet property="distanceButton3" destination="UhW-O5-rn7" id="8vi-DB-jzc"/>
                         <outlet property="placesCountLabel" destination="kDG-Fe-EYW" id="sG6-rQ-oYd"/>
                         <outlet property="sortBottomView" destination="Gf5-sz-51f" id="t5f-5M-7Bk"/>
                         <outlet property="sortTopView" destination="bLb-8o-9Qc" id="7qD-Zs-XZY"/>

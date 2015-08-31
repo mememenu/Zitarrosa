@@ -17,6 +17,11 @@
 @property (weak, nonatomic) IBOutlet UIView *sortBottomView;
 @property (weak, nonatomic) IBOutlet UILabel *placesCountLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *distanceButton1;
+@property (weak, nonatomic) IBOutlet UIButton *distanceButton2;
+@property (weak, nonatomic) IBOutlet UIButton *distanceButton3;
+
+
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 @property (nonatomic) NSString *latitude;
