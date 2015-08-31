@@ -49,6 +49,7 @@ const int KLoadingCellTag = 12345;
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.tableView.backgroundView.hidden = YES;
         if (!self.refreshControl.refreshing) {
             for (id feedItem in responseObject) {
                 if (![self.feedItems containsObject:feedItem]) {
@@ -62,9 +63,11 @@ const int KLoadingCellTag = 12345;
         [self.refreshControl endRefreshing];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // insert failure block here
+        [self setErrorMessage];
         [self.refreshControl endRefreshing];
+        [self.tableView reloadData];
     }];
+    
     [operation start];
 }
 
@@ -133,6 +136,8 @@ const int KLoadingCellTag = 12345;
 #pragma mark - Connection Error Rescue View
 
 -(void)setErrorMessage {
+    self.feedItems = nil;
+    
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
     
     messageLabel.text = @"No data is currently available. Please pull down to refresh.";
@@ -143,6 +148,7 @@ const int KLoadingCellTag = 12345;
     [messageLabel sizeToFit];
     
     self.tableView.backgroundView = messageLabel;
+    self.tableView.backgroundView.hidden = NO;
 }
 
 
