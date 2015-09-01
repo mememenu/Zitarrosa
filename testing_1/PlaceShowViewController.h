@@ -33,6 +33,7 @@
 
 @property (nonatomic) NSString *placeID;
 @property (nonatomic) NSDictionary *placeDictionary;
+@property (nonatomic) NSDictionary *foursquarePlace;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;

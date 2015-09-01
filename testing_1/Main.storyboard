@@ -1500,9 +1500,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kim-Fe-ojr">
-                                        <rect key="frame" x="12" y="25" width="20" height="30"/>
+                                        <rect key="frame" x="12" y="28" width="30" height="30"/>
                                         <animations/>
-                                        <state key="normal" image="back-arrow">
+                                        <state key="normal" backgroundImage="back-arrow">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>

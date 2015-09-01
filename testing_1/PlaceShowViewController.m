@@ -10,6 +10,9 @@
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
+#define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
+#define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
+
 @interface PlaceShowViewController ()
 
 @end
@@ -31,21 +34,39 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.placeDictionary = responseObject;
-        [self populateView];
+        [self loadFoursquare];
+        [self populateMemeView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
     [operation start];
 }
 
+-(void) loadFoursquare {
+    NSString *fourSquareId = [self.placeDictionary objectForKey:@"foursquare_id"];
+    NSString *url = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/%@?client_id=%@&client_secret=%@&v=20130815",fourSquareId, FOURSQUARE_CLIENT_ID, FOURSQUARE_CLIENT_SECRET];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.foursquarePlace = [[responseObject objectForKey:@"response"] objectForKey:@"venue"];
+        [self populateFoursquareView];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //  Insert failure block here
+    }];
+    [operation start];
+}
 
--(void)populateView {
+#pragma mark - Populate Views
+
+-(void)populateMemeView {
     NSString *image_url = [[self.placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
     [self.bannerImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     
     self.nameLabel.text = [_placeDictionary objectForKey:@"name"];
-    self.cuisineLabel.text = @"Cuisine Label";
-    self.openStatusLabel.text = @"Open Status Label";
     self.zoneLabel.text = [_placeDictionary objectForKey:@"zone"];
+    self.addressLabel.text = [_placeDictionary objectForKey:@"full_address"];
+    self.phoneLabel.text = [_placeDictionary objectForKey:@"formatted_phone"];
     
 //    Set Distance Label using Core Location
     CLLocation *placeLocation = [[CLLocation alloc] initWithLatitude:[[[_placeDictionary objectForKey:@"location"] objectAtIndex:0] floatValue]
@@ -59,9 +80,12 @@
     self.quoteTwoLabel.text = @"Curabitur quis dolor mollis, interdum tellus.";
     self.quoteThreeLabel.text = @"Nullam eu suscipit ligula. Vivamus quis mollis.";
     
-    
-    self.addressLabel.text = [_placeDictionary objectForKey:@"full_address"];
-    self.phoneLabel.text = [_placeDictionary objectForKey:@"formatted_phone"];
+}
+
+
+-(void) populateFoursquareView {
+    self.cuisineLabel.text = [[[self.foursquarePlace objectForKey:@"categories"] objectAtIndex:0] objectForKey:@"shortName"];
+    self.openStatusLabel.text = [[self.foursquarePlace objectForKey:@"hours"] objectForKey:@"status"];
 }
 
 #pragma mark - Core Location Delegate
