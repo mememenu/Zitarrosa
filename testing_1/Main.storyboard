@@ -1478,12 +1478,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="177" placeholderIntrinsicHeight="12" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-JV-dg0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-JV-dg0">
                                         <rect key="frame" x="8" y="139" width="177" height="13"/>
                                         <animations/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="5MW-V9-iwD"/>
                                             <constraint firstAttribute="width" secondItem="Hwx-JV-dg0" secondAttribute="height" multiplier="59:4" constant="-14.75" id="Dkc-zM-4f0"/>
                                             <constraint firstAttribute="height" constant="13" id="TYq-Oi-Qtl"/>
+                                            <constraint firstAttribute="width" constant="177" id="nFo-Cp-KYI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1491,6 +1493,7 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Dkc-zM-4f0"/>
+                                                <exclude reference="TYq-Oi-Qtl"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -1510,12 +1513,13 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="177" placeholderIntrinsicHeight="12" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktT-sR-kVr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktT-sR-kVr">
                                         <rect key="frame" x="190" y="139" width="177" height="13"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ktT-sR-kVr" secondAttribute="height" multiplier="59:4" constant="-14.75" id="bCE-Vi-llt"/>
                                             <constraint firstAttribute="height" constant="13" id="uIL-8E-5AI"/>
+                                            <constraint firstAttribute="width" constant="177" id="wT5-Zm-0rn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1523,6 +1527,7 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="bCE-Vi-llt"/>
+                                                <exclude reference="wT5-Zm-0rn"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -1562,6 +1567,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hST-Y8-aOY" secondAttribute="trailing" constant="8" id="5LY-WC-hu8"/>
                                     <constraint firstItem="hST-Y8-aOY" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" constant="8" id="5y0-hn-jhg"/>
+                                    <constraint firstItem="ktT-sR-kVr" firstAttribute="leading" secondItem="Hwx-JV-dg0" secondAttribute="trailing" constant="5" id="6mu-8T-9UM"/>
                                     <constraint firstAttribute="bottom" secondItem="Hwx-JV-dg0" secondAttribute="bottom" constant="8" id="AZf-LX-o1P"/>
                                     <constraint firstAttribute="width" secondItem="0Xv-Mj-mrc" secondAttribute="height" multiplier="75:32" id="C0b-UH-kpt"/>
                                     <constraint firstItem="yI3-lM-tm3" firstAttribute="leading" secondItem="i1T-oy-8ie" secondAttribute="trailing" constant="5" id="DH0-h6-D32"/>
@@ -1573,6 +1579,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ktT-sR-kVr" secondAttribute="trailing" constant="8" id="UZH-Yc-pE2"/>
                                     <constraint firstAttribute="trailing" secondItem="S8F-8c-J8S" secondAttribute="trailing" id="afc-GU-Lhz"/>
                                     <constraint firstItem="S8F-8c-J8S" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" id="cTy-y9-U33"/>
+                                    <constraint firstItem="ktT-sR-kVr" firstAttribute="leading" secondItem="Hwx-JV-dg0" secondAttribute="trailing" constant="5" id="dCL-tS-Rag"/>
                                     <constraint firstAttribute="bottom" secondItem="S8F-8c-J8S" secondAttribute="bottom" id="f8e-Ny-0nA"/>
                                     <constraint firstItem="ktT-sR-kVr" firstAttribute="top" secondItem="yI3-lM-tm3" secondAttribute="bottom" constant="3" id="l8e-yt-Mob"/>
                                     <constraint firstItem="Hwx-JV-dg0" firstAttribute="top" secondItem="i1T-oy-8ie" secondAttribute="bottom" constant="3" id="mzj-zx-not"/>
@@ -1588,6 +1595,8 @@
                                     <mask key="constraints">
                                         <exclude reference="C0b-UH-kpt"/>
                                         <exclude reference="Exq-aB-fuj"/>
+                                        <exclude reference="6mu-8T-9UM"/>
+                                        <exclude reference="pqV-rp-3XH"/>
                                     </mask>
                                 </variation>
                             </view>
