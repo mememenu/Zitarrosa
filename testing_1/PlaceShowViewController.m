@@ -86,6 +86,10 @@
 -(void) populateFoursquareView {
     self.cuisineLabel.text = [[[self.foursquarePlace objectForKey:@"categories"] objectAtIndex:0] objectForKey:@"shortName"];
     self.openStatusLabel.text = [[self.foursquarePlace objectForKey:@"hours"] objectForKey:@"status"];
+    
+    if ([self.foursquarePlace objectForKey:@"reservations" ] != NULL) {
+        [self.reserveButton setEnabled:YES];
+    }
 }
 
 #pragma mark - Core Location Delegate
@@ -123,6 +127,10 @@
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (IBAction)reservationButtonPressed:(id)sender {
+    NSLog(@"%@", [self.foursquarePlace objectForKey:@"reservations"]);
 }
 
 #pragma mark - Navigation
