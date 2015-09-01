@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PlaceShowViewController : UIViewController
+@interface PlaceShowViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *bannerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -33,4 +34,6 @@
 @property (nonatomic) NSString *placeID;
 @property (nonatomic) NSDictionary *placeDictionary;
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *location;
 @end
