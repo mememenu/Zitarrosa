@@ -28,6 +28,7 @@
 		BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CA1B8A4A99008302F6 /* SearchViewController.m */; };
 		BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CF1B8A8BE5008302F6 /* SettingsViewController.m */; };
 		BE82336D1B8B66280021638D /* SidebarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE82336C1B8B66280021638D /* SidebarTableViewCell.m */; };
+		BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */; };
 		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
 		BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF447B11B8CD41000417CEE /* NearbyViewController.m */; };
@@ -78,6 +79,8 @@
 		BE7379CF1B8A8BE5008302F6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE82336B1B8B66280021638D /* SidebarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewCell.h; sourceTree = "<group>"; };
 		BE82336C1B8B66280021638D /* SidebarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewCell.m; sourceTree = "<group>"; };
+		BE8C6BDB1B9646160085EF8F /* PlaceMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMenuTableViewController.h; sourceTree = "<group>"; };
+		BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMenuTableViewController.m; sourceTree = "<group>"; };
 		BE9988A41B94B55F00BB5216 /* CollectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionsTableViewController.h; sourceTree = "<group>"; };
 		BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsTableViewController.m; sourceTree = "<group>"; };
 		BEA9807E1B7EC0FF0050C40E /* SpotlightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewCell.h; sourceTree = "<group>"; };
@@ -170,7 +173,7 @@
 				BE5D0F1A1B7EAE9A005AD297 /* Nearby */,
 				BE5D0F1B1B7EAEA3005AD297 /* Feed */,
 				BE5D0F1D1B7EAEC4005AD297 /* Lists */,
-				BE5D0F1C1B7EAEAD005AD297 /* Places */,
+				BE5D0F1C1B7EAEAD005AD297 /* Place */,
 				BE7379CC1B8A860A008302F6 /* Search */,
 				BE7379CD1B8A863C008302F6 /* Settings */,
 			);
@@ -208,15 +211,17 @@
 			name = Feed;
 			sourceTree = "<group>";
 		};
-		BE5D0F1C1B7EAEAD005AD297 /* Places */ = {
+		BE5D0F1C1B7EAEAD005AD297 /* Place */ = {
 			isa = PBXGroup;
 			children = (
 				BE51709A1B90DBC0008256D5 /* PlacesViewController.h */,
 				BE51709B1B90DBC0008256D5 /* PlacesViewController.m */,
 				BE63C40C1B94F7930062C81D /* PlaceShowViewController.h */,
 				BE63C40D1B94F7930062C81D /* PlaceShowViewController.m */,
+				BE8C6BDB1B9646160085EF8F /* PlaceMenuTableViewController.h */,
+				BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */,
 			);
-			name = Places;
+			name = Place;
 			sourceTree = "<group>";
 		};
 		BE5D0F1D1B7EAEC4005AD297 /* Lists */ = {
@@ -393,6 +398,7 @@
 			files = (
 				BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */,
 				BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */,
+				BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */,
 				BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
 				BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */,

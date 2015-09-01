@@ -9,11 +9,14 @@
 #import "PlaceShowViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlaceMenuTableViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
 
 @interface PlaceShowViewController ()
+
+@property (strong, nonatomic) PlaceMenuTableViewController *placeMenuTVC;
 
 @end
 
@@ -34,6 +37,8 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.placeDictionary = responseObject;
+        self.placeMenuTVC.menusArray = [responseObject objectForKey:@"menus"];
+        [self.placeMenuTVC.tableView reloadData];
         [self loadFoursquare];
         [self populateMemeView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -143,6 +148,18 @@
     NSLog(@"%@", [self.foursquarePlace objectForKey:@"reservations"]);
 }
 
+- (IBAction)segmentedControlAction:(id)sender {
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        NSLog(@"Menu");
+    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
+        NSLog(@"Photos");
+    } else if (self.segmentedControl.selectedSegmentIndex == 2) {
+        NSLog(@"Map");
+    } else if (self.segmentedControl.selectedSegmentIndex == 3) {
+        NSLog(@"Details");
+    }
+}
+
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController setNavigationBarHidden:NO];
@@ -150,8 +167,9 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- 
+    if ([segue.identifier isEqualToString:@"embedMenuTableView"]) {
+        self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
+    }
 }
-
 
 @end
