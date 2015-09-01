@@ -1682,30 +1682,33 @@
                                         <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZU-gB-j54">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcZ-bs-HUm">
                                         <rect key="frame" x="191" y="13" width="174" height="15"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="174" id="FIl-rF-2hs"/>
-                                            <constraint firstAttribute="height" constant="15" id="Qo7-8N-uC7"/>
+                                            <constraint firstAttribute="height" constant="15" id="BuI-z8-ieL"/>
+                                            <constraint firstAttribute="width" constant="174" id="iDA-Df-fRZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callButtonPress:" destination="3i4-80-yzL" eventType="touchUpInside" id="yFh-ed-L2z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="BZU-gB-j54" firstAttribute="centerY" secondItem="PzE-az-suW" secondAttribute="centerY" id="58a-AC-3dC"/>
-                                    <constraint firstItem="BZU-gB-j54" firstAttribute="leading" secondItem="CAb-jQ-PGb" secondAttribute="trailing" constant="7" id="84o-uh-ZDl"/>
+                                    <constraint firstItem="hcZ-bs-HUm" firstAttribute="leading" secondItem="CAb-jQ-PGb" secondAttribute="trailing" constant="8" id="6oU-3w-Qg0"/>
                                     <constraint firstAttribute="bottom" secondItem="CAb-jQ-PGb" secondAttribute="bottom" constant="1" id="C8m-ML-BjJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hcZ-bs-HUm" secondAttribute="trailing" constant="10" id="Mva-JJ-fmz"/>
                                     <constraint firstItem="CAb-jQ-PGb" firstAttribute="centerY" secondItem="PzE-az-suW" secondAttribute="centerY" id="QWQ-Rc-MG3"/>
                                     <constraint firstItem="CAb-jQ-PGb" firstAttribute="top" secondItem="PzE-az-suW" secondAttribute="top" constant="1" id="a0j-7U-xHc"/>
                                     <constraint firstAttribute="bottom" secondItem="CAb-jQ-PGb" secondAttribute="bottom" constant="1" id="bRl-Hf-YD5"/>
                                     <constraint firstAttribute="height" constant="40" id="dQN-ZY-aIG"/>
-                                    <constraint firstItem="BZU-gB-j54" firstAttribute="leading" secondItem="CAb-jQ-PGb" secondAttribute="trailing" constant="8" id="oCM-L1-RJe"/>
-                                    <constraint firstAttribute="trailing" secondItem="BZU-gB-j54" secondAttribute="trailing" constant="10" id="oi3-Mk-6c6"/>
+                                    <constraint firstItem="hcZ-bs-HUm" firstAttribute="centerY" secondItem="PzE-az-suW" secondAttribute="centerY" id="mBf-ae-A1w"/>
                                     <constraint firstItem="CAb-jQ-PGb" firstAttribute="top" secondItem="PzE-az-suW" secondAttribute="top" constant="1" id="osq-Lz-tsK"/>
                                     <constraint firstItem="CAb-jQ-PGb" firstAttribute="leading" secondItem="PzE-az-suW" secondAttribute="leading" constant="10" id="vMv-ch-HwU"/>
                                 </constraints>
@@ -1713,7 +1716,6 @@
                                     <mask key="constraints">
                                         <exclude reference="C8m-ML-BjJ"/>
                                         <exclude reference="osq-Lz-tsK"/>
-                                        <exclude reference="84o-uh-ZDl"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1794,7 +1796,7 @@
                         <outlet property="distanceLabel" destination="ktT-sR-kVr" id="IWa-hs-eIF"/>
                         <outlet property="nameLabel" destination="hST-Y8-aOY" id="1JE-AI-S9q"/>
                         <outlet property="openStatusLabel" destination="Hwx-JV-dg0" id="c5u-Qj-OEM"/>
-                        <outlet property="phoneLabel" destination="BZU-gB-j54" id="5dW-gN-2h6"/>
+                        <outlet property="phoneButton" destination="hcZ-bs-HUm" id="cAC-Eg-iLf"/>
                         <outlet property="quoteOneLabel" destination="IjV-sW-fDJ" id="VHc-If-m0s"/>
                         <outlet property="quoteThreeLabel" destination="qZl-fe-04G" id="uZn-UL-BKR"/>
                         <outlet property="quoteTwoLabel" destination="U47-Fx-hr1" id="SnY-eF-Iw3"/>

@@ -24,8 +24,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIButton *reserveButton;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;

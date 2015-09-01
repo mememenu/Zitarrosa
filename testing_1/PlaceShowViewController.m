@@ -66,7 +66,7 @@
     self.nameLabel.text = [_placeDictionary objectForKey:@"name"];
     self.zoneLabel.text = [_placeDictionary objectForKey:@"zone"];
     self.addressLabel.text = [_placeDictionary objectForKey:@"full_address"];
-    self.phoneLabel.text = [_placeDictionary objectForKey:@"formatted_phone"];
+    [self.phoneButton setTitle:[_placeDictionary objectForKey:@"formatted_phone"] forState:UIControlStateNormal];
     
 //    Set Distance Label using Core Location
     CLLocation *placeLocation = [[CLLocation alloc] initWithLatitude:[[[_placeDictionary objectForKey:@"location"] objectAtIndex:0] floatValue]
@@ -130,15 +130,23 @@
 
 #pragma mark - IB Actions
 
-- (IBAction)backButtonPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController setNavigationBarHidden:NO];
+- (IBAction) callButtonPress:(id)sender {
+//    modify to use meme number instead of foursquare number
+    NSString *phNo = [[self.foursquarePlace objectForKey:@"contact"] objectForKey:@"phone"];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+    }
 }
 
 - (IBAction)reservationButtonPressed:(id)sender {
     NSLog(@"%@", [self.foursquarePlace objectForKey:@"reservations"]);
 }
 
+- (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController setNavigationBarHidden:NO];
+}
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
