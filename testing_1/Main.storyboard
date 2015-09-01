@@ -1548,15 +1548,23 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kim-Fe-ojr">
-                                        <rect key="frame" x="12" y="28" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="28" width="30" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OvX-rD-rn4"/>
                                             <constraint firstAttribute="width" constant="30" id="SGK-qg-Sgv"/>
+                                            <constraint firstAttribute="height" constant="30" id="WI6-Ib-mxH"/>
+                                            <constraint firstAttribute="width" constant="30" id="vlK-K7-N3d"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="back-arrow">
+                                        <state key="normal" image="white-arrow">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OvX-rD-rn4"/>
+                                                <exclude reference="SGK-qg-Sgv"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="backButtonPressed:" destination="3i4-80-yzL" eventType="touchUpInside" id="ojJ-7Y-fSw"/>
                                         </connections>
@@ -1574,9 +1582,11 @@
                                     <constraint firstAttribute="height" constant="160" id="Exq-aB-fuj"/>
                                     <constraint firstAttribute="width" secondItem="0Xv-Mj-mrc" secondAttribute="height" multiplier="75:32" id="GCj-G6-JWo"/>
                                     <constraint firstAttribute="bottom" secondItem="ktT-sR-kVr" secondAttribute="bottom" constant="8" id="JSM-XH-bCL"/>
+                                    <constraint firstItem="kim-Fe-ojr" firstAttribute="top" secondItem="0Xv-Mj-mrc" secondAttribute="top" constant="28" id="MP3-XI-fln"/>
                                     <constraint firstAttribute="trailing" secondItem="yI3-lM-tm3" secondAttribute="trailing" constant="8" id="Mlx-iU-urY"/>
                                     <constraint firstItem="Hwx-JV-dg0" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" constant="8" id="QGD-sd-q7p"/>
                                     <constraint firstAttribute="trailing" secondItem="ktT-sR-kVr" secondAttribute="trailing" constant="8" id="UZH-Yc-pE2"/>
+                                    <constraint firstItem="kim-Fe-ojr" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" constant="8" id="WI4-65-8pc"/>
                                     <constraint firstAttribute="trailing" secondItem="S8F-8c-J8S" secondAttribute="trailing" id="afc-GU-Lhz"/>
                                     <constraint firstItem="S8F-8c-J8S" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" id="cTy-y9-U33"/>
                                     <constraint firstItem="ktT-sR-kVr" firstAttribute="leading" secondItem="Hwx-JV-dg0" secondAttribute="trailing" constant="5" id="dCL-tS-Rag"/>
@@ -1587,9 +1597,7 @@
                                     <constraint firstItem="S8F-8c-J8S" firstAttribute="top" secondItem="0Xv-Mj-mrc" secondAttribute="top" id="q7B-78-dfD"/>
                                     <constraint firstItem="i1T-oy-8ie" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" constant="8" id="svN-DP-Gk3"/>
                                     <constraint firstItem="hST-Y8-aOY" firstAttribute="centerY" secondItem="0Xv-Mj-mrc" secondAttribute="centerY" id="v8b-2u-zRS"/>
-                                    <constraint firstItem="kim-Fe-ojr" firstAttribute="leading" secondItem="0Xv-Mj-mrc" secondAttribute="leading" constant="12" id="y8s-Hi-jTF"/>
                                     <constraint firstItem="hST-Y8-aOY" firstAttribute="centerX" secondItem="0Xv-Mj-mrc" secondAttribute="centerX" id="yCf-Z9-A4r"/>
-                                    <constraint firstItem="kim-Fe-ojr" firstAttribute="top" secondItem="0Xv-Mj-mrc" secondAttribute="top" constant="28" id="yba-vs-esB"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1659,7 +1667,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-Ec-DPJ">
                                 <rect key="frame" x="0.0" y="232" width="375" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="QpK-Et-1pK"/>
                                 </constraints>
@@ -1712,7 +1720,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wI-Mp-j9a">
                                 <rect key="frame" x="0.0" y="281" width="375" height="1"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="kWC-yJ-hry"/>
                                 </constraints>
@@ -1727,7 +1735,7 @@
                                 <state key="normal" title="Make a reservartion">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="disabled" title="No reservations available">
+                                <state key="disabled">
                                     <color key="titleColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1775,6 +1783,7 @@
                             <constraint firstItem="75O-B2-7Vt" firstAttribute="leading" secondItem="Ypc-wV-9It" secondAttribute="leading" id="rPp-q4-IIZ"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -2136,11 +2145,11 @@
     </scenes>
     <resources>
         <image name="10407034_10152794024739033_5504058733825816286_n" width="960" height="960"/>
-        <image name="back-arrow" width="252" height="433"/>
         <image name="black_settings_logo" width="500" height="230"/>
         <image name="featured_1" width="670" height="720"/>
         <image name="sample_list_image_two" width="750" height="300"/>
         <image name="sample_place_banner" width="750" height="300"/>
+        <image name="white-arrow" width="480" height="480"/>
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>

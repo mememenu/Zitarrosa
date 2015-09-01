@@ -76,9 +76,9 @@
     self.distanceLabel.text = [NSString stringWithFormat:@"%.1f miles away", (miles/1609.344)];
     
 //    Quote Labels
-    self.quoteOneLabel.text = @"FMauris convallis bibendum justo eget aucto";
-    self.quoteTwoLabel.text = @"Curabitur quis dolor mollis, interdum tellus.";
-    self.quoteThreeLabel.text = @"Nullam eu suscipit ligula. Vivamus quis mollis.";
+    self.quoteOneLabel.text = @"'FMauris convallis bibendum justo eget aucto'";
+    self.quoteTwoLabel.text = @"'Curabitur quis dolor mollis, interdum tellus'";
+    self.quoteThreeLabel.text = @"'Nullam eu suscipit ligula. Vivamus quis mollis'";
     
 }
 
@@ -90,6 +90,12 @@
     if ([self.foursquarePlace objectForKey:@"reservations" ] != NULL) {
         [self.reserveButton setEnabled:YES];
     }
+}
+
+#pragma mark - Status Bar Style
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Core Location Delegate
