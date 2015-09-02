@@ -11,9 +11,12 @@
 #import "FeedTableViewCell.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "PlaceShowViewController.h"
 
 const int KLoadingCellTag = 12345;
 @interface FeedTableViewController ()
+
+@property (nonatomic, strong) PlaceShowViewController *placeShowVieController;
 
 @end
 
@@ -94,6 +97,7 @@ const int KLoadingCellTag = 12345;
     
     NSDictionary *feedItem = [self.feedItems objectAtIndex:indexPath.row];
     NSString *logoImageURL = [feedItem objectForKey:@"restaurant_avatar"];
+    //    resize to medium to reduce image size and improve perfromance
     logoImageURL = [logoImageURL stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     NSString *dishImageURL = [feedItem objectForKey:@"cloud_front"];
     
@@ -105,6 +109,12 @@ const int KLoadingCellTag = 12345;
     cell.zoneLabel.text = [feedItem objectForKey:@"restaurant_zone"];
     cell.dishName.text = [feedItem objectForKey:@"name"];
     cell.descriptionLabel.text = [feedItem objectForKey:@"description"];
+    
+    UITapGestureRecognizer *logoTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeItemPressed)];
+    UITapGestureRecognizer *nameTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeItemPressed)];
+    
+    [cell.logoImageView addGestureRecognizer:logoTapGesture];
+    [cell.placeName addGestureRecognizer:nameTapGesture];
     
     return cell;
 }
@@ -133,13 +143,18 @@ const int KLoadingCellTag = 12345;
 }
 
 
+#pragma mark - IBActions
+
+-(void)placeItemPressed {
+    [self performSegueWithIdentifier:@"showFeedPlace" sender:self];
+}
+
 #pragma mark - Connection Error Rescue View
 
 -(void)setErrorMessage {
     self.feedItems = nil;
     
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (self.view.bounds.size.width - 10), self.view.bounds.size.height)];
-    
     messageLabel.text = @"No data is currently available. Please pull down to refresh.";
     messageLabel.textColor = [UIColor blackColor];
     messageLabel.numberOfLines = 0;
@@ -152,14 +167,16 @@ const int KLoadingCellTag = 12345;
 }
 
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showFeedPlace"]) {
+        self.placeShowVieController = (PlaceShowViewController *)segue.destinationViewController;
+//        NSDictionary *dish = [self.feedItems objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+//        replace with real data once new feed endpoint is up
+        self.placeShowVieController.placeID = @"5";
+    }
 }
-*/
 
 @end

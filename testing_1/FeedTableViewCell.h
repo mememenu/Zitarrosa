@@ -17,5 +17,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *dishName;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
-
 @end

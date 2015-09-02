@@ -247,17 +247,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="544"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZ5-5A-gE6">
+                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZ5-5A-gE6">
                                             <rect key="frame" x="8" y="8" width="50" height="50"/>
                                             <animations/>
+                                            <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="SJu-X0-JqJ"/>
                                                 <constraint firstAttribute="width" constant="50" id="thc-Jq-xB8"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-em-nbg">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-em-nbg">
                                             <rect key="frame" x="66" y="8" width="301" height="28"/>
                                             <animations/>
+                                            <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="Lxt-Nd-78g"/>
                                             </constraints>
@@ -353,6 +355,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="barButtonItem" destination="1dZ-RI-k2T" id="cgD-Jz-J9P"/>
+                        <segue destination="3i4-80-yzL" kind="show" identifier="showFeedPlace" id="33L-sx-UHT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdt-2l-1dr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1469,7 +1472,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                         <animations/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hST-Y8-aOY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hST-Y8-aOY">
                                         <rect key="frame" x="8" y="66" width="359" height="28"/>
                                         <animations/>
                                         <constraints>
@@ -2451,13 +2454,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7Uy-zQ-MnJ"/>
-        <segue reference="Apb-8D-TsU"/>
-        <segue reference="7Mr-bm-kzi"/>
-        <segue reference="jsd-Lz-3bk"/>
         <segue reference="rWg-i6-Af8"/>
+        <segue reference="7Mr-bm-kzi"/>
         <segue reference="8ME-Ne-ayo"/>
-        <segue reference="4Wj-nA-ogK"/>
-        <segue reference="OWf-G3-VLS"/>
+        <segue reference="Apb-8D-TsU"/>
+        <segue reference="jsd-Lz-3bk"/>
+        <segue reference="XQV-I6-uvg"/>
+        <segue reference="33L-sx-UHT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
