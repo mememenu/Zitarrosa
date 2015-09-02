@@ -92,9 +92,9 @@
     self.distanceLabel.text = [NSString stringWithFormat:@"%.1f miles away", (miles/1609.344)];
     
 //    Quote Labels
-    self.quoteOneLabel.text = @"'FMauris convallis bibendum justo eget aucto'";
-    self.quoteTwoLabel.text = @"'Curabitur quis dolor mollis, interdum tellus'";
-    self.quoteThreeLabel.text = @"'Nullam eu suscipit ligula. Vivamus quis mollis'";
+    self.quoteOneLabel.text = @"'Sample Place Quote One'";
+    self.quoteTwoLabel.text = @"'Sample Place Quote Two'";
+    self.quoteThreeLabel.text = @"'Sample Place Quote Three'";
     
 }
 
