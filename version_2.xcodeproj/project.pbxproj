@@ -33,6 +33,7 @@
 		BE8C6BE31B966D940085EF8F /* PlacePhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */; };
 		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
+		BEEAE0C11B972F9300A6C560 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C01B972F9300A6C560 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF447B11B8CD41000417CEE /* NearbyViewController.m */; };
 		BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */; };
 		F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */; };
@@ -91,6 +92,8 @@
 		BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsTableViewController.m; sourceTree = "<group>"; };
 		BEA9807E1B7EC0FF0050C40E /* SpotlightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewCell.h; sourceTree = "<group>"; };
 		BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewCell.m; sourceTree = "<group>"; };
+		BEEAE0BF1B972F9300A6C560 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		BEEAE0C01B972F9300A6C560 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BEF447B01B8CD41000417CEE /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
 		BEF447B11B8CD41000417CEE /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,7 @@
 				BE5D0F1C1B7EAEAD005AD297 /* Place */,
 				BE7379CC1B8A860A008302F6 /* Search */,
 				BE7379CD1B8A863C008302F6 /* Settings */,
+				BEEAE0BE1B972F5E00A6C560 /* WebView */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +301,15 @@
 				BE51709B1B90DBC0008256D5 /* PlacesViewController.m */,
 			);
 			name = Places;
+			sourceTree = "<group>";
+		};
+		BEEAE0BE1B972F5E00A6C560 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				BEEAE0BF1B972F9300A6C560 /* WebViewController.h */,
+				BEEAE0C01B972F9300A6C560 /* WebViewController.m */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		DB2C3980A30D614C7D2B0AFF /* Frameworks */ = {
@@ -435,6 +448,7 @@
 				BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */,
 				BE82336D1B8B66280021638D /* SidebarTableViewCell.m in Sources */,
 				BE51709C1B90DBC0008256D5 /* PlacesViewController.m in Sources */,
+				BEEAE0C11B972F9300A6C560 /* WebViewController.m in Sources */,
 				BE8C6BE31B966D940085EF8F /* PlacePhotosCollectionViewController.m in Sources */,
 				BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */,
 				BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */,

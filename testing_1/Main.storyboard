@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3X-jb-LWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3X-jb-LWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
@@ -1742,6 +1742,7 @@
                                 </state>
                                 <connections>
                                     <action selector="reservationButtonPressed:" destination="3i4-80-yzL" eventType="touchUpInside" id="0YT-Z5-ztv"/>
+                                    <segue destination="bHu-6f-dUm" kind="show" identifier="presentWebView" id="uWv-wE-qh6"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-IA-eh7">
@@ -1871,7 +1872,70 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFI-Z8-zN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196.5" y="196"/>
+            <point key="canvasLocation" x="-781.5" y="638"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bPS-bQ-fii">
+            <objects>
+                <viewController id="bHu-6f-dUm" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SlW-Rz-TED"/>
+                        <viewControllerLayoutGuide type="bottom" id="ev1-30-rxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w7g-WN-0TY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-J0-NHq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-XJ-qs7">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmy-90-MMt">
+                                        <rect key="frame" x="8" y="7" width="65" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-DA-vML">
+                                        <rect key="frame" x="75" y="6" width="65" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy7-KN-URl">
+                                        <rect key="frame" x="302" y="8" width="65" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonPress:" destination="bHu-6f-dUm" eventType="touchUpInside" id="ss5-ak-BzK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="closeButton" destination="hy7-KN-URl" id="CLI-vm-hLF"/>
+                        <outlet property="webView" destination="uzh-J0-NHq" id="JeN-tb-IZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1k-y5-1Qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-166.5" y="24.5"/>
         </scene>
         <!--Photos-->
         <scene sceneID="5b7-Mf-ClJ">
@@ -1943,7 +2007,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9E-w0-Y0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196.5" y="593"/>
+            <point key="canvasLocation" x="-326.5" y="638"/>
         </scene>
         <!--Search -->
         <scene sceneID="XXt-7W-yqb">
