@@ -110,7 +110,7 @@
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    NSLog(@"did change authorization status");
+//    NSLog(@"did change authorization status");
 }
 
 #pragma mark - API Calls

@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @property (nonatomic) NSString *placeID;
 @property (nonatomic) NSDictionary *placeDictionary;
 @property (nonatomic) NSDictionary *foursquarePlace;
@@ -38,5 +40,8 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 
+@property (nonatomic) UIViewController *currentVC;
+
+- (IBAction)segmentedControlAction:(id)sender;
 
 @end

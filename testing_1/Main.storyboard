@@ -1806,6 +1806,7 @@
                         <outlet property="addressLabel" destination="CAb-jQ-PGb" id="bXz-pe-p62"/>
                         <outlet property="backButton" destination="kim-Fe-ojr" id="XgD-8V-HtS"/>
                         <outlet property="bannerImageView" destination="S8F-8c-J8S" id="EAI-Qu-tUj"/>
+                        <outlet property="containerView" destination="tnR-zM-7sW" id="iFu-sg-uBz"/>
                         <outlet property="cuisineLabel" destination="i1T-oy-8ie" id="1bG-uK-TlM"/>
                         <outlet property="distanceLabel" destination="ktT-sR-kVr" id="IWa-hs-eIF"/>
                         <outlet property="nameLabel" destination="hST-Y8-aOY" id="1JE-AI-S9q"/>
@@ -1871,6 +1872,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFI-Z8-zN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-196.5" y="196"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="5b7-Mf-ClJ">
+            <objects>
+                <collectionViewController storyboardIdentifier="placeShowPhotos" title="Photos" id="IEe-jq-w7x" customClass="PlacePhotosCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="czl-zU-aIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="312"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yse-jG-a6x">
+                            <size key="itemSize" width="175" height="205"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="6" minY="6" maxX="6" maxY="6"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="EwO-C2-lUt" customClass="PlacePhotosCollectionViewCell">
+                                <rect key="frame" x="6" y="6" width="175" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="205"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-MQ-IE2">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="TMQ-MQ-IE2" secondAttribute="height" multiplier="1:1" id="4J1-br-avS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fried Calamari with sauteed onions served warm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-hA-Hjq">
+                                            <rect key="frame" x="4" y="179" width="167" height="22"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h8P-hA-Hjq" firstAttribute="leading" secondItem="EwO-C2-lUt" secondAttribute="leading" constant="4" id="Dtj-Yo-Rsw"/>
+                                    <constraint firstItem="TMQ-MQ-IE2" firstAttribute="leading" secondItem="EwO-C2-lUt" secondAttribute="leading" id="Hys-SV-OW1"/>
+                                    <constraint firstAttribute="bottom" secondItem="h8P-hA-Hjq" secondAttribute="bottom" constant="4" id="KUF-DN-IkD"/>
+                                    <constraint firstItem="TMQ-MQ-IE2" firstAttribute="top" secondItem="EwO-C2-lUt" secondAttribute="top" id="PTh-kZ-bp4"/>
+                                    <constraint firstAttribute="trailing" secondItem="h8P-hA-Hjq" secondAttribute="trailing" constant="4" id="gbH-gF-6Mu"/>
+                                    <constraint firstAttribute="trailing" secondItem="TMQ-MQ-IE2" secondAttribute="trailing" id="iid-Z5-gEP"/>
+                                    <constraint firstItem="h8P-hA-Hjq" firstAttribute="top" secondItem="TMQ-MQ-IE2" secondAttribute="bottom" constant="4" id="s6T-85-imr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="TMQ-MQ-IE2" id="NG8-zQ-eRB"/>
+                                    <outlet property="nameLabel" destination="h8P-hA-Hjq" id="8gG-8X-ceG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="IEe-jq-w7x" id="wm9-gw-aJc"/>
+                            <outlet property="delegate" destination="IEe-jq-w7x" id="kYI-Me-3TD"/>
+                        </connections>
+                    </collectionView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="312"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9E-w0-Y0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196.5" y="593"/>
         </scene>
         <!--Search -->
         <scene sceneID="XXt-7W-yqb">

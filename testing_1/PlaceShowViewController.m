@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 #import "PlaceMenuTableViewController.h"
+#import "PlacePhotosCollectionViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
@@ -17,6 +18,7 @@
 @interface PlaceShowViewController ()
 
 @property (strong, nonatomic) PlaceMenuTableViewController *placeMenuTVC;
+@property (strong, nonatomic) PlacePhotosCollectionViewController *placePhotosCVC;
 
 @end
 
@@ -25,8 +27,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    self.placeMenuTVC = self.childViewControllers.lastObject;
+    self.placePhotosCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"placeShowPhotos"];
+    self.currentVC = self.placeMenuTVC;
+    
     [self loadPlace];
     [self locateUser];
+
 }
 
 
@@ -38,7 +46,8 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.placeDictionary = responseObject;
         self.placeMenuTVC.menusArray = [responseObject objectForKey:@"menus"];
-        [self.placeMenuTVC.tableView reloadData];
+        self.placePhotosCVC.menusArray = [responseObject objectForKey:@"menus"];
+        [_placeMenuTVC.tableView reloadData];
         [self loadFoursquare];
         [self populateMemeView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -150,9 +159,21 @@
 
 - (IBAction)segmentedControlAction:(id)sender {
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        NSLog(@"Menu");
+        
+        if (self.currentVC != self.placeMenuTVC) {
+            [self addChildViewController:self.placeMenuTVC];
+            self.placeMenuTVC.view.frame = self.containerView.bounds;
+            [self moveToNewController:self.placeMenuTVC];
+        }
+        
     } else if (self.segmentedControl.selectedSegmentIndex == 1) {
-        NSLog(@"Photos");
+        
+        if (self.currentVC != self.placePhotosCVC) {
+            [self addChildViewController:self.placePhotosCVC];
+            self.placePhotosCVC.view.frame = self.containerView.bounds;
+            [self moveToNewController:self.placePhotosCVC];
+        }
+        
     } else if (self.segmentedControl.selectedSegmentIndex == 2) {
         NSLog(@"Map");
     } else if (self.segmentedControl.selectedSegmentIndex == 3) {
@@ -164,7 +185,18 @@
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController setNavigationBarHidden:NO];
 }
+
 #pragma mark - Navigation
+
+-(void)moveToNewController:(UIViewController *) newController {
+    [self.currentVC willMoveToParentViewController:nil];
+    [self transitionFromViewController:self.currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil
+                            completion:^(BOOL finished) {
+                                [self.currentVC removeFromParentViewController];
+                                [newController didMoveToParentViewController:self];
+                                self.currentVC = newController;
+                            }];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedMenuTableView"]) {
