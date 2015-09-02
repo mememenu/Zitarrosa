@@ -161,21 +161,20 @@
 
 - (IBAction)segmentedControlAction:(id)sender {
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        
-        if (self.currentVC != self.placeMenuTVC) {
-            [self addChildViewController:self.placeMenuTVC];
-            self.placeMenuTVC.view.frame = self.containerView.bounds;
-            [self moveToNewController:self.placeMenuTVC];
-        }
+//      Menu Selected
+        [self addChildViewController:self.placeMenuTVC];
+        [self.placeMenuTVC didMoveToParentViewController:self];
+        self.placeMenuTVC.view.frame = self.containerView.bounds;
+        [self.containerView addSubview:self.placeMenuTVC.tableView];
+        [self.currentVC removeFromParentViewController];
         
     } else if (self.segmentedControl.selectedSegmentIndex == 1) {
-        
-        if (self.currentVC != self.placePhotosCVC) {
-            [self addChildViewController:self.placePhotosCVC];
-            self.placePhotosCVC.view.frame = self.containerView.bounds;
-            [self moveToNewController:self.placePhotosCVC];
-        }
-        
+//      Photos Selected
+        [self addChildViewController:self.placePhotosCVC];
+        [self.placePhotosCVC didMoveToParentViewController:self];
+        self.placePhotosCVC.view.frame = self.containerView.bounds;
+        [self.containerView addSubview:self.placePhotosCVC.collectionView];
+        [self.currentVC removeFromParentViewController];
     } else if (self.segmentedControl.selectedSegmentIndex == 2) {
         NSLog(@"Map");
     } else if (self.segmentedControl.selectedSegmentIndex == 3) {
