@@ -76,8 +76,8 @@
 #pragma mark - Populate Views
 
 -(void)populateMemeView {
-    NSString *image_url = [[self.placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
-    [self.bannerImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
+//    NSString *image_url = [[self.placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+//    [self.bannerImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     
     self.nameLabel.text = [_placeDictionary objectForKey:@"name"];
     self.zoneLabel.text = [_placeDictionary objectForKey:@"zone"];
