@@ -51,6 +51,18 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath; {
+    return [self cellSize:collectionView];
+}
+
+
+-(CGSize)cellSize:(UICollectionView *)collectionView {
+    int screenWidth = collectionView.frame.size.width;
+    int cellWidth = screenWidth * 0.468;
+    int cellHeight = cellWidth + (cellWidth * 0.17);
+    return CGSizeMake(cellWidth, cellHeight);
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
