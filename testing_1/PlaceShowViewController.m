@@ -11,6 +11,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "PlaceMenuTableViewController.h"
 #import "PlacePhotosCollectionViewController.h"
+#import "PlaceMapViewController.h"
+#import "PlaceDetailsViewController.h"
 #import "WebViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
@@ -20,6 +22,8 @@
 
 @property (strong, nonatomic) PlaceMenuTableViewController *placeMenuTVC;
 @property (strong, nonatomic) PlacePhotosCollectionViewController *placePhotosCVC;
+@property (strong, nonatomic) PlaceMapViewController *placeMapVC;
+@property (strong, nonatomic) PlaceDetailsViewController *placeDetailsVC;
 @property (strong, nonatomic) WebViewController *webViewController;
 
 @end
@@ -31,7 +35,9 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     self.placeMenuTVC = self.childViewControllers.lastObject;
-    self.placePhotosCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"placeShowPhotos"];
+    self.placePhotosCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Photos"];
+    self.placeMapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Map"];
+    self.placeDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Details"];
     self.currentVC = self.placeMenuTVC;
     
     [self loadPlace];
@@ -46,11 +52,18 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self loadFoursquare];
+        
         self.placeDictionary = responseObject;
         self.placeMenuTVC.menusArray = [responseObject objectForKey:@"menus"];
         self.placePhotosCVC.menusArray = [responseObject objectForKey:@"menus"];
+        
+        NSArray *locationArray = [responseObject objectForKey:@"location"];
+        CLLocation *placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
+                                                               longitude:[[locationArray objectAtIndex:1] floatValue]];
+        self.placeMapVC.placeLocation = placeLocation;
         [_placeMenuTVC.tableView reloadData];
-        [self loadFoursquare];
+        
         [self populateMemeView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
@@ -175,10 +188,22 @@
         self.placePhotosCVC.view.frame = self.containerView.bounds;
         [self.containerView addSubview:self.placePhotosCVC.collectionView];
         [self.currentVC removeFromParentViewController];
+        
     } else if (self.segmentedControl.selectedSegmentIndex == 2) {
-        NSLog(@"Map");
+//      Maps Selected
+        [self addChildViewController:self.placeMapVC];
+        [self.placeMapVC didMoveToParentViewController:self];
+        self.placeMapVC.view.frame = self.containerView.bounds;
+        [self.containerView addSubview:self.placeMapVC.view];
+        [self.currentVC removeFromParentViewController];
+        
     } else if (self.segmentedControl.selectedSegmentIndex == 3) {
-        NSLog(@"Details");
+//      Details Selected
+        [self addChildViewController:self.placeDetailsVC];
+        [self.placeDetailsVC didMoveToParentViewController:self];
+        self.placeDetailsVC.view.frame = self.containerView.bounds;
+        [self.containerView addSubview:self.placeDetailsVC.view];
+        [self.currentVC removeFromParentViewController];
     }
 }
 
@@ -188,16 +213,6 @@
 }
 
 #pragma mark - Navigation
-
--(void)moveToNewController:(UIViewController *) newController {
-    [self.currentVC willMoveToParentViewController:nil];
-    [self transitionFromViewController:self.currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil
-                            completion:^(BOOL finished) {
-                                [self.currentVC removeFromParentViewController];
-                                [newController didMoveToParentViewController:self];
-                                self.currentVC = newController;
-                            }];
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedMenuTableView"]) {

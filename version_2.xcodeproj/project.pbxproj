@@ -34,6 +34,9 @@
 		BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */; };
 		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
 		BEEAE0C11B972F9300A6C560 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C01B972F9300A6C560 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BEEAE0C41B97AE9500A6C560 /* PlaceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C31B97AE9500A6C560 /* PlaceDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BEEAE0C71B97B05B00A6C560 /* PlaceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C61B97B05B00A6C560 /* PlaceMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BEEAE0C91B97B5E000A6C560 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEAE0C81B97B5E000A6C560 /* MapKit.framework */; };
 		BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF447B11B8CD41000417CEE /* NearbyViewController.m */; };
 		BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */; };
 		F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */; };
@@ -94,6 +97,11 @@
 		BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewCell.m; sourceTree = "<group>"; };
 		BEEAE0BF1B972F9300A6C560 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		BEEAE0C01B972F9300A6C560 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		BEEAE0C21B97AE9500A6C560 /* PlaceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailsViewController.h; sourceTree = "<group>"; };
+		BEEAE0C31B97AE9500A6C560 /* PlaceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailsViewController.m; sourceTree = "<group>"; };
+		BEEAE0C51B97B05B00A6C560 /* PlaceMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapViewController.h; sourceTree = "<group>"; };
+		BEEAE0C61B97B05B00A6C560 /* PlaceMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapViewController.m; sourceTree = "<group>"; };
+		BEEAE0C81B97B5E000A6C560 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BEF447B01B8CD41000417CEE /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
 		BEF447B11B8CD41000417CEE /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -105,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEAE0C91B97B5E000A6C560 /* MapKit.framework in Frameworks */,
 				BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */,
 				F9D830654280339CBDAC1941 /* libPods-testing_1.a in Frameworks */,
 			);
@@ -231,6 +240,10 @@
 				BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */,
 				BE8C6BE11B966D940085EF8F /* PlacePhotosCollectionViewController.h */,
 				BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */,
+				BEEAE0C51B97B05B00A6C560 /* PlaceMapViewController.h */,
+				BEEAE0C61B97B05B00A6C560 /* PlaceMapViewController.m */,
+				BEEAE0C21B97AE9500A6C560 /* PlaceDetailsViewController.h */,
+				BEEAE0C31B97AE9500A6C560 /* PlaceDetailsViewController.m */,
 			);
 			name = Place;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 		DB2C3980A30D614C7D2B0AFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEEAE0C81B97B5E000A6C560 /* MapKit.framework */,
 				BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */,
 				5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */,
 			);
@@ -433,6 +447,7 @@
 				BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
 				BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */,
+				BEEAE0C71B97B05B00A6C560 /* PlaceMapViewController.m in Sources */,
 				BE588CD01B7CFBCC000D2752 /* SWRevealViewController.m in Sources */,
 				BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */,
 				BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */,
@@ -452,6 +467,7 @@
 				BE8C6BE31B966D940085EF8F /* PlacePhotosCollectionViewController.m in Sources */,
 				BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */,
 				BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */,
+				BEEAE0C41B97AE9500A6C560 /* PlaceDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
