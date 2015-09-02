@@ -1742,7 +1742,7 @@
                                 </state>
                                 <connections>
                                     <action selector="reservationButtonPressed:" destination="3i4-80-yzL" eventType="touchUpInside" id="0YT-Z5-ztv"/>
-                                    <segue destination="bHu-6f-dUm" kind="show" identifier="presentWebView" id="uWv-wE-qh6"/>
+                                    <segue destination="bHu-6f-dUm" kind="show" identifier="showWebView" id="uWv-wE-qh6"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-IA-eh7">
@@ -1886,31 +1886,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-J0-NHq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-XJ-qs7">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj5-UO-NBv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmy-90-MMt">
-                                        <rect key="frame" x="8" y="7" width="65" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-DA-vML">
-                                        <rect key="frame" x="75" y="6" width="65" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Refresh">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy7-KN-URl">
-                                        <rect key="frame" x="302" y="8" width="65" height="30"/>
+                                        <rect key="frame" x="0.0" y="20" width="65" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Close">
@@ -1923,13 +1903,77 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BcT-I3-01O"/>
+                                </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-XJ-qs7">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmy-90-MMt">
+                                        <rect key="frame" x="1" y="5" width="65" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="bHu-6f-dUm" eventType="touchUpInside" id="87U-hy-KCJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-DA-vML">
+                                        <rect key="frame" x="302" y="5" width="65" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshButtonPressed:" destination="bHu-6f-dUm" eventType="touchUpInside" id="r6c-nW-fo1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8B-Nv-FT5">
+                                        <rect key="frame" x="74" y="5" width="65" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Forward">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="bHu-6f-dUm" eventType="touchUpInside" id="zlu-gJ-LNo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YIp-v2-Mf8"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-J0-NHq">
+                                <rect key="frame" x="0.0" y="50" width="375" height="577"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <animations/>
+                        <constraints>
+                            <constraint firstItem="uzh-J0-NHq" firstAttribute="leading" secondItem="w7g-WN-0TY" secondAttribute="leading" id="C7L-cr-h22"/>
+                            <constraint firstAttribute="trailing" secondItem="Cj5-UO-NBv" secondAttribute="trailing" id="Ewg-Hi-SmT"/>
+                            <constraint firstItem="nIl-XJ-qs7" firstAttribute="leading" secondItem="w7g-WN-0TY" secondAttribute="leading" id="HGa-ic-w61"/>
+                            <constraint firstItem="Cj5-UO-NBv" firstAttribute="top" secondItem="w7g-WN-0TY" secondAttribute="top" id="LoG-eC-ffS"/>
+                            <constraint firstItem="Cj5-UO-NBv" firstAttribute="leading" secondItem="w7g-WN-0TY" secondAttribute="leading" id="NoM-uw-voR"/>
+                            <constraint firstAttribute="trailing" secondItem="nIl-XJ-qs7" secondAttribute="trailing" id="VV8-ep-Wi4"/>
+                            <constraint firstItem="uzh-J0-NHq" firstAttribute="top" secondItem="Cj5-UO-NBv" secondAttribute="bottom" id="Vp7-E4-WqU"/>
+                            <constraint firstAttribute="trailing" secondItem="uzh-J0-NHq" secondAttribute="trailing" id="Z0P-Pv-wLs"/>
+                            <constraint firstItem="ev1-30-rxg" firstAttribute="top" secondItem="nIl-XJ-qs7" secondAttribute="bottom" id="wr2-mi-ZZH"/>
+                            <constraint firstItem="nIl-XJ-qs7" firstAttribute="top" secondItem="uzh-J0-NHq" secondAttribute="bottom" id="yA0-NV-ctE"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="backButton" destination="rmy-90-MMt" id="X2B-jc-cnJ"/>
                         <outlet property="closeButton" destination="hy7-KN-URl" id="CLI-vm-hLF"/>
+                        <outlet property="forwardButton" destination="y8B-Nv-FT5" id="Kym-Op-j1m"/>
+                        <outlet property="refreshButton" destination="2uA-DA-vML" id="bJZ-I8-KBa"/>
                         <outlet property="webView" destination="uzh-J0-NHq" id="JeN-tb-IZH"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "PlaceMenuTableViewController.h"
 #import "PlacePhotosCollectionViewController.h"
+#import "WebViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
@@ -19,6 +20,7 @@
 
 @property (strong, nonatomic) PlaceMenuTableViewController *placeMenuTVC;
 @property (strong, nonatomic) PlacePhotosCollectionViewController *placePhotosCVC;
+@property (strong, nonatomic) WebViewController *webViewController;
 
 @end
 
@@ -154,7 +156,7 @@
 }
 
 - (IBAction)reservationButtonPressed:(id)sender {
-    NSLog(@"%@", [self.foursquarePlace objectForKey:@"reservations"]);
+    self.webViewController.urlString = [[self.foursquarePlace objectForKey:@"reservations"] objectForKey:@"url"];
 }
 
 - (IBAction)segmentedControlAction:(id)sender {
@@ -201,6 +203,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedMenuTableView"]) {
         self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"showWebView"]) {
+        self.webViewController = (WebViewController *)segue.destinationViewController;
     }
 }
 

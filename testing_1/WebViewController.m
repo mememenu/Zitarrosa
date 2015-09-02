@@ -17,17 +17,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *urlString = @"http://www.opentable.com/single.aspx?rid=160732&ref=9601";
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:self.urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:urlRequest];
 }
-
 
 #pragma mark - IB Actions
 
 - (IBAction)closeButtonPress:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)backButtonPressed:(id)sender {
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+    }
+}
+
+- (IBAction)forwardButtonPressed:(id)sender {
+    if ([self.webView canGoForward]) {
+        [self.webView goForward];
+    }
+}
+
+- (IBAction)refreshButtonPressed:(id)sender {
+    [self.webView reload];
 }
 
 #pragma mark - Navigation

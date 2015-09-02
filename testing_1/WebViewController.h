@@ -10,7 +10,12 @@
 
 @interface WebViewController : UIViewController
 
+@property (nonatomic) NSString *urlString;
+
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 @end
