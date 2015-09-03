@@ -1054,7 +1054,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XhS-le-CJj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_place_banner" translatesAutoresizingMaskIntoConstraints="NO" id="XhS-le-CJj">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                                     <animations/>
                                                 </imageView>
@@ -2559,13 +2559,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7Uy-zQ-MnJ"/>
-        <segue reference="rWg-i6-Af8"/>
-        <segue reference="7Mr-bm-kzi"/>
         <segue reference="8ME-Ne-ayo"/>
-        <segue reference="Apb-8D-TsU"/>
+        <segue reference="rWg-i6-Af8"/>
         <segue reference="jsd-Lz-3bk"/>
-        <segue reference="XQV-I6-uvg"/>
-        <segue reference="33L-sx-UHT"/>
+        <segue reference="Apb-8D-TsU"/>
+        <segue reference="7Mr-bm-kzi"/>
+        <segue reference="2gV-va-Q6e"/>
+        <segue reference="4Wj-nA-ogK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
