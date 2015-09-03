@@ -17,24 +17,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.mapView.delegate = self;
     
     MKCoordinateRegion mapRegion;
     mapRegion.center = self.placeLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.2;
-    mapRegion.span.longitudeDelta = 0.2;
-    [self.mapView setRegion:mapRegion animated:YES];
+    [self.mapView setRegion:[self.mapView regionThatFits:mapRegion] animated:YES];
+    
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = self.placeLocation.coordinate;
+    point.title = @"Place Location";
+    point.subtitle = @"Place cuisine, open label, or any other info";
+    [self.mapView addAnnotation:point];
 }
 
 #pragma mark - IBActions 
 
 - (IBAction)directionsPressed:(id)sender {
-    NSLog(@"Open with Maps");
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
 }
 
 @end

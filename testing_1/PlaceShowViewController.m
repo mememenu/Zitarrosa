@@ -52,20 +52,23 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self loadFoursquare];
-        
         self.placeDictionary = responseObject;
+        [self loadFoursquare];
+        [self populateMemeView];
+        
+        //  Set Menu Data
         self.placeMenuTVC.menusArray = [responseObject objectForKey:@"menus"];
+        [self.placeMenuTVC.tableView reloadData];
+        
+        // Set Photos Data
         self.placePhotosCVC.menusArray = [responseObject objectForKey:@"menus"];
         
+        //  Set Map Data
         NSArray *locationArray = [responseObject objectForKey:@"location"];
-        CLLocation *placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
+        self.placeMapVC.placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
                                                                longitude:[[locationArray objectAtIndex:1] floatValue]];
-        self.placeMapVC.placeLocation = placeLocation;
-        [_placeMenuTVC.tableView reloadData];
-        
-        [self populateMemeView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //  Error Block Here
     }];
     [operation start];
 }
@@ -108,7 +111,6 @@
     self.quoteOneLabel.text = @"'Sample Place Quote One'";
     self.quoteTwoLabel.text = @"'Sample Place Quote Two'";
     self.quoteThreeLabel.text = @"'Sample Place Quote Three'";
-    
 }
 
 
