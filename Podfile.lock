@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FontAwesomeIconFactory (2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - FontAwesomeIconFactory
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  FontAwesomeIconFactory: 0be1c4e100bb228ea59645d5b1f8a933b7ebe73a
 
 COCOAPODS: 0.38.2

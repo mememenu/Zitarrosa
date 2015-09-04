@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1C8046C5A099F4A02C15C4FF /* libPods-version_2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-version_2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testing_1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A410D9545181C4813C570988 /* Pods-version_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-version_2.release.xcconfig"; path = "Pods/Target Support Files/Pods-version_2/Pods-version_2.release.xcconfig"; sourceTree = "<group>"; };
 		AF8575D6CE36F9809F728D90 /* Pods-testing_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.release.xcconfig"; sourceTree = "<group>"; };
 		BE07AA971B7E817000B8FA00 /* SpotlightCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewController.h; sourceTree = "<group>"; };
 		BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewController.m; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		BEF447B11B8CD41000417CEE /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D8E7E9E3E8A35A23A1A4AE77 /* Pods-testing_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.debug.xcconfig"; sourceTree = "<group>"; };
+		E0EC6C2E56276D111F7C165E /* Pods-version_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-version_2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-version_2/Pods-version_2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,8 @@
 			children = (
 				D8E7E9E3E8A35A23A1A4AE77 /* Pods-testing_1.debug.xcconfig */,
 				AF8575D6CE36F9809F728D90 /* Pods-testing_1.release.xcconfig */,
+				E0EC6C2E56276D111F7C165E /* Pods-version_2.debug.xcconfig */,
+				A410D9545181C4813C570988 /* Pods-version_2.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -574,6 +578,7 @@
 		};
 		BE2CF42E1B7A73B10071A70D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0EC6C2E56276D111F7C165E /* Pods-version_2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -589,6 +594,7 @@
 		};
 		BE2CF42F1B7A73B10071A70D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A410D9545181C4813C570988 /* Pods-version_2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
