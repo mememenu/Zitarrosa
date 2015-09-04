@@ -6,5 +6,6 @@ pod "AFNetworking", "~> 2.0"
 pod "FontAwesomeIconFactory"
 pod "SVProgressHUD"
 pod "SDWebImage"
+pod "ISHPermissionKit"
 end
 
