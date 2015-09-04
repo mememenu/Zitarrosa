@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self.navigationController setNavigationBarHidden:YES];
+    
     NSURL *url = [NSURL URLWithString:self.urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:urlRequest];
@@ -26,6 +27,7 @@
 
 - (IBAction)closeButtonPress:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (IBAction)backButtonPressed:(id)sender {

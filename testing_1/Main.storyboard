@@ -2009,6 +2009,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="rmy-90-MMt" id="X2B-jc-cnJ"/>
                         <outlet property="closeButton" destination="hy7-KN-URl" id="CLI-vm-hLF"/>
@@ -2768,7 +2769,7 @@
         <!--Social-->
         <scene sceneID="bua-bL-GMl">
             <objects>
-                <viewController id="dVp-4b-F9U" sceneMemberID="viewController">
+                <viewController title="Social" id="dVp-4b-F9U" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pgT-SD-jAu"/>
                         <viewControllerLayoutGuide type="bottom" id="bJh-uS-ikJ"/>
@@ -2796,7 +2797,7 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30o-Yf-5cO">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30o-Yf-5cO">
                                 <rect key="frame" x="55" y="164" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
@@ -2822,8 +2823,11 @@
                                         <exclude reference="k0g-SS-Xps"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="socialButtonPressed:" destination="dVp-4b-F9U" eventType="touchUpInside" id="1VH-gE-nky"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-TX-srP">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-TX-srP">
                                 <rect key="frame" x="125" y="164" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
@@ -2848,8 +2852,11 @@
                                         <exclude reference="Aky-J7-qCr"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="socialButtonPressed:" destination="dVp-4b-F9U" eventType="touchUpInside" id="qMo-hp-sKr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUH-iw-64B">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUH-iw-64B">
                                 <rect key="frame" x="195" y="164" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
@@ -2866,6 +2873,31 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="socialButtonPressed:" destination="dVp-4b-F9U" eventType="touchUpInside" id="qmf-yZ-kWG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-e4-OYT">
+                                <rect key="frame" x="265" y="164" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KN6-yF-EEv"/>
+                                    <constraint firstAttribute="height" constant="50" id="wmf-0n-HKG"/>
+                                </constraints>
+                                <state key="normal" title="TU">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="socialButtonPressed:" destination="dVp-4b-F9U" eventType="touchUpInside" id="m3B-WY-GZL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZa-II-ZCF">
                                 <rect key="frame" x="88" y="497" width="200" height="16"/>
@@ -2900,25 +2932,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-e4-OYT">
-                                <rect key="frame" x="265" y="164" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="KN6-yF-EEv"/>
-                                    <constraint firstAttribute="height" constant="50" id="wmf-0n-HKG"/>
-                                </constraints>
-                                <state key="normal" title="TU">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <real key="value" value="0.69999999999999996"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2959,6 +2972,9 @@
                     <navigationItem key="navigationItem" title="Social" id="RZE-5r-GcQ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="bHu-6f-dUm" kind="show" identifier="showWebView" id="nc7-QR-Teu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AJ-hV-l7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2975,12 +2991,13 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Uy-zQ-MnJ"/>
-        <segue reference="7Mr-bm-kzi"/>
-        <segue reference="jsd-Lz-3bk"/>
         <segue reference="Apb-8D-TsU"/>
-        <segue reference="rWg-i6-Af8"/>
+        <segue reference="7Uy-zQ-MnJ"/>
+        <segue reference="jsd-Lz-3bk"/>
         <segue reference="8ME-Ne-ayo"/>
+        <segue reference="7Mr-bm-kzi"/>
+        <segue reference="rWg-i6-Af8"/>
+        <segue reference="nc7-QR-Teu"/>
         <segue reference="4Wj-nA-ogK"/>
         <segue reference="AWp-7Q-e9c"/>
     </inferredMetricsTieBreakers>
