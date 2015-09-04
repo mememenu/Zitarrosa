@@ -5,5 +5,6 @@ target 'version_2' do
 pod "AFNetworking", "~> 2.0"
 pod "FontAwesomeIconFactory"
 pod "SVProgressHUD"
+pod "SDWebImage"
 end
 
