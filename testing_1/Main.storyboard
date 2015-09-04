@@ -2123,32 +2123,48 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-yd-VFN">
-                                    <rect key="frame" x="10" y="11" width="66" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-yd-VFN">
+                                    <rect key="frame" x="10" y="15" width="66" height="21"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="66" id="CMe-OR-URX"/>
+                                        <constraint firstAttribute="height" constant="21" id="Mpr-hV-ilA"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-VE-Jae">
-                                    <rect key="frame" x="333" y="10" width="22" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-VE-Jae">
+                                    <rect key="frame" x="330" y="13" width="25" height="25"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="cdT-fW-5yR"/>
+                                        <constraint firstAttribute="height" constant="25" id="daJ-Ho-q1I"/>
+                                    </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <state key="normal">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8Z-Pb-SmX">
-                                    <rect key="frame" x="291" y="10" width="22" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-aL-FQN">
+                                    <rect key="frame" x="295" y="13" width="25" height="25"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="d8x-cW-t8o"/>
+                                        <constraint firstAttribute="height" constant="25" id="gsx-Kw-idR"/>
+                                    </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <state key="normal">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwQ-v3-rV5">
-                                    <rect key="frame" x="249" y="10" width="22" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-Zp-81y">
+                                    <rect key="frame" x="260" y="13" width="25" height="25"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="dgv-uw-J3Z"/>
+                                        <constraint firstAttribute="height" constant="25" id="vPv-s0-8rA"/>
+                                    </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <state key="normal">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2157,6 +2173,22 @@
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="mrp-aL-FQN" firstAttribute="leading" secondItem="eFA-Zp-81y" secondAttribute="trailing" constant="10" id="ABw-Pg-Cjc"/>
+                                <constraint firstItem="Q6C-yd-VFN" firstAttribute="leading" secondItem="ZVv-bi-QG6" secondAttribute="leading" constant="10" id="NLT-nK-uEC"/>
+                                <constraint firstItem="zhm-VE-Jae" firstAttribute="leading" secondItem="mrp-aL-FQN" secondAttribute="trailing" constant="10" id="WvH-OT-hKI"/>
+                                <constraint firstItem="mrp-aL-FQN" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="cwz-AC-V8S"/>
+                                <constraint firstItem="Q6C-yd-VFN" firstAttribute="leading" secondItem="ZVv-bi-QG6" secondAttribute="leading" constant="10" id="giU-L4-Grq"/>
+                                <constraint firstAttribute="trailing" secondItem="zhm-VE-Jae" secondAttribute="trailing" constant="20" id="h1V-aI-h8G"/>
+                                <constraint firstItem="Q6C-yd-VFN" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="o5z-Hc-yMl"/>
+                                <constraint firstItem="eFA-Zp-81y" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="rLX-IN-NJt"/>
+                                <constraint firstItem="zhm-VE-Jae" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="y6R-xc-SiL"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="giU-L4-Grq"/>
+                                </mask>
+                            </variation>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="yaN-9R-ZaT" detailTextLabel="7Kz-44-AX8" style="IBUITableViewCellStyleSubtitle" id="jaE-Lu-DnA">
