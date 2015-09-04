@@ -52,21 +52,21 @@
 - (PlacesTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *place = [self.nearbyItems objectAtIndex: indexPath.row];
-//    NSString *image_url = [place objectForKey:@"logo"];
-//    
-//    //    check place has a banner object present
-//    if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
-//        // check if banner has a Cloud Front URL
-//        if ([[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"] != (id)[NSNull null]) {
-//            image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
-////            image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
-//        } else {
-//            image_url = [[place objectForKey:@"banner"] objectForKey:@"image_url"];
-////            image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
-//        }
-//    }
-//    //    !!!!!!!!replace with proper placeholder!!!!!!
-//    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
+    NSString *image_url = [place objectForKey:@"logo"];
+    
+    //    check place has a banner object present
+    if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
+        // check if banner has a Cloud Front URL
+        if ([[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"] != (id)[NSNull null]) {
+            image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+//            image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
+        } else {
+            image_url = [[place objectForKey:@"banner"] objectForKey:@"image_url"];
+//            image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+        }
+    }
+    //    !!!!!!!!replace with proper placeholder!!!!!!
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     cell.placeNameLabel.text = [place objectForKey:@"name"];
     
     float distance = [[place objectForKey:@"distance"] floatValue];
@@ -122,7 +122,7 @@
 #pragma mark - API Calls
 
 - (void) loadNearbyItems {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-staging.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=%i",_latitude, _longitude, _distanceFilter]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mememenu-production.herokuapp.com/api/v1/places/nearby.json?location[]=%@&location[]=%@&distance=%i",_latitude, _longitude, _distanceFilter]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];

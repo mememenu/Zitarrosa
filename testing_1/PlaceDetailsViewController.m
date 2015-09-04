@@ -10,6 +10,7 @@
 
 @interface PlaceDetailsViewController ()
 
+
 @end
 
 @implementation PlaceDetailsViewController
@@ -17,6 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
+#pragma mark - Table View Data Source
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.detailsArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+
+    NSDictionary *dictionary = [[[self.detailsArray objectAtIndex:indexPath.row] objectForKey:@"items"] firstObject];
+    cell.textLabel.text = [dictionary objectForKey:@"displayName"];
+    cell.detailTextLabel.text = [dictionary objectForKey:@"displayValue"];
+    
+    return cell;
+}
+
 
 
 #pragma mark - Navigation

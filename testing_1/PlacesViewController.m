@@ -39,6 +39,25 @@
     NSDictionary *place = [self.placeItems objectAtIndex:indexPath.row];
 //    NSString *imageURL = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
 //    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
+    
+    
+    NSString *image_url = [place objectForKey:@"logo"];
+    
+    //    check place has a banner object present
+    if ([place objectForKey:@"banner"] != (id)[NSNull null]) {
+        // check if banner has a Cloud Front URL
+        if ([[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"] != (id)[NSNull null]) {
+            image_url = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+            //            image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
+        } else {
+            image_url = [[place objectForKey:@"banner"] objectForKey:@"image_url"];
+            //            image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+        }
+    }
+    //    !!!!!!!!replace with proper placeholder!!!!!!
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
+    
+    
     cell.placeNameLabel.text = [place objectForKey:@"name"];
     return cell;
 }

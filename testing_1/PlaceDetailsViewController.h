@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaceDetailsViewController : UIViewController
+@interface PlaceDetailsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSDictionary *detailsDictionary;
+@property (nonatomic) NSArray *detailsArray;
+
 
 @end

@@ -47,7 +47,7 @@
 
 
 - (void) loadPlace {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-staging.herokuapp.com/api/v1/places/%@.json", self.placeID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-production.herokuapp.com/api/v1/places/%@.json", self.placeID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -82,6 +82,7 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.foursquarePlace = [[responseObject objectForKey:@"response"] objectForKey:@"venue"];
+        self.placeDetailsVC.detailsArray = [[self.foursquarePlace objectForKey:@"attributes"] objectForKey:@"groups"];
         [self populateFoursquareView];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //  Insert failure block here
@@ -93,20 +94,20 @@
 
 -(void)populateMemeView {
    
-//    NSString *imageURL = [_placeDictionary objectForKey:@"logo"];
-//    //    check place has a banner object present
-//    if ([_placeDictionary objectForKey:@"banner"] != (id)[NSNull null]) {
-//        // check if banner has a Cloud Front URL
-//        if ([[_placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"] != (id)[NSNull null]) {
-//            imageURL = [[_placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
-//            // imageURL = [imageURL stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
-//        } else if ([_placeDictionary objectForKey:@"header"] != (id)[NSNull null]) {
-//            imageURL = [[_placeDictionary objectForKey:@"header"] objectForKey:@"cloudfront_url"];
-//            // imageURL = [imageURL stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
-//        }
-//    }
-//    
-//    [self.bannerImageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
+    NSString *imageURL = [_placeDictionary objectForKey:@"logo"];
+    //    check place has a banner object present
+    if ([_placeDictionary objectForKey:@"banner"] != (id)[NSNull null]) {
+        // check if banner has a Cloud Front URL
+        if ([[_placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"] != (id)[NSNull null]) {
+            imageURL = [[_placeDictionary objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+            // imageURL = [imageURL stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
+        } else if ([_placeDictionary objectForKey:@"header"] != (id)[NSNull null]) {
+            imageURL = [[_placeDictionary objectForKey:@"header"] objectForKey:@"cloudfront_url"];
+            // imageURL = [imageURL stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+        }
+    }
+    
+    [self.bannerImageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     self.nameLabel.text = [_placeDictionary objectForKey:@"name"];
     self.zoneLabel.text = [_placeDictionary objectForKey:@"zone"];
     self.addressLabel.text = [_placeDictionary objectForKey:@"full_address"];

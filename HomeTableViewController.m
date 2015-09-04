@@ -48,7 +48,7 @@
 }
 
 - (void) loadHomePage {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-staging.herokuapp.com/api/v1/home_pages.json"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://mememenu-production.herokuapp.com/api/v1/home_pages.json"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
