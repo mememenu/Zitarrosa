@@ -7,5 +7,6 @@ pod "FontAwesomeIconFactory"
 pod "SVProgressHUD"
 pod "SDWebImage"
 pod "ISHPermissionKit"
+pod "TSMessages"
 end
 
