@@ -32,6 +32,7 @@
 		BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE8C6BE01B966D020085EF8F /* PlacePhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BDF1B966D020085EF8F /* PlacePhotosCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		BE8C6BE31B966D940085EF8F /* PlacePhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BE98CF071B9A73360052FF78 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98CF061B9A73360052FF78 /* MessageUI.framework */; };
 		BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */; };
 		BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA9807F1B7EC0FF0050C40E /* SpotlightCollectionViewCell.m */; };
 		BEEAE0C11B972F9300A6C560 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C01B972F9300A6C560 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -93,6 +94,7 @@
 		BE8C6BDF1B966D020085EF8F /* PlacePhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacePhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		BE8C6BE11B966D940085EF8F /* PlacePhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacePhotosCollectionViewController.h; sourceTree = "<group>"; };
 		BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacePhotosCollectionViewController.m; sourceTree = "<group>"; };
+		BE98CF061B9A73360052FF78 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BE9988A41B94B55F00BB5216 /* CollectionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionsTableViewController.h; sourceTree = "<group>"; };
 		BE9988A51B94B55F00BB5216 /* CollectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsTableViewController.m; sourceTree = "<group>"; };
 		BEA9807E1B7EC0FF0050C40E /* SpotlightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewCell.h; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE98CF071B9A73360052FF78 /* MessageUI.framework in Frameworks */,
 				BEEAE0C91B97B5E000A6C560 /* MapKit.framework in Frameworks */,
 				BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */,
 				47E706A1774BE05A0DE124B4 /* libPods-version_2.a in Frameworks */,
@@ -333,6 +336,7 @@
 		DB2C3980A30D614C7D2B0AFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE98CF061B9A73360052FF78 /* MessageUI.framework */,
 				BEEAE0C81B97B5E000A6C560 /* MapKit.framework */,
 				BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */,
 				5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */,

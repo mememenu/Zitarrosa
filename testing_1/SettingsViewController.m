@@ -27,10 +27,46 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    switch (result) {
+        case MFMailComposeResultSent: {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Sent" message:@"Your email has been succesfully sent." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+        case MFMailComposeResultSaved:
+            break;
+        case MFMailComposeResultCancelled:
+            break;
+        case MFMailComposeResultFailed:
+            break;
+        default: {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occurred when trying to send this email. Please check your internet connection and try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+    }
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - IB Actions
 
 - (IBAction)socialButtonPressed:(id)sender {
     UIButton *button = (UIButton *)sender;
     [self performSegueWithIdentifier:@"showWebView" sender:button];
+}
+
+- (IBAction)contactButtonPressed:(id)sender {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+        mail.mailComposeDelegate = self;
+        [mail setSubject:@"Meme Menu (iPhone)"];
+        [mail setToRecipients:@[@"hello@meme.menu"]];
+        [self presentViewController:mail animated:YES completion:NULL];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Mail is not yet configured on your device." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 

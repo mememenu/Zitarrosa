@@ -2486,6 +2486,9 @@
                                         <real key="value" value="0.29999999999999999"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="contactButtonPressed:" destination="CDB-aZ-Gq5" eventType="touchUpInside" id="0fY-Fc-WcI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guX-Xd-Gc8">
                                 <rect key="frame" x="-1" y="147" width="377" height="39"/>
