@@ -10,8 +10,12 @@
 #import "PlacePhotosCollectionViewCell.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import <CCMPopup/CCMPopupSegue.h>
+#import "PopupViewController.h"
 
 @interface PlacePhotosCollectionViewController ()
+
+@property (strong, nonatomic) PopupViewController *popupViewController;
 
 @end
 
@@ -21,7 +25,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -63,10 +66,24 @@ static NSString * const reuseIdentifier = @"Cell";
     return CGSizeMake(cellWidth, cellHeight);
 }
 
+#pragma mark - Collection View Delegate 
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *dishesArray = [[self.categoriesArray objectAtIndex:indexPath.section] objectForKey:@"dishes"];
+    NSDictionary *dish = [dishesArray objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:@"showPopup" sender:dish];
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    if ([segue isKindOfClass:[CCMPopupSegue class]]){
+        CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
+        popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400);
+        self.popupViewController = (PopupViewController *)popupSegue.destinationViewController;
+        self.popupViewController.dish = sender;
+    }
 }
 
 @end

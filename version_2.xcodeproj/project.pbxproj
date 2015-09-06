@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47E706A1774BE05A0DE124B4 /* libPods-version_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8046C5A099F4A02C15C4FF /* libPods-version_2.a */; };
+		BE04B4411B9CCC3B00E6E77E /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04B4401B9CCC3B00E6E77E /* PopupViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */; };
 		BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */; };
 		BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */; };
@@ -48,6 +49,8 @@
 		5D92D31D451281ED391AD0C3 /* libPods-testing_1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testing_1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A410D9545181C4813C570988 /* Pods-version_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-version_2.release.xcconfig"; path = "Pods/Target Support Files/Pods-version_2/Pods-version_2.release.xcconfig"; sourceTree = "<group>"; };
 		AF8575D6CE36F9809F728D90 /* Pods-testing_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.release.xcconfig"; sourceTree = "<group>"; };
+		BE04B43F1B9CCC3B00E6E77E /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupViewController.h; sourceTree = "<group>"; };
+		BE04B4401B9CCC3B00E6E77E /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupViewController.m; sourceTree = "<group>"; };
 		BE07AA971B7E817000B8FA00 /* SpotlightCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightCollectionViewController.h; sourceTree = "<group>"; };
 		BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightCollectionViewController.m; sourceTree = "<group>"; };
 		BE07AA9A1B7E83CD00B8FA00 /* FeaturedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedCollectionViewController.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				BEEAE0C61B97B05B00A6C560 /* PlaceMapViewController.m */,
 				BEEAE0C21B97AE9500A6C560 /* PlaceDetailsViewController.h */,
 				BEEAE0C31B97AE9500A6C560 /* PlaceDetailsViewController.m */,
+				BE04B43F1B9CCC3B00E6E77E /* PopupViewController.h */,
+				BE04B4401B9CCC3B00E6E77E /* PopupViewController.m */,
 			);
 			name = Place;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,
+				BE04B4411B9CCC3B00E6E77E /* PopupViewController.m in Sources */,
 				BE9988A61B94B55F00BB5216 /* CollectionsTableViewController.m in Sources */,
 				BE82336D1B8B66280021638D /* SidebarTableViewCell.m in Sources */,
 				BE51709C1B90DBC0008256D5 /* PlacesViewController.m in Sources */,

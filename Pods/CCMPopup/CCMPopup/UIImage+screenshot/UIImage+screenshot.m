@@ -33,7 +33,7 @@
     imageSize.width = h;
   }
 
-  if (NULL != UIGraphicsBeginImageContextWithOptions)
+  if (NULL != &UIGraphicsBeginImageContextWithOptions)
     UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
   else
     UIGraphicsBeginImageContext(imageSize);
