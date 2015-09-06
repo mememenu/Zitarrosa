@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CCMPopup (1.1.0)
   - FontAwesomeIconFactory (2.1)
   - HexColors (2.2.1)
   - ISHPermissionKit (0.8.0)
@@ -32,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - CCMPopup
   - FontAwesomeIconFactory
   - ISHPermissionKit
   - SDWebImage
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
   FontAwesomeIconFactory: 0be1c4e100bb228ea59645d5b1f8a933b7ebe73a
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   ISHPermissionKit: adcdac6b69d0f045c33dadbdbe3ac70da7cd128a

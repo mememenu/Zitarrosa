@@ -8,5 +8,6 @@ pod "SVProgressHUD"
 pod "SDWebImage"
 pod "ISHPermissionKit"
 pod "TSMessages"
+pod "CCMPopup"
 end
 
