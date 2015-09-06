@@ -21,6 +21,7 @@
     
     self.nameLabel.text = [self.dish objectForKey:@"name"];
     self.descriptionLabel.text = [self.dish objectForKey:@"description"];
+    [self.descriptionLabel sizeToFit];
     [self.imageView setImageWithURL:[NSURL URLWithString:[[_dish objectForKey:@"default_image"] objectForKey:@"cloudfront_url"]]];
 }
 

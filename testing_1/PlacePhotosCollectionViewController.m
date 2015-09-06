@@ -78,9 +78,12 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    
     if ([segue isKindOfClass:[CCMPopupSegue class]]){
         CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
-        popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400);
+        popupSegue.destinationBounds = CGRectMake(0, 0, (screenWidth * .90), (screenHeight * .66));
         self.popupViewController = (PopupViewController *)popupSegue.destinationViewController;
         self.popupViewController.dish = sender;
     }

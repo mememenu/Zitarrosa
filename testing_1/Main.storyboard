@@ -1382,10 +1382,10 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Y3c-Ib-Vpt" customClass="FeaturedCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="186.5" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featured_1" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-nM-Jjf">
@@ -2121,45 +2121,61 @@
                         <viewControllerLayoutGuide type="bottom" id="aT7-yb-Vtk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G5h-wj-N5w">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="440"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYm-XW-dhC">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="337" height="337"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mYm-XW-dhC" secondAttribute="height" multiplier="1:1" id="jRW-og-4lV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suq-81-DAG">
-                                <rect key="frame" x="8" y="308" width="241" height="30"/>
+                                <rect key="frame" x="10" y="347" width="241" height="20"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="Cyf-La-wuZ"/>
-                                    <constraint firstAttribute="height" constant="30" id="Qhf-fZ-6CJ"/>
+                                    <constraint firstAttribute="height" constant="20" id="Qhf-fZ-6CJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wlt-w8-3T5">
-                                <rect key="frame" x="8" y="352" width="284" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wlt-w8-3T5">
+                                <rect key="frame" x="8" y="375" width="284" height="57"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="RYI-Od-Pll"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-Yg-BnT">
-                                <rect key="frame" x="262" y="308" width="30" height="30"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-Yg-BnT">
+                                <rect key="frame" x="299" y="345" width="30" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="F9T-FK-var"/>
+                                    <constraint firstAttribute="height" constant="30" id="GHb-4a-QlE"/>
                                     <constraint firstAttribute="width" constant="30" id="beP-9a-6AW"/>
+                                    <constraint firstAttribute="width" constant="30" id="wIw-K8-4ax"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="back-arrow"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F9T-FK-var"/>
+                                        <exclude reference="beP-9a-6AW"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="VfZ-dT-tmm" eventType="touchUpInside" id="IQZ-DT-C16"/>
                                 </connections>
@@ -2168,23 +2184,32 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wlt-w8-3T5" secondAttribute="trailing" constant="8" id="7lw-Od-8Zx"/>
-                            <constraint firstItem="Wlt-w8-3T5" firstAttribute="leading" secondItem="G5h-wj-N5w" secondAttribute="leading" constant="8" id="Q6u-Lb-u8G"/>
-                            <constraint firstItem="zzk-Yg-BnT" firstAttribute="top" secondItem="mYm-XW-dhC" secondAttribute="bottom" constant="8" id="QJX-DJ-iNg"/>
-                            <constraint firstItem="suq-81-DAG" firstAttribute="leading" secondItem="G5h-wj-N5w" secondAttribute="leading" constant="8" id="Qh9-pB-e2G"/>
+                            <constraint firstItem="Wlt-w8-3T5" firstAttribute="leading" secondItem="G5h-wj-N5w" secondAttribute="leading" constant="8" id="AkK-z1-dlp"/>
+                            <constraint firstItem="zzk-Yg-BnT" firstAttribute="top" secondItem="mYm-XW-dhC" secondAttribute="bottom" constant="8" id="Jfx-tr-YsQ"/>
+                            <constraint firstItem="suq-81-DAG" firstAttribute="leading" secondItem="G5h-wj-N5w" secondAttribute="leading" constant="10" id="Qh9-pB-e2G"/>
+                            <constraint firstItem="Wlt-w8-3T5" firstAttribute="top" secondItem="zzk-Yg-BnT" secondAttribute="bottom" constant="8" id="SJQ-Zl-Yrq"/>
                             <constraint firstItem="mYm-XW-dhC" firstAttribute="leading" secondItem="G5h-wj-N5w" secondAttribute="leading" id="UlW-tQ-wCX"/>
-                            <constraint firstItem="suq-81-DAG" firstAttribute="top" secondItem="mYm-XW-dhC" secondAttribute="bottom" constant="8" id="atQ-Vl-te3"/>
+                            <constraint firstAttribute="trailing" secondItem="zzk-Yg-BnT" secondAttribute="trailing" constant="8" id="ZSO-Lr-dbe"/>
+                            <constraint firstItem="suq-81-DAG" firstAttribute="top" secondItem="mYm-XW-dhC" secondAttribute="bottom" constant="10" id="atQ-Vl-te3"/>
                             <constraint firstAttribute="trailing" secondItem="mYm-XW-dhC" secondAttribute="trailing" id="cuq-rS-Nf9"/>
                             <constraint firstItem="mYm-XW-dhC" firstAttribute="top" secondItem="kTz-Ld-FCw" secondAttribute="bottom" id="hTR-FT-WoS"/>
-                            <constraint firstAttribute="trailing" secondItem="zzk-Yg-BnT" secondAttribute="trailing" constant="8" id="vdV-6l-8dG"/>
-                            <constraint firstItem="aT7-yb-Vtk" firstAttribute="top" secondItem="Wlt-w8-3T5" secondAttribute="bottom" constant="8" id="wyz-lW-Hiy"/>
+                            <constraint firstAttribute="bottom" secondItem="Wlt-w8-3T5" secondAttribute="bottom" constant="8" id="l4I-B5-K5l"/>
+                            <constraint firstAttribute="trailing" secondItem="Wlt-w8-3T5" secondAttribute="trailing" constant="45" id="mh6-Er-fDd"/>
+                            <constraint firstItem="Wlt-w8-3T5" firstAttribute="top" secondItem="suq-81-DAG" secondAttribute="bottom" constant="8" id="pNZ-wj-OdP"/>
+                            <constraint firstItem="mYm-XW-dhC" firstAttribute="top" secondItem="G5h-wj-N5w" secondAttribute="top" id="xqj-KK-qX4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hTR-FT-WoS"/>
+                                <exclude reference="SJQ-Zl-Yrq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="400"/>
+                    <size key="freeformSize" width="337" height="440"/>
                     <connections>
                         <outlet property="backButton" destination="zzk-Yg-BnT" id="JT5-lF-Zmg"/>
                         <outlet property="descriptionLabel" destination="Wlt-w8-3T5" id="uWc-XE-GNG"/>
@@ -3253,7 +3278,6 @@
     </scenes>
     <resources>
         <image name="10407034_10152794024739033_5504058733825816286_n" width="960" height="960"/>
-        <image name="back-arrow" width="252" height="433"/>
         <image name="black_settings_logo" width="500" height="230"/>
         <image name="featured_1" width="670" height="720"/>
         <image name="sample_list_image_two" width="750" height="300"/>
