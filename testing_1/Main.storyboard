@@ -2365,22 +2365,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpM-Aq-7EE">
-                                <rect key="frame" x="10" y="12" width="355" height="30"/>
+                                <rect key="frame" x="0.0" y="5" width="375" height="35"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OqH-jb-rcD"/>
+                                    <constraint firstAttribute="height" constant="35" id="OqH-jb-rcD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Get Directions">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="directionsPressed:" destination="r1I-2c-YcU" eventType="touchUpInside" id="iKi-8n-c19"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eLS-t4-AqB">
-                                <rect key="frame" x="10" y="50" width="355" height="240"/>
+                                <rect key="frame" x="0.0" y="45" width="375" height="255"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eLS-t4-AqB" secondAttribute="height" multiplier="71:48" id="Nzt-f6-EgY"/>
@@ -2398,16 +2403,22 @@
                             </mapView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dpM-Aq-7EE" firstAttribute="top" secondItem="W0j-eJ-4se" secondAttribute="bottom" constant="12" id="Mxn-MC-YKn"/>
-                            <constraint firstItem="eLS-t4-AqB" firstAttribute="leading" secondItem="lKb-FO-Uzx" secondAttribute="leading" constant="10" id="dga-g6-aVH"/>
-                            <constraint firstAttribute="trailing" secondItem="dpM-Aq-7EE" secondAttribute="trailing" constant="10" id="djN-9p-WAK"/>
-                            <constraint firstItem="eLS-t4-AqB" firstAttribute="top" secondItem="dpM-Aq-7EE" secondAttribute="bottom" constant="8" id="lKq-DR-XwS"/>
-                            <constraint firstItem="dpM-Aq-7EE" firstAttribute="leading" secondItem="lKb-FO-Uzx" secondAttribute="leading" constant="10" id="niT-GP-lo7"/>
-                            <constraint firstAttribute="bottom" secondItem="eLS-t4-AqB" secondAttribute="bottom" constant="10" id="yRq-c7-f9D"/>
-                            <constraint firstAttribute="trailing" secondItem="eLS-t4-AqB" secondAttribute="trailing" constant="10" id="ylW-oP-1W1"/>
+                            <constraint firstItem="eLS-t4-AqB" firstAttribute="leading" secondItem="lKb-FO-Uzx" secondAttribute="leading" id="dga-g6-aVH"/>
+                            <constraint firstAttribute="trailing" secondItem="dpM-Aq-7EE" secondAttribute="trailing" id="djN-9p-WAK"/>
+                            <constraint firstItem="eLS-t4-AqB" firstAttribute="top" secondItem="dpM-Aq-7EE" secondAttribute="bottom" constant="5" id="lKq-DR-XwS"/>
+                            <constraint firstItem="dpM-Aq-7EE" firstAttribute="leading" secondItem="lKb-FO-Uzx" secondAttribute="leading" id="niT-GP-lo7"/>
+                            <constraint firstItem="dpM-Aq-7EE" firstAttribute="top" secondItem="lKb-FO-Uzx" secondAttribute="top" constant="5" id="pSZ-r2-qRe"/>
+                            <constraint firstAttribute="bottom" secondItem="eLS-t4-AqB" secondAttribute="bottom" id="yRq-c7-f9D"/>
+                            <constraint firstAttribute="trailing" secondItem="eLS-t4-AqB" secondAttribute="trailing" id="ylW-oP-1W1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mxn-MC-YKn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
