@@ -234,6 +234,8 @@
         self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
     } else if ([segue.identifier isEqualToString:@"showWebView"]) {
         self.webViewController = (WebViewController *)segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"newScreen"]) {
+        self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
     }
 }
 
