@@ -9,5 +9,6 @@ pod "SDWebImage"
 pod "ISHPermissionKit"
 pod "TSMessages"
 pod "CCMPopup"
+pod 'VGParallaxHeader'
 end
 
