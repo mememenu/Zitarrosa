@@ -14,6 +14,7 @@
 #import "PlaceMapViewController.h"
 #import "PlaceDetailsViewController.h"
 #import "WebViewController.h"
+#import "PlaceViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
@@ -225,6 +226,11 @@
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    PlaceViewController *placeVC = [[PlaceViewController alloc] init];
+    [self presentViewController:placeVC animated:YES completion:nil];
 }
 
 #pragma mark - Navigation

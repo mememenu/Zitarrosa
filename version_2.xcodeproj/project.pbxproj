@@ -41,6 +41,9 @@
 		BEEAE0C71B97B05B00A6C560 /* PlaceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEAE0C61B97B05B00A6C560 /* PlaceMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BEEAE0C91B97B5E000A6C560 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEAE0C81B97B5E000A6C560 /* MapKit.framework */; };
 		BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF447B11B8CD41000417CEE /* NearbyViewController.m */; };
+		BEF5712D1B9F68090049D06D /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF5712C1B9F68090049D06D /* PlaceViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BEF571341B9F714E0049D06D /* MBTwitterScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF571311B9F714E0049D06D /* MBTwitterScroll.m */; settings = {ASSET_TAGS = (); }; };
+		BEF571351B9F714E0049D06D /* UIScrollView+TwitterCover.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF571331B9F714E0049D06D /* UIScrollView+TwitterCover.m */; settings = {ASSET_TAGS = (); }; };
 		BEF6ADA21B8786220079F8C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +114,12 @@
 		BEEAE0C81B97B5E000A6C560 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BEF447B01B8CD41000417CEE /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
 		BEF447B11B8CD41000417CEE /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
+		BEF5712B1B9F68090049D06D /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		BEF5712C1B9F68090049D06D /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		BEF571301B9F714E0049D06D /* MBTwitterScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTwitterScroll.h; sourceTree = "<group>"; };
+		BEF571311B9F714E0049D06D /* MBTwitterScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTwitterScroll.m; sourceTree = "<group>"; };
+		BEF571321B9F714E0049D06D /* UIScrollView+TwitterCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TwitterCover.h"; sourceTree = "<group>"; };
+		BEF571331B9F714E0049D06D /* UIScrollView+TwitterCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TwitterCover.m"; sourceTree = "<group>"; };
 		BEF6ADA11B8786220079F8C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D8E7E9E3E8A35A23A1A4AE77 /* Pods-testing_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testing_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testing_1/Pods-testing_1.debug.xcconfig"; sourceTree = "<group>"; };
 		E0EC6C2E56276D111F7C165E /* Pods-version_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-version_2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-version_2/Pods-version_2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				BE2CF41A1B7A73B10071A70D /* main.m */,
-				BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */,
-				BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */,
+				BEF5712F1B9F714E0049D06D /* MBTwitterScroll */,
+				BEF5712E1B9F70E90049D06D /* SWRevealViewController */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 				BE5D0F1D1B7EAEC4005AD297 /* Lists */,
 				BE8C6BE41B966E680085EF8F /* Places */,
 				BE5D0F1C1B7EAEAD005AD297 /* Place */,
+				BEF5712A1B9F67A90049D06D /* Place Show */,
 				BE7379CC1B8A860A008302F6 /* Search */,
 				BE7379CD1B8A863C008302F6 /* Settings */,
 				BEEAE0BE1B972F5E00A6C560 /* WebView */,
@@ -336,6 +346,36 @@
 				BEEAE0C01B972F9300A6C560 /* WebViewController.m */,
 			);
 			name = WebView;
+			sourceTree = "<group>";
+		};
+		BEF5712A1B9F67A90049D06D /* Place Show */ = {
+			isa = PBXGroup;
+			children = (
+				BEF5712B1B9F68090049D06D /* PlaceViewController.h */,
+				BEF5712C1B9F68090049D06D /* PlaceViewController.m */,
+			);
+			name = "Place Show";
+			sourceTree = "<group>";
+		};
+		BEF5712E1B9F70E90049D06D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE588CCE1B7CFBCC000D2752 /* SWRevealViewController.h */,
+				BE588CCF1B7CFBCC000D2752 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		BEF5712F1B9F714E0049D06D /* MBTwitterScroll */ = {
+			isa = PBXGroup;
+			children = (
+				BEF571301B9F714E0049D06D /* MBTwitterScroll.h */,
+				BEF571311B9F714E0049D06D /* MBTwitterScroll.m */,
+				BEF571321B9F714E0049D06D /* UIScrollView+TwitterCover.h */,
+				BEF571331B9F714E0049D06D /* UIScrollView+TwitterCover.m */,
+			);
+			name = MBTwitterScroll;
+			path = "../../../MBTwitterScroll-master/MBTwitterScroll";
 			sourceTree = "<group>";
 		};
 		DB2C3980A30D614C7D2B0AFF /* Frameworks */ = {
@@ -476,7 +516,10 @@
 				BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */,
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
 				BE63C40E1B94F7930062C81D /* PlaceShowViewController.m in Sources */,
+				BEF571351B9F714E0049D06D /* UIScrollView+TwitterCover.m in Sources */,
+				BEF571341B9F714E0049D06D /* MBTwitterScroll.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
+				BEF5712D1B9F68090049D06D /* PlaceViewController.m in Sources */,
 				BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */,
 				BE2CF41E1B7A73B10071A70D /* AppDelegate.m in Sources */,
 				BE2CF41B1B7A73B10071A70D /* main.m in Sources */,

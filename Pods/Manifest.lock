@@ -24,27 +24,21 @@ PODS:
   - FontAwesomeIconFactory (2.1)
   - HexColors (2.2.1)
   - ISHPermissionKit (0.8.0)
-  - MBTwitterScroll (0.1)
-  - PureLayout (3.0.1)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
   - SVProgressHUD (1.1.3)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
-  - VGParallaxHeader (0.0.6):
-    - PureLayout
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CCMPopup
   - FontAwesomeIconFactory
   - ISHPermissionKit
-  - MBTwitterScroll
   - SDWebImage
   - SVProgressHUD
   - TSMessages
-  - VGParallaxHeader
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
@@ -52,11 +46,8 @@ SPEC CHECKSUMS:
   FontAwesomeIconFactory: 0be1c4e100bb228ea59645d5b1f8a933b7ebe73a
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   ISHPermissionKit: adcdac6b69d0f045c33dadbdbe3ac70da7cd128a
-  MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
-  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
-  VGParallaxHeader: 1213aba58c9b0aea84f9e81ad526fde57aa4fe48
 
 COCOAPODS: 0.38.2
