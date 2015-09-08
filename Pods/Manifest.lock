@@ -24,6 +24,7 @@ PODS:
   - FontAwesomeIconFactory (2.1)
   - HexColors (2.2.1)
   - ISHPermissionKit (0.8.0)
+  - MBTwitterScroll (0.1)
   - PureLayout (3.0.1)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - CCMPopup
   - FontAwesomeIconFactory
   - ISHPermissionKit
+  - MBTwitterScroll
   - SDWebImage
   - SVProgressHUD
   - TSMessages
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   FontAwesomeIconFactory: 0be1c4e100bb228ea59645d5b1f8a933b7ebe73a
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   ISHPermissionKit: adcdac6b69d0f045c33dadbdbe3ac70da7cd128a
+  MBTwitterScroll: 6c69bb2b864423db52b631f42311706b8d0440b6
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

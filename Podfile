@@ -10,5 +10,6 @@ pod "ISHPermissionKit"
 pod "TSMessages"
 pod "CCMPopup"
 pod 'VGParallaxHeader'
+pod "MBTwitterScroll"
 end
 
