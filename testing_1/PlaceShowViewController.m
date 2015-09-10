@@ -43,7 +43,6 @@
     
     [self loadPlace];
     [self locateUser];
-
 }
 
 
