@@ -39,9 +39,12 @@
     SpotlightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex:indexPath.row];
     
-    NSString *image_url = [spotlightItem objectForKey:@"image_url"];
-    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+    NSString *image_url = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"cloudfront_url"];
+//    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+    
     cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
+    [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
+    
     
     return cell;
 }

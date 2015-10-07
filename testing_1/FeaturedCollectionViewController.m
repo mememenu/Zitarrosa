@@ -40,13 +40,13 @@
     FeaturedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *featuredItem = [self.featuredItems objectAtIndex: indexPath.row];
-    NSString *image_url = [featuredItem objectForKey:@"logo"];
-    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+    NSString *image_url = [[featuredItem objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+//    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
     
 //    set for real content to load from call
-//    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
-//    cell.featuredName.text = [featuredItem objectForKey:@"name"];
-//    cell.featuredType.text = [featuredItem objectForKey:@"type"];
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+    cell.featuredName.text = [featuredItem objectForKey:@"name"];
+    cell.featuredType.text = [featuredItem objectForKey:@"type"];
     return cell;
 }
 
