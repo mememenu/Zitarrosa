@@ -13,10 +13,10 @@
 @interface PlaceMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic) CLLocation *placeLocation;
+@property (nonatomic) NSDictionary *placeDictionary;
 
 @property (weak, nonatomic) IBOutlet UIButton *directionsButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
 
 - (IBAction)directionsPressed:(id)sender;
 

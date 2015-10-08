@@ -65,6 +65,7 @@
         
         //  Set Map Data
         NSArray *locationArray = [responseObject objectForKey:@"location"];
+        self.placeMapVC.placeDictionary = self.placeDictionary;
         self.placeMapVC.placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
                                                                longitude:[[locationArray objectAtIndex:1] floatValue]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
