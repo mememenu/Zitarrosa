@@ -91,6 +91,7 @@
     if ([segue.identifier isEqualToString:@"showList"]) {
         self.placesVC = (PlacesViewController *)segue.destinationViewController;
         self.placesVC.placeItems = [[spotable objectForKey:@"places"] mutableCopy];
+        self.placesVC.title = [spotable objectForKey:@"name"];
     }
 }
 

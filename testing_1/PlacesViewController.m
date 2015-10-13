@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.placesCountLabel.text = [NSString stringWithFormat:@"%lu Places", (unsigned long)[self.placeItems count]];
     [self.tableView reloadData];
 }
@@ -37,10 +37,6 @@
     PlacesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *place = [self.placeItems objectAtIndex:indexPath.row];
-//    NSString *imageURL = [[place objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
-//    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
-    
-    
     NSString *image_url = [place objectForKey:@"logo"];
     
     //    check place has a banner object present
