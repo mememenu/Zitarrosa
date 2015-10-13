@@ -302,15 +302,40 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-Gx-dhY">
+                                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="6sQ-sz-hq9"/>
+                                                <constraint firstAttribute="width" constant="50" id="wD2-MV-IlQ"/>
+                                            </constraints>
+                                            <connections>
+                                                <segue destination="3i4-80-yzL" kind="show" identifier="imagePressed" id="rJF-zv-IVK"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y2-Zq-Lvl">
+                                            <rect key="frame" x="66" y="8" width="140" height="25"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="140" id="JpT-ij-GAx"/>
+                                                <constraint firstAttribute="height" constant="25" id="i4K-C2-Box"/>
+                                            </constraints>
+                                            <connections>
+                                                <segue destination="3i4-80-yzL" kind="show" identifier="namePressed" id="mfr-cn-sPQ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="PZ5-5A-gE6" firstAttribute="leading" secondItem="B5N-gJ-bmY" secondAttribute="leading" constant="8" id="5Q4-wo-BU4"/>
                                         <constraint firstItem="PZ5-5A-gE6" firstAttribute="top" secondItem="B5N-gJ-bmY" secondAttribute="top" constant="8" id="630-hf-nOc"/>
+                                        <constraint firstItem="2KY-Gx-dhY" firstAttribute="leading" secondItem="B5N-gJ-bmY" secondAttribute="leading" constant="8" id="6HC-hz-Pgp"/>
                                         <constraint firstItem="Ivx-cJ-qq0" firstAttribute="top" secondItem="PZ5-5A-gE6" secondAttribute="bottom" constant="10" id="9JG-7X-6jl"/>
                                         <constraint firstItem="WJe-ED-c13" firstAttribute="top" secondItem="faC-7H-XkQ" secondAttribute="bottom" constant="8" id="CEp-xy-Veg"/>
+                                        <constraint firstItem="9y2-Zq-Lvl" firstAttribute="top" secondItem="B5N-gJ-bmY" secondAttribute="top" constant="8" id="JQN-Cp-UWS"/>
                                         <constraint firstAttribute="bottom" secondItem="WJe-ED-c13" secondAttribute="bottom" constant="8" id="Mil-tn-MZZ"/>
                                         <constraint firstItem="Ivx-cJ-qq0" firstAttribute="leading" secondItem="B5N-gJ-bmY" secondAttribute="leading" id="Ozn-07-DH4"/>
+                                        <constraint firstItem="9y2-Zq-Lvl" firstAttribute="leading" secondItem="2KY-Gx-dhY" secondAttribute="trailing" constant="8" id="Qte-x4-3i5"/>
                                         <constraint firstAttribute="trailing" secondItem="KXv-pL-FgU" secondAttribute="trailing" constant="8" id="RQF-2G-ah6"/>
                                         <constraint firstItem="KXv-pL-FgU" firstAttribute="leading" secondItem="PZ5-5A-gE6" secondAttribute="trailing" constant="8" id="Sny-tl-e25"/>
                                         <constraint firstAttribute="trailing" secondItem="faC-7H-XkQ" secondAttribute="trailing" constant="8" id="VrP-4N-ghI"/>
@@ -323,6 +348,7 @@
                                         <constraint firstItem="KXv-pL-FgU" firstAttribute="top" secondItem="TDu-em-nbg" secondAttribute="bottom" constant="5" id="g5i-ba-OKJ"/>
                                         <constraint firstItem="faC-7H-XkQ" firstAttribute="top" secondItem="Ivx-cJ-qq0" secondAttribute="bottom" constant="8" id="jcO-8J-jdu"/>
                                         <constraint firstAttribute="trailing" secondItem="TDu-em-nbg" secondAttribute="trailing" constant="8" id="k2A-CJ-Kgq"/>
+                                        <constraint firstItem="2KY-Gx-dhY" firstAttribute="top" secondItem="B5N-gJ-bmY" secondAttribute="top" constant="8" id="v5D-Xy-wVb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -330,7 +356,9 @@
                                     <outlet property="descriptionLabel" destination="WJe-ED-c13" id="BtN-aa-ahR"/>
                                     <outlet property="dishImageView" destination="Ivx-cJ-qq0" id="jsh-zU-Vor"/>
                                     <outlet property="dishName" destination="faC-7H-XkQ" id="l3A-rx-eRD"/>
+                                    <outlet property="imageButton" destination="2KY-Gx-dhY" id="YZE-cg-DNY"/>
                                     <outlet property="logoImageView" destination="PZ5-5A-gE6" id="GiV-zt-7W6"/>
+                                    <outlet property="nameButton" destination="9y2-Zq-Lvl" id="2q0-Kn-T2S"/>
                                     <outlet property="placeName" destination="TDu-em-nbg" id="kN2-D2-G6w"/>
                                     <outlet property="zoneLabel" destination="KXv-pL-FgU" id="X0C-av-ZxJ"/>
                                 </connections>
@@ -1585,14 +1613,13 @@
                                             <constraint firstAttribute="width" constant="30" id="mNI-ho-zI4"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-ke-reg">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-ke-reg">
                                         <rect key="frame" x="308" y="30" width="46" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kxi-iA-wp8"/>
                                             <constraint firstAttribute="width" constant="46" id="wvh-66-ZIH"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttonPressed:" destination="3i4-80-yzL" eventType="touchUpInside" id="U6C-S5-RbC"/>
                                         </connections>
@@ -3315,14 +3342,14 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="seX-BY-9Br"/>
+        <segue reference="33L-sx-UHT"/>
+        <segue reference="7Uy-zQ-MnJ"/>
+        <segue reference="PoO-xW-Qd2"/>
         <segue reference="Pgf-7g-hAr"/>
+        <segue reference="seX-BY-9Br"/>
         <segue reference="6CT-BU-aRA"/>
         <segue reference="NbN-0r-Jiv"/>
-        <segue reference="PoO-xW-Qd2"/>
-        <segue reference="7Uy-zQ-MnJ"/>
         <segue reference="XQV-I6-uvg"/>
-        <segue reference="Jtn-b9-8S5"/>
         <segue reference="uWv-wE-qh6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

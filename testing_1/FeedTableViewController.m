@@ -109,13 +109,8 @@ const int KLoadingCellTag = 12345;
     cell.zoneLabel.text = [feedItem objectForKey:@"restaurant_zone"];
     cell.dishName.text = [feedItem objectForKey:@"name"];
     cell.descriptionLabel.text = [feedItem objectForKey:@"description"];
-    
-    UITapGestureRecognizer *logoTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeItemPressed)];
-    UITapGestureRecognizer *nameTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeItemPressed)];
-    
-    [cell.logoImageView addGestureRecognizer:logoTapGesture];
-    [cell.placeName addGestureRecognizer:nameTapGesture];
-    
+    cell.imageButton.tag = indexPath.row;
+    cell.nameButton.tag = indexPath.row;
     return cell;
 }
 
@@ -171,9 +166,10 @@ const int KLoadingCellTag = 12345;
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showFeedPlace"]) {
+    if ([segue.identifier isEqualToString:@"namePressed"] || [segue.identifier isEqualToString:@"imagePressed"]) {
+        UIButton* button = (UIButton*)sender;
         self.placeShowVieController = (PlaceShowViewController *)segue.destinationViewController;
-        NSDictionary *dish = [self.feedItems objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        NSDictionary *dish = [self.feedItems objectAtIndex:button.tag];
         self.placeShowVieController.placeID = [[dish objectForKey:@"place"] objectForKey:@"id"];
     }
 }

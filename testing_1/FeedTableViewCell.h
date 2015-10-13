@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *zoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dishName;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
+@property (weak, nonatomic) IBOutlet UIButton *nameButton;
 
 @end
