@@ -173,9 +173,8 @@ const int KLoadingCellTag = 12345;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showFeedPlace"]) {
         self.placeShowVieController = (PlaceShowViewController *)segue.destinationViewController;
-//        NSDictionary *dish = [self.feedItems objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-//        replace with real data once new feed endpoint is up
-        self.placeShowVieController.placeID = @"5";
+        NSDictionary *dish = [self.feedItems objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        self.placeShowVieController.placeID = [[dish objectForKey:@"place"] objectForKey:@"id"];
     }
 }
 

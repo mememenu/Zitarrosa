@@ -10,10 +10,12 @@
 #import "SpotlightCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "PlacesViewController.h"
+#import "PlaceShowViewController.h"
 
 @interface SpotlightCollectionViewController ()
 
 @property (strong, nonatomic) PlacesViewController *placesVC;
+@property (strong, nonatomic) PlaceShowViewController *placeShowVC;
 
 @end
 
@@ -38,10 +40,18 @@
 - (SpotlightCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SpotlightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex:indexPath.row];
+    NSDictionary *spotable = [spotlightItem objectForKey:@"spotable"];
+    NSString *image_url = @"";
+        
+    if ([[spotable objectForKey:@"type"] isEqualToString:@"List"]) {
+       image_url = [spotable objectForKey:@"cloudfront_url"];
+        
+    } else if ([[spotable objectForKey:@"type"] isEqualToString:@"Place"]) {
+        image_url = [[spotable objectForKey:@"banner"] objectForKey:@"cloudfront_url"];
+    }
     
-    NSString *image_url = [spotlightItem objectForKey:@"image_url"];
-    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
-    cell.spotlightName.text = [[spotlightItem objectForKey:@"spotable"] objectForKey:@"name"];
+    cell.spotlightName.text = [spotable objectForKey:@"name"];
+    [cell.spotlightImageView setImageWithURL:[NSURL URLWithString:image_url]];
     
     return cell;
 }
@@ -54,13 +64,34 @@
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *spotlightItem = [self.spotlightItems objectAtIndex:indexPath.row];
+    NSDictionary *spotable = [spotlightItem objectForKey:@"spotable"];
+    
+    if ([[spotable objectForKey:@"type"] isEqualToString:@"List"]) {
+        [self performSegueWithIdentifier:@"showList" sender:spotable];
+    }
+    
+    if ([[spotable objectForKey:@"type"] isEqualToString:@"Place"]) {
+        [self performSegueWithIdentifier:@"showPlace" sender:spotable];
+    }
+    
 }
 
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    NSDictionary *spotable = sender;
+    
+    if ([segue.identifier isEqualToString:@"showPlace"]) {
+        self.placeShowVC = (PlaceShowViewController *)segue.destinationViewController;
+        self.placeShowVC.placeID = [spotable objectForKey:@"id"];
+        
+    }
+    if ([segue.identifier isEqualToString:@"showList"]) {
+        self.placesVC = (PlacesViewController *)segue.destinationViewController;
+        self.placesVC.placeItems = [[spotable objectForKey:@"places"] mutableCopy];
+    }
 }
 
 

@@ -90,6 +90,11 @@
     cell.listName.text = [listItem objectForKey:@"name"];
     cell.listType.text = [listItem objectForKey:@"type"];
     
+    
+    NSString *image_url = [listItem objectForKey:@"cloudfront_url"];
+    image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
+    [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
+    
     return cell;
 }
 
