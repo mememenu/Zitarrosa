@@ -54,7 +54,7 @@
     NSDictionary *collection = [self.collections objectAtIndex:indexPath.row];
     
     cell.listNameLabel.text = [collection objectForKey:@"name"];
-    cell.listType.text = [collection objectForKey:@"type"];
+    cell.listType.text = @"";
     
     NSString *image_url = [collection objectForKey:@"cloudfront_url"];
     image_url = [image_url stringByReplacingOccurrencesOfString:@"original" withString:@"medium"];
