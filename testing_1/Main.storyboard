@@ -435,7 +435,7 @@
                             <outlet property="delegate" destination="Wtg-n2-ncK" id="rCP-Mk-pxh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Collections" id="LzZ-0i-pbh">
+                    <navigationItem key="navigationItem" title="Guides" id="LzZ-0i-pbh">
                         <barButtonItem key="backBarButtonItem" title=" " id="Dtc-0b-2Vy"/>
                         <barButtonItem key="leftBarButtonItem" image="white_sidebar" id="WoG-x6-Pqq"/>
                     </navigationItem>
@@ -462,7 +462,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6oK-TG-9ag"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1lK-gX-wl4">
-                        <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga1-lT-WBk">
@@ -641,7 +641,7 @@
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Xx-FD-0t9">
-                                <rect key="frame" x="0.0" y="80" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="523"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -903,14 +903,14 @@
                                     <segue destination="laE-zZ-6hU" kind="custom" customClass="SWRevealViewControllerSegue" id="7Uy-zQ-MnJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Lists" textLabel="GGi-P8-jeq" style="IBUITableViewCellStyleDefault" id="WCD-Zu-clt" customClass="SidebarTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Guides" textLabel="GGi-P8-jeq" style="IBUITableViewCellStyleDefault" id="WCD-Zu-clt" customClass="SidebarTableViewCell">
                                 <rect key="frame" x="0.0" y="408" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCD-Zu-clt" id="fIZ-3f-wir">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Lists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GGi-P8-jeq">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Guides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GGi-P8-jeq">
                                             <rect key="frame" x="15" y="0.0" width="345" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -3301,15 +3301,15 @@
         <image name="white_sidebar" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Mr-bm-kzi"/>
-        <segue reference="rWg-i6-Af8"/>
-        <segue reference="jsd-Lz-3bk"/>
-        <segue reference="8ME-Ne-ayo"/>
-        <segue reference="Apb-8D-TsU"/>
-        <segue reference="Jtn-b9-8S5"/>
-        <segue reference="YPA-Ts-AaT"/>
-        <segue reference="uWv-wE-qh6"/>
+        <segue reference="seX-BY-9Br"/>
+        <segue reference="Pgf-7g-hAr"/>
+        <segue reference="6CT-BU-aRA"/>
+        <segue reference="NbN-0r-Jiv"/>
+        <segue reference="PoO-xW-Qd2"/>
         <segue reference="7Uy-zQ-MnJ"/>
+        <segue reference="XQV-I6-uvg"/>
+        <segue reference="Jtn-b9-8S5"/>
+        <segue reference="uWv-wE-qh6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
