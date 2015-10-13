@@ -46,7 +46,7 @@
 //    set for real content to load from call
     [cell.backgroundImageView setImageWithURL:[NSURL URLWithString:image_url]];
     cell.featuredName.text = [featuredItem objectForKey:@"name"];
-    cell.featuredType.text = [featuredItem objectForKey:@"type"];
+    cell.featuredType.text = @"Featured";
     return cell;
 }
 

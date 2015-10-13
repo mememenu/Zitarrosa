@@ -88,7 +88,7 @@
     NSDictionary *listItem = [self.listItems objectAtIndex: indexPath.row];
     
     cell.listName.text = [listItem objectForKey:@"name"];
-    cell.listType.text = [listItem objectForKey:@"type"];
+    cell.listType.text = @"Guide";
     
     
     NSString *image_url = [listItem objectForKey:@"cloudfront_url"];
