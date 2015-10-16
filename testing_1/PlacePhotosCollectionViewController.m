@@ -50,7 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
     image_url = [image_url stringByReplacingOccurrencesOfString:@"large" withString:@"medium"];
     
     cell.nameLabel.text = [dish objectForKey:@"name"];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:image_url] placeholderImage:[UIImage imageNamed:@"featured_1"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:image_url]];
     return cell;
 }
 
