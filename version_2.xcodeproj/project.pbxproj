@@ -21,6 +21,7 @@
 		BE2CF4261B7A73B10071A70D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2CF4251B7A73B10071A70D /* Assets.xcassets */; };
 		BE2CF4291B7A73B10071A70D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2CF4271B7A73B10071A70D /* LaunchScreen.storyboard */; };
 		BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */; };
+		BE443ABD1BD69E62003E60ED /* V8HorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE443ABB1BD69E62003E60ED /* V8HorizontalPickerView.m */; settings = {ASSET_TAGS = (); }; };
 		BE4A90AB1B7EB62F00C904B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4A90AA1B7EB62F00C904B1 /* Main.storyboard */; };
 		BE5170991B90C590008256D5 /* ListsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5170981B90C590008256D5 /* ListsTableViewCell.m */; };
 		BE51709C1B90DBC0008256D5 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE51709B1B90DBC0008256D5 /* PlacesViewController.m */; };
@@ -77,6 +78,9 @@
 		BE2CF42A1B7A73B10071A70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2CF43A1B7AB8C20071A70D /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
 		BE2CF43B1B7AB8C20071A70D /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
+		BE443ABA1BD69E62003E60ED /* V8HorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V8HorizontalPickerView.h; sourceTree = "<group>"; };
+		BE443ABB1BD69E62003E60ED /* V8HorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V8HorizontalPickerView.m; sourceTree = "<group>"; };
+		BE443ABC1BD69E62003E60ED /* V8HorizontalPickerViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V8HorizontalPickerViewProtocol.h; sourceTree = "<group>"; };
 		BE4A90AA1B7EB62F00C904B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BE5170971B90C590008256D5 /* ListsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewCell.h; sourceTree = "<group>"; };
 		BE5170981B90C590008256D5 /* ListsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewCell.m; sourceTree = "<group>"; };
@@ -189,10 +193,21 @@
 			isa = PBXGroup;
 			children = (
 				BE2CF41A1B7A73B10071A70D /* main.m */,
+				BE443ABE1BD69E6B003E60ED /* V8HorizontalPicker */,
 				BEF5712F1B9F714E0049D06D /* MBTwitterScroll */,
 				BEF5712E1B9F70E90049D06D /* SWRevealViewController */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE443ABE1BD69E6B003E60ED /* V8HorizontalPicker */ = {
+			isa = PBXGroup;
+			children = (
+				BE443ABA1BD69E62003E60ED /* V8HorizontalPickerView.h */,
+				BE443ABB1BD69E62003E60ED /* V8HorizontalPickerView.m */,
+				BE443ABC1BD69E62003E60ED /* V8HorizontalPickerViewProtocol.h */,
+			);
+			name = V8HorizontalPicker;
 			sourceTree = "<group>";
 		};
 		BE5D0F0F1B7EAC3E005AD297 /* Views */ = {
@@ -505,6 +520,7 @@
 				BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */,
 				BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */,
 				BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */,
+				BE443ABD1BD69E62003E60ED /* V8HorizontalPickerView.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
 				BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */,
 				BEEAE0C71B97B05B00A6C560 /* PlaceMapViewController.m in Sources */,
