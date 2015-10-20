@@ -122,9 +122,18 @@
     self.distanceLabel.text = [NSString stringWithFormat:@"%.1f miles away", (miles/1609.344)];
     
 //    Quote Labels
-    self.quoteOneLabel.text = @"'Sample Place Quote One'";
-    self.quoteTwoLabel.text = @"'Sample Place Quote Two'";
-    self.quoteThreeLabel.text = @"'Sample Place Quote Three'";
+    NSArray *quotes = [self.placeDictionary objectForKey:@"quotes"];
+    
+    if ([quotes count] == 1) {
+        self.quoteOneLabel.text = [quotes objectAtIndex:0];
+    } else if ([quotes count] == 2) {
+        self.quoteOneLabel.text = [quotes objectAtIndex:0];
+        self.quoteTwoLabel.text = [quotes objectAtIndex:1];
+    } else if ([quotes count] == 3) {
+        self.quoteOneLabel.text = [quotes objectAtIndex:0];
+        self.quoteTwoLabel.text = [quotes objectAtIndex:1];
+        self.quoteThreeLabel.text = [quotes objectAtIndex:2];
+    }    
 }
 
 
