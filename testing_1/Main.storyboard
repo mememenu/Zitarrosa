@@ -2078,11 +2078,11 @@
                             <size key="itemSize" width="187" height="204"/>
                             <size key="headerReferenceSize" width="30" height="30"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="3" maxX="0.0" maxY="15"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="EwO-C2-lUt" customClass="PlacePhotosCollectionViewCell">
-                                <rect key="frame" x="0.0" y="33" width="187" height="204"/>
+                                <rect key="frame" x="0.0" y="30" width="187" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="204"/>
@@ -2139,7 +2139,7 @@
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="p0r-5D-bzQ"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="default">
                                         <mask key="constraints">
