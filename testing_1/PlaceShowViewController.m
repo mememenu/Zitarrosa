@@ -9,19 +9,19 @@
 #import "PlaceShowViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
-#import "PlaceMenuTableViewController.h"
 #import "PlacePhotosCollectionViewController.h"
 #import "PlaceMapViewController.h"
 #import "PlaceDetailsViewController.h"
 #import "WebViewController.h"
 #import "PlaceViewController.h"
+#import "PlaceMenuViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
 
 @interface PlaceShowViewController ()
 
-@property (strong, nonatomic) PlaceMenuTableViewController *placeMenuTVC;
+@property (strong, nonatomic) PlaceMenuViewController *placeMenuTVC;
 @property (strong, nonatomic) PlacePhotosCollectionViewController *placePhotosCVC;
 @property (strong, nonatomic) PlaceMapViewController *placeMapVC;
 @property (strong, nonatomic) PlaceDetailsViewController *placeDetailsVC;
@@ -58,7 +58,7 @@
         
         //  Set Menu Data
         self.placeMenuTVC.menusArray = [responseObject objectForKey:@"menus"];
-        [self.placeMenuTVC.tableView reloadData];
+        [self.placeMenuTVC initView];
         
         // Set Photos Data
         self.placePhotosCVC.menusArray = [responseObject objectForKey:@"menus"];
@@ -203,7 +203,7 @@
         [self addChildViewController:self.placeMenuTVC];
         [self.placeMenuTVC didMoveToParentViewController:self];
         self.placeMenuTVC.view.frame = self.containerView.bounds;
-        [self.containerView addSubview:self.placeMenuTVC.tableView];
+        [self.containerView addSubview:self.placeMenuTVC.view];
         [self.currentVC removeFromParentViewController];
         
     } else if (self.segmentedControl.selectedSegmentIndex == 1) {
@@ -246,11 +246,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedMenuTableView"]) {
-        self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
+        self.placeMenuTVC = (PlaceMenuViewController *)segue.destinationViewController;
     } else if ([segue.identifier isEqualToString:@"showWebView"]) {
         self.webViewController = (WebViewController *)segue.destinationViewController;
     } else if ([segue.identifier isEqualToString:@"newScreen"]) {
-        self.placeMenuTVC = (PlaceMenuTableViewController *)segue.destinationViewController;
+        self.placeMenuTVC = (PlaceMenuViewController *)segue.destinationViewController;
     }
 }
 

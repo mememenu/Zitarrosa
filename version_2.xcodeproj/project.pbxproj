@@ -13,6 +13,7 @@
 		BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */; };
 		BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */; };
 		BE17FBF81BD811C2005270CA /* PhotosCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE17FBF71BD811C2005270CA /* PhotosCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
+		BE17FBFC1BD825AA005270CA /* PlaceMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE17FBFB1BD825AA005270CA /* PlaceMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */; };
 		BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */; };
 		BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2175951B828D2B00EA7165 /* HomeTableViewCell.m */; };
@@ -32,7 +33,6 @@
 		BE7379CB1B8A4A99008302F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CA1B8A4A99008302F6 /* SearchViewController.m */; };
 		BE7379D01B8A8BE5008302F6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7379CF1B8A8BE5008302F6 /* SettingsViewController.m */; };
 		BE82336D1B8B66280021638D /* SidebarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE82336C1B8B66280021638D /* SidebarTableViewCell.m */; };
-		BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE8C6BE01B966D020085EF8F /* PlacePhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BDF1B966D020085EF8F /* PlacePhotosCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		BE8C6BE31B966D940085EF8F /* PlacePhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BE98CF071B9A73360052FF78 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98CF061B9A73360052FF78 /* MessageUI.framework */; };
@@ -64,6 +64,8 @@
 		BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewCell.m; sourceTree = "<group>"; };
 		BE17FBF61BD811C2005270CA /* PhotosCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionReusableView.h; sourceTree = "<group>"; };
 		BE17FBF71BD811C2005270CA /* PhotosCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionReusableView.m; sourceTree = "<group>"; };
+		BE17FBFA1BD825AA005270CA /* PlaceMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMenuViewController.h; sourceTree = "<group>"; };
+		BE17FBFB1BD825AA005270CA /* PlaceMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMenuViewController.m; sourceTree = "<group>"; };
 		BE19FD6E1B87C110008DBA0A /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		BE19FD711B87C8B0008DBA0A /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		BE7379CF1B8A8BE5008302F6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE82336B1B8B66280021638D /* SidebarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewCell.h; sourceTree = "<group>"; };
 		BE82336C1B8B66280021638D /* SidebarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewCell.m; sourceTree = "<group>"; };
-		BE8C6BDB1B9646160085EF8F /* PlaceMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMenuTableViewController.h; sourceTree = "<group>"; };
-		BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMenuTableViewController.m; sourceTree = "<group>"; };
 		BE8C6BDE1B966D020085EF8F /* PlacePhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacePhotosCollectionViewCell.h; sourceTree = "<group>"; };
 		BE8C6BDF1B966D020085EF8F /* PlacePhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacePhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		BE8C6BE11B966D940085EF8F /* PlacePhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacePhotosCollectionViewController.h; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 			children = (
 				BE63C40C1B94F7930062C81D /* PlaceShowViewController.h */,
 				BE63C40D1B94F7930062C81D /* PlaceShowViewController.m */,
-				BE8C6BDB1B9646160085EF8F /* PlaceMenuTableViewController.h */,
-				BE8C6BDC1B9646170085EF8F /* PlaceMenuTableViewController.m */,
+				BE17FBFA1BD825AA005270CA /* PlaceMenuViewController.h */,
+				BE17FBFB1BD825AA005270CA /* PlaceMenuViewController.m */,
 				BE8C6BE11B966D940085EF8F /* PlacePhotosCollectionViewController.h */,
 				BE8C6BE21B966D940085EF8F /* PlacePhotosCollectionViewController.m */,
 				BEEAE0C51B97B05B00A6C560 /* PlaceMapViewController.h */,
@@ -523,7 +523,6 @@
 			files = (
 				BE6477C01B7AE25E00CC5387 /* SidebarTableViewController.m in Sources */,
 				BEF447B21B8CD41000417CEE /* NearbyViewController.m in Sources */,
-				BE8C6BDD1B9646170085EF8F /* PlaceMenuTableViewController.m in Sources */,
 				BE2175991B828D4200EA7165 /* HomeTableViewController.m in Sources */,
 				BE443ABD1BD69E62003E60ED /* V8HorizontalPickerView.m in Sources */,
 				BE2CF43C1B7AB8C20071A70D /* PlacesTableViewCell.m in Sources */,
@@ -538,6 +537,7 @@
 				BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */,
 				BE63C40E1B94F7930062C81D /* PlaceShowViewController.m in Sources */,
 				BED7FB831BA76EDE000C7D0A /* UIScrollView+TwitterCover.m in Sources */,
+				BE17FBFC1BD825AA005270CA /* PlaceMenuViewController.m in Sources */,
 				BED7FB821BA76EDE000C7D0A /* MBTwitterScroll.m in Sources */,
 				BEA980801B7EC0FF0050C40E /* SpotlightCollectionViewCell.m in Sources */,
 				BEF5712D1B9F68090049D06D /* PlaceViewController.m in Sources */,
