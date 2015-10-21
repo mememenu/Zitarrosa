@@ -12,6 +12,7 @@
 		BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA981B7E817000B8FA00 /* SpotlightCollectionViewController.m */; };
 		BE07AA9C1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */; };
 		BE11FBD81B82ADBC00892E33 /* FeaturedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */; };
+		BE17FBF81BD811C2005270CA /* PhotosCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE17FBF71BD811C2005270CA /* PhotosCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
 		BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */; };
 		BE19FD731B87C8B0008DBA0A /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19FD721B87C8B0008DBA0A /* FeedTableViewCell.m */; };
 		BE2175961B828D2B00EA7165 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2175951B828D2B00EA7165 /* HomeTableViewCell.m */; };
@@ -61,6 +62,8 @@
 		BE07AA9B1B7E83CD00B8FA00 /* FeaturedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewController.m; sourceTree = "<group>"; };
 		BE11FBD61B82ADBC00892E33 /* FeaturedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedCollectionViewCell.h; sourceTree = "<group>"; };
 		BE11FBD71B82ADBC00892E33 /* FeaturedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCollectionViewCell.m; sourceTree = "<group>"; };
+		BE17FBF61BD811C2005270CA /* PhotosCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionReusableView.h; sourceTree = "<group>"; };
+		BE17FBF71BD811C2005270CA /* PhotosCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionReusableView.m; sourceTree = "<group>"; };
 		BE19FD6E1B87C110008DBA0A /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		BE19FD6F1B87C110008DBA0A /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		BE19FD711B87C8B0008DBA0A /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 		BE5D0F0F1B7EAC3E005AD297 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE17FBF61BD811C2005270CA /* PhotosCollectionReusableView.h */,
+				BE17FBF71BD811C2005270CA /* PhotosCollectionReusableView.m */,
 				BE82336A1B8B66120021638D /* Cells */,
 			);
 			name = Views;
@@ -548,6 +553,7 @@
 				BE07AA991B7E817000B8FA00 /* SpotlightCollectionViewController.m in Sources */,
 				BE19FD701B87C110008DBA0A /* FeedTableViewController.m in Sources */,
 				BEEAE0C41B97AE9500A6C560 /* PlaceDetailsViewController.m in Sources */,
+				BE17FBF81BD811C2005270CA /* PhotosCollectionReusableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "UIImageView+AFNetworking.h"
 #import <CCMPopup/CCMPopupSegue.h>
 #import "PopupViewController.h"
+#import "PhotosCollectionReusableView.h"
 
 @interface PlacePhotosCollectionViewController ()
 
@@ -58,12 +59,21 @@ static NSString * const reuseIdentifier = @"Cell";
     return [self cellSize:collectionView];
 }
 
-
 -(CGSize)cellSize:(UICollectionView *)collectionView {
     int screenWidth = collectionView.frame.size.width;
-    int cellWidth = screenWidth * 0.468;
-    int cellHeight = cellWidth + (cellWidth * 0.17);
+    int cellWidth = screenWidth * 0.499;
+    int cellHeight = cellWidth + 17;
     return CGSizeMake(cellWidth, cellHeight);
+}
+
+-(PhotosCollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+
+    PhotosCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];    
+    headerView.titleLabel.text = [[self.categoriesArray objectAtIndex:indexPath.section] objectForKey:@"name"];
+
+    return headerView;
+
+    
 }
 
 #pragma mark - Collection View Delegate 
