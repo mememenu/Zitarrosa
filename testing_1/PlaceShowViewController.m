@@ -9,12 +9,12 @@
 #import "PlaceShowViewController.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
-#import "PlacePhotosCollectionViewController.h"
 #import "PlaceMapViewController.h"
 #import "PlaceDetailsViewController.h"
 #import "WebViewController.h"
 #import "PlaceViewController.h"
 #import "PlaceMenuViewController.h"
+#import "PlacePhotosViewController.h"
 
 #define FOURSQUARE_CLIENT_ID @"SS0D3S2N1I0YMZN2FLT3XF0ZYEPJ4Y00QOJX4HJ1ENZXSN2M"
 #define FOURSQUARE_CLIENT_SECRET @"WCX5LXYBW4GMKL0ZDQ2QBTUOVK4E1YXDGHSW4YFQS1DFZSJV"
@@ -22,7 +22,7 @@
 @interface PlaceShowViewController ()
 
 @property (strong, nonatomic) PlaceMenuViewController *placeMenuTVC;
-@property (strong, nonatomic) PlacePhotosCollectionViewController *placePhotosCVC;
+@property (strong, nonatomic) PlacePhotosViewController *placePhotosCVC;
 @property (strong, nonatomic) PlaceMapViewController *placeMapVC;
 @property (strong, nonatomic) PlaceDetailsViewController *placeDetailsVC;
 @property (strong, nonatomic) WebViewController *webViewController;
@@ -62,6 +62,7 @@
         
         // Set Photos Data
         self.placePhotosCVC.menusArray = [responseObject objectForKey:@"menus"];
+        [self.placePhotosCVC initView];
         
         //  Set Map Data
         NSArray *locationArray = [responseObject objectForKey:@"location"];
@@ -211,7 +212,7 @@
         [self addChildViewController:self.placePhotosCVC];
         [self.placePhotosCVC didMoveToParentViewController:self];
         self.placePhotosCVC.view.frame = self.containerView.bounds;
-        [self.containerView addSubview:self.placePhotosCVC.collectionView];
+        [self.containerView addSubview:self.placePhotosCVC.view];
         [self.currentVC removeFromParentViewController];
         
     } else if (self.segmentedControl.selectedSegmentIndex == 2) {
