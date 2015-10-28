@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3X-jb-LWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3X-jb-LWS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -2100,6 +2100,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lEY-3c-fTm">
                                 <rect key="frame" x="0.0" y="30" width="375" height="270"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="QUs-jH-qBF">
                                     <size key="itemSize" width="187" height="204"/>
                                     <size key="headerReferenceSize" width="30" height="30"/>
@@ -2157,7 +2158,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crV-EN-bvR">
-                                            <rect key="frame" x="18" y="6" width="200" height="18"/>
+                                            <rect key="frame" x="15" y="6" width="200" height="18"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="6dD-qd-9KU"/>
@@ -2171,7 +2172,7 @@
                                     <animations/>
                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="0.5" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="crV-EN-bvR" firstAttribute="leading" secondItem="bvO-Nb-vJ0" secondAttribute="leading" constant="18" id="3uP-5b-lw8"/>
+                                        <constraint firstItem="crV-EN-bvR" firstAttribute="leading" secondItem="bvO-Nb-vJ0" secondAttribute="leading" constant="15" id="3uP-5b-lw8"/>
                                         <constraint firstItem="crV-EN-bvR" firstAttribute="centerY" secondItem="bvO-Nb-vJ0" secondAttribute="centerY" id="6dg-au-Tkf"/>
                                     </constraints>
                                     <connections>
