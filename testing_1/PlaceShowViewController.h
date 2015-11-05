@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface PlaceShowViewController : UIViewController <CLLocationManagerDelegate>
+@interface PlaceShowViewController : UIViewController <CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *bannerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -22,8 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *quoteTwoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *quoteThreeLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *addressButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIButton *reserveButton;

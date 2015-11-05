@@ -112,7 +112,7 @@
     [self.bannerImageView setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"white_sidebar"]];
     self.nameLabel.text = [_placeDictionary objectForKey:@"name"];
     self.zoneLabel.text = [_placeDictionary objectForKey:@"zone"];
-    self.addressLabel.text = [_placeDictionary objectForKey:@"full_address"];
+    [self.addressButton setTitle:[_placeDictionary objectForKey:@"full_address"] forState:UIControlStateNormal];
     [self.phoneButton setTitle:[_placeDictionary objectForKey:@"formatted_phone"] forState:UIControlStateNormal];
     
 //    Set Distance Label using Core Location
@@ -185,6 +185,17 @@
 
 #pragma mark - IB Actions
 
+- (IBAction)directionsPressed:(id)sender {
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Directions with Maps?"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"Open", nil];
+    [alert show];
+}
+
 - (IBAction) callButtonPress:(id)sender {
 //    modify to use meme number instead of foursquare number
     NSString *phNo = [[self.foursquarePlace objectForKey:@"contact"] objectForKey:@"phone"];
@@ -241,6 +252,42 @@
 - (IBAction)buttonPressed:(id)sender {
     PlaceViewController *placeVC = [[PlaceViewController alloc] init];
     [self presentViewController:placeVC animated:YES completion:nil];
+}
+
+#pragma mark - UIAlertView Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (buttonIndex == 1) {
+        NSArray *locationArray = [self.placeDictionary objectForKey:@"location"];
+        CLLocation *placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
+                                                               longitude:[[locationArray objectAtIndex:1] floatValue]];
+        
+        CGFloat endLat = placeLocation.coordinate.latitude;
+        CGFloat endLong = placeLocation.coordinate.longitude;
+        
+        // Check for iOS 6
+        Class mapItemClass = [MKMapItem class];
+        if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+            // Create an MKMapItem to pass to the Maps app
+            CLLocationCoordinate2D coordinate =
+            CLLocationCoordinate2DMake(endLat, endLong);
+            MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate
+                                                           addressDictionary:nil];
+            MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+            [mapItem setName:[self.placeDictionary objectForKey:@"name"]];
+            
+            // Set the directions mode to "Walking"
+            // Can use MKLaunchOptionsDirectionsModeDriving instead
+            NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+            // Get the "Current User Location" MKMapItem
+            MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
+            // Pass the current location and destination map items to the Maps app
+            // Set the direction mode in the launchOptions dictionary
+            [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem]
+                           launchOptions:launchOptions];
+        }
+    }
 }
 
 #pragma mark - Navigation
