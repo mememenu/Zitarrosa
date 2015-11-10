@@ -27,7 +27,6 @@
 
 - (IBAction)closeButtonPress:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (IBAction)backButtonPressed:(id)sender {

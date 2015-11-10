@@ -12,8 +12,9 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSDictionary *detailsDictionary;
+@property (strong, nonatomic) NSDictionary *placeDictionary;
 @property (nonatomic) NSArray *detailsArray;
 
+- (IBAction)socialMediaButtonPressed:(id)sender;
 
 @end

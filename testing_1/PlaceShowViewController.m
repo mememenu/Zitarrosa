@@ -69,6 +69,8 @@
         self.placeMapVC.placeDictionary = self.placeDictionary;
         self.placeMapVC.placeLocation = [[CLLocation alloc] initWithLatitude:[[locationArray objectAtIndex:0] floatValue]
                                                                longitude:[[locationArray objectAtIndex:1] floatValue]];
+        
+        self.placeDetailsVC.placeDictionary = self.placeDictionary;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //  Error Block Here
     }];
@@ -277,7 +279,7 @@
             MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
             [mapItem setName:[self.placeDictionary objectForKey:@"name"]];
             
-            // Set the directions mode to "Walking"
+            // Set the directions mode to "Driving"
             // Can use MKLaunchOptionsDirectionsModeDriving instead
             NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
             // Get the "Current User Location" MKMapItem

@@ -7,9 +7,11 @@
 //
 
 #import "PlaceDetailsViewController.h"
+#import "WebViewController.h"
 
 @interface PlaceDetailsViewController ()
 
+@property (strong, nonatomic) WebViewController *webViewController;
 
 @end
 
@@ -37,13 +39,26 @@
 }
 
 
+- (IBAction)socialMediaButtonPressed:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    [self performSegueWithIdentifier:@"showSocialMedia" sender:button];
+    
+
+}
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    self.webViewController = (WebViewController *)segue.destinationViewController;
+    UIButton *button = (UIButton *)sender;
+    if (button.tag == 1) {
+        self.webViewController.urlString = [self.placeDictionary objectForKey:@"facebook"];
+    } else if (button.tag == 2) {
+        self.webViewController.urlString = [self.placeDictionary objectForKey:@"twitter"];
+    } else {
+        self.webViewController.urlString = [self.placeDictionary objectForKey:@"instagram"];
+    }
 }
-
 
 @end

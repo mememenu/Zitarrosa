@@ -2069,6 +2069,7 @@
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backButton" destination="rmy-90-MMt" id="X2B-jc-cnJ"/>
                         <outlet property="closeButton" destination="hy7-KN-URl" id="CLI-vm-hLF"/>
@@ -2333,52 +2334,61 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-VE-Jae">
-                                    <rect key="frame" x="330" y="13" width="25" height="25"/>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-Zp-81y">
+                                    <rect key="frame" x="256" y="8" width="30" height="34"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="cdT-fW-5yR"/>
-                                        <constraint firstAttribute="height" constant="25" id="daJ-Ho-q1I"/>
+                                        <constraint firstAttribute="width" constant="30" id="dgv-uw-J3Z"/>
+                                        <constraint firstAttribute="height" constant="34" id="vPv-s0-8rA"/>
                                     </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <state key="normal">
+                                    <state key="normal" title="FB">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="socialMediaButtonPressed:" destination="8bP-Be-OMt" eventType="touchUpInside" id="Qhg-dq-jxf"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-aL-FQN">
-                                    <rect key="frame" x="295" y="13" width="25" height="25"/>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-aL-FQN">
+                                    <rect key="frame" x="292" y="8" width="30" height="34"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="d8x-cW-t8o"/>
-                                        <constraint firstAttribute="height" constant="25" id="gsx-Kw-idR"/>
+                                        <constraint firstAttribute="width" constant="30" id="d8x-cW-t8o"/>
+                                        <constraint firstAttribute="height" constant="34" id="gsx-Kw-idR"/>
                                     </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <state key="normal">
+                                    <state key="normal" title="TW">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="socialMediaButtonPressed:" destination="8bP-Be-OMt" eventType="touchUpInside" id="Kan-Rf-dS5"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-Zp-81y">
-                                    <rect key="frame" x="260" y="13" width="25" height="25"/>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-VE-Jae">
+                                    <rect key="frame" x="328" y="8" width="30" height="34"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="dgv-uw-J3Z"/>
-                                        <constraint firstAttribute="height" constant="25" id="vPv-s0-8rA"/>
+                                        <constraint firstAttribute="width" constant="30" id="cdT-fW-5yR"/>
+                                        <constraint firstAttribute="height" constant="34" id="daJ-Ho-q1I"/>
                                     </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <state key="normal">
+                                    <state key="normal" title="IN">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="socialMediaButtonPressed:" destination="8bP-Be-OMt" eventType="touchUpInside" id="v9w-Bi-uZn"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="mrp-aL-FQN" firstAttribute="leading" secondItem="eFA-Zp-81y" secondAttribute="trailing" constant="10" id="ABw-Pg-Cjc"/>
+                                <constraint firstItem="mrp-aL-FQN" firstAttribute="leading" secondItem="eFA-Zp-81y" secondAttribute="trailing" constant="6" id="ABw-Pg-Cjc"/>
                                 <constraint firstItem="Q6C-yd-VFN" firstAttribute="leading" secondItem="ZVv-bi-QG6" secondAttribute="leading" constant="10" id="NLT-nK-uEC"/>
-                                <constraint firstItem="zhm-VE-Jae" firstAttribute="leading" secondItem="mrp-aL-FQN" secondAttribute="trailing" constant="10" id="WvH-OT-hKI"/>
+                                <constraint firstItem="zhm-VE-Jae" firstAttribute="leading" secondItem="mrp-aL-FQN" secondAttribute="trailing" constant="6" id="WvH-OT-hKI"/>
                                 <constraint firstItem="mrp-aL-FQN" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="cwz-AC-V8S"/>
                                 <constraint firstItem="Q6C-yd-VFN" firstAttribute="leading" secondItem="ZVv-bi-QG6" secondAttribute="leading" constant="10" id="giU-L4-Grq"/>
-                                <constraint firstAttribute="trailing" secondItem="zhm-VE-Jae" secondAttribute="trailing" constant="20" id="h1V-aI-h8G"/>
+                                <constraint firstAttribute="trailing" secondItem="zhm-VE-Jae" secondAttribute="trailing" constant="17" id="h1V-aI-h8G"/>
                                 <constraint firstItem="Q6C-yd-VFN" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="o5z-Hc-yMl"/>
                                 <constraint firstItem="eFA-Zp-81y" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="rLX-IN-NJt"/>
                                 <constraint firstItem="zhm-VE-Jae" firstAttribute="centerY" secondItem="ZVv-bi-QG6" secondAttribute="centerY" id="y6R-xc-SiL"/>
@@ -2432,6 +2442,7 @@
                     <size key="freeformSize" width="375" height="300"/>
                     <connections>
                         <outlet property="tableView" destination="vrY-j3-cqY" id="Fsk-0D-5D8"/>
+                        <segue destination="bHu-6f-dUm" kind="show" identifier="showSocialMedia" id="x9D-4G-9oC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovf-eO-XuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3384,14 +3395,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="seX-BY-9Br"/>
-        <segue reference="7Uy-zQ-MnJ"/>
-        <segue reference="NbN-0r-Jiv"/>
-        <segue reference="PoO-xW-Qd2"/>
         <segue reference="6CT-BU-aRA"/>
+        <segue reference="NbN-0r-Jiv"/>
         <segue reference="Pgf-7g-hAr"/>
-        <segue reference="33L-sx-UHT"/>
-        <segue reference="uWv-wE-qh6"/>
+        <segue reference="PoO-xW-Qd2"/>
+        <segue reference="7Uy-zQ-MnJ"/>
         <segue reference="XQV-I6-uvg"/>
+        <segue reference="33L-sx-UHT"/>
+        <segue reference="x9D-4G-9oC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
